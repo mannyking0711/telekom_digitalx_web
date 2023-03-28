@@ -1,0 +1,335 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT MEGATRENDS ANCHOR LIST
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+section.megatrends-filter {
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing5XL;
+  }
+
+  .event-partner__filter-buttons {
+    justify-content: center;
+  }
+}
+
+.event-megatrends-anchor-list {
+  & + .eventjoin {
+    margin-top: $spacing3XL;
+    @include breakpoint('l', min) {
+      margin-top: $spacing5XL;
+    }
+  }
+}
+
+.event-megatrends-anchor-list-item {
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing5XL;
+  }
+
+  & + .event-megatrends-anchor-list-item {
+    margin-top: 65px;
+    @include breakpoint('l', min) {
+      margin-top: 100px;
+    }
+  }
+
+  &__icon {
+    width: auto;
+    height: 50px;
+    display: inline-block;
+    margin-bottom: 20px;
+
+    @include breakpoint('l', min) {
+      height: 80px;
+      align-self: flex-end;
+      margin-right: -50px;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font: 600 1.9rem #{"/"} 1em $fontFamily;
+
+    text-align: left;
+    color: $colorWhite;
+    margin: 0 0 $spacingXL;
+
+    @include breakpoint('l', min) {
+      font-size: 3.3rem;
+      line-height: 1em;
+    }
+  }
+
+  &__section {
+    @include breakpoint('l', min) {
+      margin-bottom: 0;
+    }
+
+    //height: 30vw;
+    //min-height: 291px;
+    //background-repeat: no-repeat;
+    //background-position: center;
+    //background-size: cover;
+  }
+
+  &__teaser {
+    @include breakpoint('l', min) {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 100px 0;
+    }
+
+    //height: 30vw;
+    //min-height: 291px;
+    //background-repeat: no-repeat;
+    //background-position: center;
+    //background-size: cover;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+
+    @include breakpoint('l', min) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      width: calc(100% - 30%);
+    }
+  }
+
+  @include breakpoint('l', min) {
+    &:nth-child(odd) &__image {
+      left: 30%;
+    }
+
+    &:nth-child(even) &__image {
+      right: 30%;
+    }
+
+    &:nth-child(even) &__container {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__card {
+    //width: 90%;
+    //margin: -5rem auto 5rem auto;
+    //width: calc(99.9% - 16.6%);
+    //margin: 0 8.3%;
+    margin-top: -5.5rem;
+    padding: 20px 40px 40px 40px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('l', min) {
+      max-width: 650px;
+      width: auto;
+      margin: 0;
+      padding: 42px 100px 100px 100px;
+    }
+
+    p, h2 {
+      color: $colorWhite;
+    }
+
+    .btn {
+      background-color: transparent;
+      border: 2px solid $colorWhite;
+      line-height: 1;
+      padding: 0.7rem 1.9rem 0.7rem 1.9rem;
+
+      &:hover,&.focus {
+        background: $colorWhite;
+        color: $colorGrayDark;
+      }
+    }
+
+
+    &.red {
+      background-color: $colorMegatrendsRed;
+    }
+
+    &.dark_red {
+      background-color: $colorMegatrendsDarkRed;
+    }
+
+    &.yellow {
+      background-color: $colorMegatrendsYellow;
+
+      p, h2 {
+        color: $colorGrayDark;
+      }
+
+      .btn {
+        border: 2px solid $colorGrayDark;
+        color: $colorGrayDark;
+        &:hover,&.focus {
+          background: $colorGrayDark;
+          color: $colorWhite;
+        }
+      }
+    }
+
+    &.light_green {
+      background-color: $colorMegatrendsLightGreen;
+      p, h2 {
+        color: $colorGrayDark;
+      }
+
+      .btn {
+        border: 2px solid $colorGrayDark;
+        color: $colorGrayDark;
+        &:hover,&.focus {
+          background: $colorGrayDark;
+          color: $colorWhite;
+        }
+      }
+    }
+
+    &.blue {
+      background-color: $colorMegatrendsBlue;
+    }
+
+    &.green {
+      background-color: $colorMegatrendsGreen;
+    }
+
+    &.purple_magenta {
+      background-color: $colorMegatrendsPurpleMagenta;
+
+      p, h2 {
+        color: $colorGrayDark;
+      }
+
+      .btn {
+        border: 2px solid $colorGrayDark;
+        color: $colorGrayDark;
+        &:hover,&.focus {
+          background: $colorGrayDark;
+          color: $colorWhite;
+        }
+      }
+    }
+
+    &.orange {
+      background-color: $colorMegatrendsOrange;
+    }
+
+    &.magenta {
+      background-color: $colorMegatrendsMagenta;
+    }
+
+    &.dark_blue {
+      background-color: $colorMegatrendsDarkBlue;
+    }
+  }
+
+
+
+  &__subtopics {
+    font-size: 18px;
+
+    span {
+      font-weight: bold;
+      display: block;
+    }
+  }
+
+  &__description {
+    white-space: pre-line;
+
+  }
+
+  &__quote {
+    font-size: 21px;
+    font-weight: 100;
+    line-height: 1.2em;
+
+    span {
+      display: block;
+      margin-top: 15px;
+    }
+  }
+}
+
+@include breakpoint('l', 'min') {
+  .event-megatrends-anchor-list-item {
+
+    //position: relative;
+    //height: 950px;
+    //margin-bottom: 7%;
+
+    //h2 {
+    //  font-size: 46px;
+    //}
+
+    //&__teaser {
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //  left: auto;
+    //  height: 950px;
+    //  width: 70%;
+    //}
+
+    //&__card {
+    //  position: absolute;
+    //  top: 50%;
+    //  left: 5vw;
+    //  right: auto;
+    //  transform: translate(0, -50%);
+    //  width: 60%;
+    //  margin: 0;
+    //  height: 85%;
+    //  padding: 105px 70px 90px 70px;
+    //}
+
+    //&__icon {
+    //  left: auto;
+    //  right: 15px;
+    //  width: 150px;
+    //  height: 150px;
+    //}
+
+    &__subtopics {
+      span {
+        display: inline;
+      }
+    }
+
+    &__quote {
+      font-size: 26px;
+
+      span {
+      }
+    }
+
+    &:nth-child(even) &__teaser {
+      //right: auto;
+      //left: 0;
+    }
+
+    //&:nth-child(even) &__card {
+    //  left: auto;
+    //  right: 5vw;
+    //}
+  }
+}

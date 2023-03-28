@@ -1,0 +1,150 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AGENDA SEARCH
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.agendaSearch {
+    @include breakpoint('l', min) {
+        width:                  80%;
+        margin:                 0 auto;
+    }
+
+    .btn {
+        padding:                0.65rem $spacingLG 0.65rem $spacingMD;
+    }
+
+    &__list {
+        padding:                0;
+    }
+
+    &__item {
+        padding:                $spacingLG $spacingLG $spacingXL;
+        list-style:             none;
+        background:             rgba(11, 25, 39, 0.75);
+        position:               relative;
+
+        @include breakpoint('l', min) {
+            padding:            $spacingXL $spacingLG $spacing2XL;
+        }
+
+        @include breakpoint('xl', min) {
+            padding:            $spacingXL $spacingXL $spacing2XL;
+        }
+
+        &:first-child {
+            border-radius: 5px 5px 0 0;
+
+            @include breakpoint('l', min) {
+                padding-top:    $spacing4XL;
+            }
+        }
+
+        &:last-child {
+            border-radius: 0 0 5px 5px;
+        }
+
+        &:nth-child(odd) {
+            background:         rgba(16, 36, 56, 0.75);
+        }
+
+        &--result {
+            @include breakpoint('l', min) {
+                display:        flex;
+            }
+        }
+    }
+
+    &__reset.btn {
+        display:                flex;
+        margin:                 -$spacingLG auto $spacingLG;
+
+        @include breakpoint('l', min) {
+            position:           absolute;
+            top:                0;
+            left:               auto;
+            right:              0;
+            margin:             0;
+        }
+    }
+
+    &__title {
+        color:                  $colorWhite;
+        margin:                 0;
+        text-align:             center;
+        font: 		            400 1.6rem #{"/"} 1.2em $fontFamily;
+
+        @include breakpoint('l', min) {
+            font-size:          1.8rem;
+        }
+    }
+
+    &__term {
+        display:                block;
+
+        @include breakpoint('l', min) {
+            display:            inline;
+        }
+    }
+
+    &__result-time {
+        color:                  $colorXBlue;
+        font: 		            600 0.9rem #{"/"} 1.4em $fontFamily;
+
+        @include breakpoint('l', min) {
+            font-size:          1.2rem;
+            line-height:        1.2em;
+            text-align:         right;
+            width:              25%;
+            min-width:          10rem;
+            padding-right:      $spacingLG;
+        }
+
+        @include breakpoint('xl', min) {
+            padding-right:      $spacingXL;
+        }
+    }
+
+    &__result-wrap {
+        @include breakpoint('l', min) {
+            width:              75%;
+        }
+    }
+
+    &__result-subject {
+        color:                  $colorGrayLight;
+        font: 		            600 1rem #{"/"} 1.2em $fontFamily;
+        text-transform:         uppercase;
+        margin-bottom:          $spacingSM;
+
+        @include breakpoint('l', min) {
+            font-size:          1.2rem;
+            margin-bottom:      $spacingXS;
+        }
+    }
+
+    &__result-title {
+        font: 		            600 1.2rem #{"/"} 1.2em $fontFamily;
+        color:                  #fff;
+        text-transform:         uppercase;
+        margin-bottom:          $spacingSM;
+
+        @include breakpoint('l', min) {
+            font-size:          1.4rem;
+        }
+    }
+
+    &__result-desc {
+        color:                  $colorGrayLight;
+        font: 		            400 0.9rem #{"/"} 1.4em $fontFamily;
+        margin-bottom:          $spacingSM;
+
+        @include breakpoint('l', min) {
+            font-size:          1rem;
+        }
+    }
+
+    &__result-link {
+        margin:                 0;
+    }
+}

@@ -1,0 +1,60 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  AWARD PARTNERS LIST
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.award-partners {
+  text-align: center;
+  padding: 0 0 $marginBottomSectionMobile 0;
+
+  @include media-breakpoint-up(lg){
+    padding: 0 0 $marginBottomSection 0;
+  }
+
+  h3{
+    @extend .h5;
+
+    margin: 0 0 $marginBottomSectionMobile 0;
+  }
+
+  &__headline {
+    @include breakpoint('l', min) {
+      font-size: 2.2rem;
+    }
+    margin-bottom: $spacingXL;
+    font: 600 1.8rem #{"/"} 1.2em $fontFamily;
+    text-align: center;
+
+  }
+
+  &__logolist {
+    @extend %relative-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__logolist__item {
+    @extend %relative;
+    width: 150px;
+    height: 100px;
+    margin: 0 15px;
+    padding: $spacingSM;
+    list-style: none;
+  }
+
+  &__logolist__logo {
+    @extend %absolute;
+    height: 100%;
+    //opacity: 0.8;
+    //filter: saturate(0%);
+    object-fit: contain;
+  }
+
+
+  &__logolist__logo:hover {
+    //opacity: 1;
+    //filter: saturate(100%);
+  }
+}
+

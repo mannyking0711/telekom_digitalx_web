@@ -1,0 +1,70 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MAGAZINE OVERVIEW PODCASTS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.magOverPodcasts {
+    $arrowSize: 12px;
+
+    padding:                $spacing2XL 0 0;
+    position:               relative;
+    margin-top:             $arrowSize;
+
+    &__headline {
+        margin-bottom:      $spacing2XL;
+    }
+
+    &__teaser {
+        margin-bottom:      $spacing4XL;
+    }
+
+    &__btn.btn {
+        margin-bottom:      $spacing4XL;
+    }
+
+
+	/////////////////////////////////
+	// ARROWS
+	/////////////////////////////////
+
+    // arrows at the beginning of the section
+    &__arrow {
+        position:           relative;
+        overflow:           hidden;
+        width:              100%;
+        height:             $arrowSize;
+        top:                -46px;
+
+        &:before, &:after {
+            content:        '';
+            position:       absolute;
+            top:            0;
+            background:     $colorWhite;
+            height:         $arrowSize;
+            width:          50%;
+            transform-origin: 0% 0%;
+        }
+        &:before {
+            left:           -$arrowSize;
+            transform:      skewX(45deg);
+        }
+        &:after {
+            right:          -$arrowSize;
+            transform:      skewX(-45deg);
+        }
+    }
+
+    // arrows at the end of the section
+    &:after {
+        content:            '';
+        background:         $colorWhite;
+        position:           absolute;
+        top:                100%;
+        left:               50%;
+        width:              18px;
+        height:             18px;
+        transform:          rotate(45deg);
+        margin:             -9px 0 0 -9px;
+    }
+}

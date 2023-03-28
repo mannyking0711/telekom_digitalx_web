@@ -1,0 +1,79 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD PRICES
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.awardPrices {
+    &__headline {
+        margin-bottom:          $spacing3XL;
+
+        @include breakpoint('m', min) {
+            margin-bottom:      $spacing4XL;
+        }
+    }
+
+    &__prices {
+        margin:                 0 auto;
+        max-width:              300px;
+        display:                flex;
+        flex-wrap:              wrap;
+        justify-content:        space-evenly;
+
+        @include breakpoint('m', min) {
+            max-width:          initial;
+            margin-bottom:      $spacingMD;
+        }
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacing3XL;
+        }
+    }
+
+    &__price {
+        width:                  100%;
+        text-align:             center;
+        padding:                0 $spacingXL $spacing3XL;
+
+        @include breakpoint('m', min) {
+            width:              50%;
+        }
+    
+        @include breakpoint('l', min) {
+            padding:            0 $spacingMD $spacingMD;
+            margin-bottom:      $spacingXL;
+            width:              33.3333%;
+            max-width:          360px;
+        }
+    
+        @include breakpoint('xl', min) {
+            padding:            0 $spacing2XL $spacingXL;
+        }
+    }
+
+    &__price-icon {
+        position:               static;
+        fill:                   #78ce94;
+        height:                 120px;
+        margin:                 0 auto $spacingMD;
+
+        &:hover {
+            fill:               #78ce94;
+        }
+    }
+
+    &__price-title {
+        font-size:              1.4rem;
+
+        @include breakpoint('l', min) {
+            font-size:          1.8rem;
+        }
+    }
+
+    &__price-desc {
+        color:                  $colorGray;
+        font-size:              1rem;
+        line-height:            1.4em;
+        margin-bottom:          0;
+    }
+}

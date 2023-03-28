@@ -1,0 +1,80 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INITIATIVE RETRO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.iniRetro {
+    &__headline {
+        padding:            $spacing3XL 0 $spacingMD;
+
+        @include breakpoint('l', min) {
+            padding:        $spacing4XL 0 $spacingXL;
+        }
+    }
+
+    .slider__bullets {
+        @include breakpoint('l', min) {
+            position:       absolute;
+            bottom:         2rem;
+            left:           0;
+            width:          45%;
+            justify-content: center;
+            padding-left:   $paddingPageInner;
+            padding-right:  $spacingLG;
+        }
+
+        @include breakpoint('xl', min) {
+            padding-left:   0;
+            padding-right:  $spacing3XL;
+        }
+    }
+
+    &__slide {
+        display:            flex;
+        flex-flow:          column-reverse;
+
+        @include breakpoint('m', min) {
+            flex-flow:      row;
+        }
+    }
+
+    &__slide-info {
+        padding:            0 $paddingPageMobileInner;
+
+        @include breakpoint('m', min) {
+            width:          45%;
+            padding-left:   $paddingPageInner;
+            padding-right:  $spacingLG;
+            align-self:     center;
+        }
+
+        @include breakpoint('xl', min) {
+            padding-left:   0;
+            padding-right:  $spacing3XL;
+        }
+    }
+
+    &__slide-image {
+        width:              100%;
+        margin:             0 0 $spacingMD;
+
+        @include breakpoint('m', min) {
+            margin-bottom:  0;
+            align-self:     center;
+            width:          55%;
+        }
+    }
+
+    &__slide &__slide-headline {
+        margin-bottom:      $spacingMD;
+
+        @include breakpoint('l', min) {
+            margin-bottom:  $spacingLG;
+        }
+    }
+
+    &__slide-text {
+        color:              $colorGray;
+    }
+}

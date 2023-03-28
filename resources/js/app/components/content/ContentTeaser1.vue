@@ -1,0 +1,78 @@
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    HTML
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<template>
+  <section class="content-teaser1 inner no-spacing">
+    <div class="col-100">
+      <div class="content-teaser1__grid">
+        <div class="content-teaser1__content">
+          <div class="content-teaser1__headline">
+            <h3 class="content-teaser1__title">
+              {{ title }}
+            </h3>
+            <h4 v-if="subtitle" class="content-teaser1__subtitle">
+              {{ subtitle }}
+            </h4>
+          </div>
+          <div v-if="text" class="content-teaser1__text" v-html="text" />
+          <a v-if="button && url" :href="url" class="content-teaser1__button icon-left btn blue">
+            <svg-icon icon="app/icon-arrow"></svg-icon>
+            <span>{{ button }}</span>
+          </a>
+        </div>
+        <div class="content-teaser1__image">
+          <img :data-src="image" v-if="image" class="lazy" :alt="title"/>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    JAVASCRIPT
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<script>
+
+export default {
+  name: 'ContentTeaser1',
+
+  props: {
+    title: {type: String, required: null},
+    subtitle: {type: String, required: null},
+    text: {type: String, required: false, default: null},
+    button: {type: String, required: false, default: null},
+    url: {type: String, required: false, default: null},
+    image: {type: String, required: false, default: null},
+  },
+} // end export
+
+</script>
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    CSS
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<style lang="scss">
+
+</style>
+
+
+<style lang="scss" scoped>
+
+</style>
+
+
+

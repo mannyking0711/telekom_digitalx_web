@@ -1,0 +1,188 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .pageevent {
+        //// background with image and gradient to smoothly blend into the next section
+        //background-image:       linear-gradient(180deg, rgba(26, 60, 93, 0) 80%, rgb(26, 60, 93) 100%),
+        //url('../img/app/event/event-intro.jpg');
+        //background-position:    center center, center center;
+        //background-size:        cover, cover;
+        //
+        //background-repeat:      no-repeat, no-repeat;
+        //background-attachment:  fixed;
+
+        // keyvisual should start right beneath the header
+        &#page-events-detail {
+            padding-top: 70px;
+
+            @include breakpoint('xl', min) {
+                padding-top: 105px;
+            }
+        }
+
+        &__list {
+            padding:                    0 0 0 $spacingXS;
+            display:                    inline-block;
+            margin-left:                auto;
+            margin-right:               auto;
+
+            li {
+                margin-bottom:          $spacingMD;
+                list-style:             none;
+                padding-left:           $spacingXL;
+                background: 		    url('../svg/app/icon-check.svg') no-repeat left 0.3rem/1.2rem;
+                text-align:             left;
+                color:                  $colorGray;
+                font: 		            400 0.9rem #{"/"} 1.4em $fontFamily;
+
+                @include breakpoint('l', min) {
+                    font-size:          1.2rem;
+                    margin-bottom:      $spacingLG;
+                    background-position: left 0.5rem;
+                }
+            }
+        }
+
+        .eventmap {
+            background: white;
+
+            &__section {
+                max-width: 100%;
+            }
+
+            &__headline {
+                color: black;
+            }
+
+            &__inner {
+                width: 60%;
+                margin: auto;
+                padding: 43px 0;
+
+                @include breakpoint('l', max) {
+                    width: 90%;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            &__textBox {
+                margin: 0;
+            }
+
+            & .ql-align-center {
+                text-align: center;
+            }
+
+            &__imageDesktop {
+                @include breakpoint('l', max) {
+                    display: none !important;
+                }
+            }
+
+            &__imageMobile {
+                display: none !important;
+
+                @include breakpoint('l', max) {
+                    display: flex !important;
+                }
+            }
+
+            &__imageBox {
+                background-image: var(--desktopImage);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-color: #1C4167;
+                height: 740px;
+                padding: 0;
+                margin: 0;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include breakpoint('l', max) {
+                    background-image: var(--mobileImage);
+                    position: unset;
+                    align-items: flex-end;
+
+                    aspect-ratio: 375 / 550 !important;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &__quartiers {
+                position: relative;
+                left: 260px;
+
+                @include breakpoint('l', max) {
+                    position: unset;
+                    width: 100%;
+                }
+            }
+
+            &__quartiers-quartier {
+                list-style: none;
+
+                @include breakpoint('l', max) {
+                    float: left;
+                    width: 50%;
+                }
+            }
+
+            &__quartiers-quartier-title {
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            &__quartiers-quartier-colorbar {
+                margin: 0 0 50px 0;
+                width: 40px;
+                height: 6px;
+            }
+
+            &__quartierBoxes {
+                padding: 0px 85px;
+
+                @include breakpoint('l', max) {
+                    padding: 30px 23px;
+                }
+            }
+
+            &__quartierBoxes-quartier {
+                width: 25%;
+                padding: 42px;
+
+                @include breakpoint('xl', 'max') {
+                    padding: 42px 21px;
+                }
+
+                @include breakpoint('l', max) {
+                    width: 100%;
+                    margin: 15px 0;
+                    padding: 0;
+                }
+            }
+
+            &__quartierBoxes-quartier-title {
+                margin-bottom: 0;
+            }
+
+            &__quartierBoxes-quartier-colorbar {
+                margin: 5px 0 20px 0;
+                width: 40px;
+                height: 6px;
+            }
+        }
+
+      section.article-list.article-hero-list {
+        margin-bottom: 0;
+      }
+    }

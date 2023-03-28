@@ -1,0 +1,180 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AGENDA SESSIONS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+.agendaSessions {
+    padding:            0;
+    background:         $colorWhite;
+    color:              $colorGrayDark;
+    border-radius:      0 0 5px 5px;
+    display:            none;
+    min-height:         $spacingXL;
+
+    @at-root {
+        .agendaSubjects__subject.active &  { // active subject styles
+            display:        block;
+        }
+    }
+
+    &__session {
+        list-style:         none;
+        padding:            $spacingMD;
+        border-bottom:      1px solid $colorGrayMid;
+
+        @include breakpoint('l', min) {
+            display:        flex;
+            padding:        $spacing2XL $spacingXL;
+        }
+
+        &:last-child {
+            border-bottom:  0;
+        }
+    }
+
+    &__hint {
+        color:              $colorGrayLight;
+        font: 		        600 1rem #{"/"} 1.4em $fontFamily;
+
+        @include breakpoint('l', min) {
+            font-size:      1.2rem;
+        }
+    }
+
+    &__time {
+        color:              $colorXBlue;
+        font: 		        600 1rem #{"/"} 1.4em $fontFamily;
+
+        @include breakpoint('l', min) {
+            width:          20%;
+            min-width:      10rem;
+            padding-right:  $spacingLG;
+            text-align:     right;
+            font-size:      1.2rem;
+            flex:           0;
+        }
+    }
+
+    &__info {
+        width:              100%;
+    }
+
+    &__subject {
+        color:              $colorGrayLight;
+        font: 		        600 1rem #{"/"} 1.4em $fontFamily;
+        margin-bottom:      $spacingMD;
+
+        @include breakpoint('l', min) {
+            font-size:      1.2rem;
+            margin-bottom:  0;
+        }
+    }
+
+    &__title {
+        font: 		        600 1.2rem #{"/"} 1.1em $fontFamily;
+        margin-bottom:      $spacingMD;
+
+        @include breakpoint('l', min) {
+            font-size:      1.6rem;
+        }
+    }
+
+    &__description {
+        font: 		        400 0.9rem #{"/"} 1.4em $fontFamily;
+        margin-bottom:      $spacingMD;
+
+        @include breakpoint('l', min) {
+            font-size:      1rem;
+            margin-bottom:  $spacingXL;
+        }
+    }
+
+    &__participants {
+        text-align:         center;
+        padding:            0;
+        display:            flex;
+        flex-wrap:          wrap;
+        margin:             0;
+
+        @include breakpoint('l', min) {
+            text-align:     left;
+        }
+    }
+
+    &__participant {
+        width:              50%;
+        padding:            0;
+        list-style:         none;
+        margin-bottom:      $spacingMD;
+
+        @include breakpoint('m', min) {
+            width:          33%;
+        }
+
+        @include breakpoint('l', min) {
+            width:          50%;
+            display:        flex;
+            align-items:    center;
+        }
+
+        @include breakpoint('xl', min) {
+            width:          33%;
+        }
+
+        @include breakpoint(1500, min) {
+            width:          25%;
+        }
+    }
+    &__participant:hover {
+        transform:          scale(1.03);
+    }
+
+    &__participant-image {
+        border-radius:      100%;
+        width:              80px;
+        height:             80px;
+        margin-bottom:      $spacingXS;
+        object-fit:         cover;
+        object-position:    center;
+
+        @include breakpoint('l', min) {
+            margin:         0 $spacingSM 0 0;
+        }
+    } 
+
+    &__participant-name {
+        font: 		        600 0.9rem #{"/"} 1.4em $fontFamily;
+        color:              $colorGrayDark;
+
+        @include breakpoint('l', min) {
+            font-size:      1rem;
+        }
+    }  
+
+    &__participant-company {
+        font: 		        400 0.8rem #{"/"} 1.2em $fontFamily;
+        color:              $colorGrayLight;
+
+        @include breakpoint('l', min) {
+            font-size:      1rem;
+        }
+    }
+
+    &__btn--mobile.btn {
+        @include breakpoint('l', min) {
+            display:        none;
+        }
+    }
+
+    &__btn--desktop.btn {
+        display:            none;
+
+        @include breakpoint('l', min) {
+            display:        inline-block;
+            width:          100%;
+        }
+    }
+}

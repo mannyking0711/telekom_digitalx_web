@@ -1,0 +1,91 @@
+function CheckLowerCaseChars(rules, password) {
+  if (rules.MinimumCountLowerCharacters <= 0) {
+    return true;
+  }
+  return password.split('').filter(function (char) { return char.match(/[a-z]/) }).length >= rules.MinimumCountLowerCharacters;
+}
+
+function CheckUpperCaseChars(rules, password) {
+  if (rules.MinimumCountLowerCharacters <= 0) {
+    return true;
+  }
+  return password.split('').filter(function (char) { return char.match(/[A-Z]/); }).length >= rules.MinimumCountLowerCharacters;
+}
+
+function CheckNumberChars(rules, password) {
+  if (rules.MinimumCountNumbers <= 0) {
+    return true;
+  } 
+  return password.split('').filter(function (char) { return /[0-9]/.test(char); }).length >= rules.MinimumCountNumbers;
+}
+
+function CheckSpecialChars(rules, password) {
+  if (rules.MinimumCountSpecialCharacters <= 0) {
+    return true;
+  } 
+  return password.split('').filter(function (char) { return /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/.test(char) }).length >= rules.MinimumCountSpecialCharacters;
+}
+
+function CheckRegExInvalidChars(rules, password) {
+  if (!rules.RegExInvalidChars) {
+    return true;
+  } 
+  var regex = RegExp(rules.RegExInvalidChars);
+  return password.match(regex);
+}
+
+function CheckRegExValidChars(rules, password) {
+  if (!rules.RegExValidChars) {
+    return true;
+  } 
+  var regex = RegExp(rules.RegExValidChars);
+  return password.match(regex);
+}
+
+function CheckPassword(password, rules) {
+  var errors = [];
+  if (password.length < rules.MinimumStringLength) {
+    errors.push({ code: "PasswordTooShort", value: rules.MinimumStringLength });
+  }
+  if (!CheckLowerCaseChars(rules, password)) {
+    errors.push({ code: "PasswordRequiresLower", value: rules.MinimumCountLowerCharacters });
+  }
+  if (!CheckUpperCaseChars(rules, password)) {
+    errors.push({ code: "PasswordRequiresUpper", value: rules.MinimumCountUpperCharacters });
+  }
+  if (!CheckNumberChars(rules, password)) {
+    errors.push({ code: "PasswordRequiresDigit", value: rules.MinimumCountNumbers });
+  }
+  if (!CheckSpecialChars(rules, password)) {
+    errors.push({ code: "PasswordRequiresNonAlphanumeric", value: rules.MinimumCountSpecialCharacters });
+  }
+  if (!CheckRegExInvalidChars(rules, password)) {
+    errors.push({ code: "PasswordInValidChars", value: rules.RegExInvalidChars });
+  }
+  if (!CheckRegExValidChars(rules, password)) {
+    errors.push({ code: "PasswordInValidChars", value: rules.RegExValidChars });
+  }
+  return errors;
+}
+
+jQuery.validator.addMethod(
+  'pass',
+  function (value, _element, params) {
+    var errors = CheckPassword(value, params.rules);
+    return errors.length === 0;
+  },
+  function (params, element) {
+    var value = jQuery(element).val();
+    var errors = CheckPassword(value, params.rules);
+    return errors.map(function (error) {
+      var message = jQuery.validator.format(params.errors[error.code]);
+      return message(error.value);
+    }).join('\n');
+  }
+);
+
+jQuery.validator.unobtrusive.adapters.add('pass', ['rules', 'errors'], function (options) {
+  var rules = JSON.parse(options.params.rules);
+  var errors = JSON.parse(options.params.errors);
+  options.rules['pass'] = { rules, errors };
+});

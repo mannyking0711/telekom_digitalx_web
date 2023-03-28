@@ -1,0 +1,111 @@
+{
+	"Konktakt":					"Contact",
+	"Impressum":				"Imprint",
+	"Datenschutzbestimmungen":	"Privacy Policy",
+	"Cookie-Einstellungen": 	"Cookie Settings",
+	"Einstellungen": 			"Settings",
+	"Admin Panel":				"Admin Panel",
+	"Dashboard":				"Dashboard",
+	"Frontend":					"Frontend",
+
+
+	"Speichern":	"Save",
+	"Löschen":		"Delete",
+	"Abbrechen":	"Cancel",
+	"Entfernen":	"Remove",
+	"Auswählen":	"Select",
+	"Bearbeiten":	"Edit",
+	"Bestätigen":	"Confirm",
+	"Erlauben":		"Allow",
+	"Verweigern":	"Deny",
+	"Hinzufügen":	"Add",
+	"Suchen": 		"Search",
+	"Suche": 		"Search",
+
+
+	"aktiviert":		"enabled",
+	"deaktiviert":		"disabled",
+	"nicht verfügbar":	"not existing",
+	"sichtbar":			"public",
+	"nicht sichtbar":	"not public",
+
+
+	"Registrierung":	"Register",
+	"Registrieren": 	"register",
+	"Handelsregister":	"Commercial register",
+	"Registergericht":	"Registration court",
+	"Umsatzsteuer-ID":	"Vat ID",
+
+
+	"Ja":		 "Yes",
+	"Nein":		 "No",
+
+
+	"Name":			"Name",
+	"Nachname":		"Surname",
+	"Benutzername":	"Username",
+	"Telefon":		"Phone",
+	"Handy":		"Mobile",
+	"Geschlecht":	"Gender",
+	"männlich":		"male",
+	"weiblich":		"female",
+	"Männlich":		"Male",
+	"Weiblich":		"Female",
+	"divers": 		"diverse",
+	"Divers": 		"Diverse",
+	"Benutzer": 	"User",
+
+
+	"E-Mail":			"Email",
+	"E-Mail-Adresse":	"Email Address",
+	"Hallo": 			"Hello",
+	"Beste Grüße": 		"Regards",
+
+
+	"Passwort":					"Password",
+	"Passwort vergessen?":		"Forgot Your Password?",
+	"Passwort bestätigen":		"confirm password",
+	"Passwort zurücksetzen":	"Reset password",
+	"Altes Passwort": 			"Old password",
+	"Neues Passwort": 			"New password",
+	"Eingeloggt bleiben":		"Remember Me",
+
+
+
+	"Bitte auswählen":			"Please choose",
+	"Neue Datei auswählen":		"Select new file",
+	"Keine Datei ausgewählt":	"No file selected",
+
+
+	"Account bereits vorhanden?": "Already have a login?",
+	"Bestätigungslink senden": "Send Password Reset Link",
+	"Bestätigen Sie ihre E-Mail Adresse.": "Verify Your Email Address",
+	"Ein neuer Bestätigungslink wurde an Ihre E-Mail-Adresse gesendet.": "A fresh verification link has been sent to your email address.",
+	"Bevor Sie fortfahren, überprüfen Sie bitte Ihre E-Mail auf einen Bestätigungslink.": "Before proceeding, please check your email for a verification link.",
+	"Wenn Sie die E-Mail nicht erhalten haben": "If you did not receive the email",
+	"klicken Sie hier, um ein anderes anzufordern": "click here to request another",
+	"Wenn Sie Probleme beim Klicken den Button \":actionText\" haben, kopieren Sie die untenstehende URL und fügen Sie sie in Ihren Webbrowser ein:": "If you’re having trouble clicking the \":actionText\" button, copy and paste the URL below into your web browser:",
+
+	"Seiten-Einstellungen":		"Page Settings",
+	"Benutzer-Einstellungen":	"User Settings",
+
+
+	"Zum Login":	 "Go to login",
+	"Zur Website":	 "Go to website",
+
+	"HTML Titel":  "HTML title",
+	"HTML Beschreibung": "HTML description",
+
+	"Noch keine Einträge vorhanden.": "No items available.",
+	"Eintrag löschen?": "Delete item?",
+	"Datei löschen?": "Delete file?",
+	"Wollen Sie den Eintrag wirklich löschen?": "Do you really want to delete this item?",
+	"Wollen Sie diese Datei wirklich löschen?": "Do you really want to delete this file?",
+	"Neue Seite": "New page",
+	"Seite bearbeiten": "Edit page",
+	"Neue Seite erstellen": "Create new page",
+
+	"Fehler": "Error",
+	"Seite nicht gefunden": "Page not found",
+	"Fehler aufgetreten": "Error occurred"
+}

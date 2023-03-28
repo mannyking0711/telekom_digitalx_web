@@ -1,0 +1,138 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENTS FOOTER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.eventsfooter {
+    background:                 $gradientXBlueLight;
+    padding:                    $spacingLG 0;
+    text-align:                 center;
+    color:                      $colorWhite;
+
+    &__content {
+        position:               relative;
+        z-index:                40;
+    }
+
+    &__map {
+        display:                block;
+        width:                  100%;
+
+        @include breakpoint('xl', 'min') {
+            object-fit:         cover;
+            object-position:    right center;
+            height:             100%;
+        }
+
+        &--flags {
+            position:           absolute;
+            left:               0;
+            top:                0;
+            z-index:            30;
+        }
+
+        &--germany {
+            position:           absolute;
+            left:               0;
+            top:                0;
+            z-index:            20;
+            opacity:            0.55;
+        }
+
+        &--europe {
+            position:           relative;
+            z-index:            10;
+            opacity:            0.75;
+            mix-blend-mode:     multiply;
+        }
+    }
+
+    &__maps {
+        position:               relative;
+        margin:                 -15vw auto 0;
+        max-width:              500px;
+
+        &--mobile {
+            @include breakpoint('xl', 'min') {
+                display:        none;
+            }
+        }
+
+        &--desktop {
+            display:            none;
+            margin-top:         -625px;
+            max-width:          1500px;
+            height:             800px;
+
+            @include breakpoint('xl', 'min') {
+                display:        block;
+            }
+        }
+    }
+
+    &__title {
+        color:                  $colorWhite;
+        text-transform:         none;
+        max-width:              500px;
+        margin:                 0 auto $spacingLG;
+        width:                  100%;
+
+        @include breakpoint('l', 'min') {
+            max-width:          700px;
+        }
+    }
+
+    &__desc {
+        color:                  $colorWhite;
+        max-width:              500px;
+        margin:                 0 auto $spacingXL;
+
+        @include breakpoint('l', 'min') {
+            max-width:          700px;
+            margin-bottom:      $spacing5XL;
+        }
+    }
+    
+    &__event {
+        border-bottom:          1px dashed $colorXBlue;
+        padding:                $spacingSM 0 $spacingMD;
+        max-width:              240px;
+        margin:                 0 auto;
+
+        @include breakpoint('l', 'min') {
+            text-align:         left;
+            max-width:          500px;
+            display:            flex;
+            justify-content:    space-between;
+            align-items:        center;
+            padding:            $spacingSM 0;
+        }
+
+        @include breakpoint('xl', 'min') {
+            margin:             0;
+        }
+    }
+    
+    &__event-title {
+        font:                   600 1.1rem #{"/"} 1.4em $fontFamily;
+        text-transform:         uppercase;
+    }
+    
+    &__event-date {
+        font:                   400 0.9rem #{"/"} 1.4em $fontFamily;
+        color:                  $colorXBlue;
+        margin-bottom:          $spacingSM;
+    }
+    
+    &__event-link.btn {
+        margin:                 0;
+        width:                  100%;
+        font-size:              0.8rem;
+        line-height:            1.4em;
+
+        @include breakpoint('l', 'min') {
+            width:              max-content;
+        }
+    }
+}

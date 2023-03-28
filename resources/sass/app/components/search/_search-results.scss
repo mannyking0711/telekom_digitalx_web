@@ -1,0 +1,85 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	SEARCH RESULTS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.search-results {
+
+  min-height: 400px;
+
+  &__search {
+    margin-bottom: $spacing4XL;
+  }
+
+  &__item {
+    position: relative;
+
+    border-bottom: 2px solid $colorGrayLight;
+    padding-bottom: $spacingLG;
+    margin-bottom: $spacingLG;
+
+    &__tag {
+      @extend %relative-inline-block;
+
+      top: -3px;
+      color: #fff;
+      border-radius: 0.3rem;
+      background-color: $colorXGreen;
+
+      cursor: default;
+
+      padding: 0.3rem $spacingSM;
+      font: bold 0.6rem #{"/"} 0.6rem $fontFamily;
+
+      @include breakpoint('m', 'min') {
+        padding: 0.5rem 0.7rem 0.4rem 0.7rem;
+        font: bold $fontSizeSmall #{"/"} $fontSizeSmall $fontFamily;
+      }
+    }
+
+    &__description {
+      margin-bottom: $spacingMD;
+    }
+
+    &__link {
+      display: block;
+      font:  bold 1rem/1.5rem $fontFamily;
+      color: $colorTypo;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__link::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: auto;
+      content: "";
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    h3 {
+      font-weight: normal;
+
+      em {
+        font-style: normal;
+        font-weight: 800;
+      }
+    }
+  }
+
+  &__more {
+    margin-top: $spacing2XL;
+    text-align: center;
+
+    .btn {
+    }
+  }
+
+}

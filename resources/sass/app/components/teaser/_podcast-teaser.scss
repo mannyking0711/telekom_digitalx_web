@@ -1,0 +1,450 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  PODCAST TEASER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	.podteaser {
+		$self: &; // store scope in varaible
+
+		background:             $gradientXBlue;
+
+		&--large  { // large variant
+			@include breakpoint('l', min) {
+				display:            flex;
+			}
+		}
+
+		&__intro {
+			@extend %relative;
+
+			cursor: pointer;
+
+			#{ $self }--large & { // large variant
+				flex:           1;
+			}
+		}
+
+		&__headline {
+			display:            flex;
+			margin-bottom:      $spacingXS;
+			padding-top:        1.2rem;
+			justify-content:    center;
+			transform:          scale(0.9);
+
+			@include breakpoint('m', min) {
+				transform:      scale(1);
+			}
+
+			@include breakpoint('xl', 'min') {
+				transform:      scale(0.9);
+			}
+
+			@include breakpoint('xxl', 'min') {
+				transform:      scale(1);
+			}
+
+			#{ $self }--large & { // large variant
+				display:        none;
+			}
+		}
+
+		&__logo-text {
+			font:               600 1.8rem #{"/"} 1.2em $fontFamily;
+			color:              $colorWhite;
+			text-transform:     uppercase;
+
+			span  {
+				color:          $colorXBlue;
+			}
+
+			#{ $self }--large & { // large variant
+
+				@include breakpoint('l', min) {
+					font-size:  2.6rem;
+				}
+
+				font-size:      2rem;
+			}
+		}
+
+		&__logo {
+			@extend             %relative;
+
+			width:              $spacing2XL;
+			height:             $spacing2XL;
+			margin-right:       $spacingMD;
+
+			svg {
+				fill:           $colorWhite;
+				filter:         drop-shadow(0 0 7px rgba(255, 255, 255, 0.6));
+			}
+
+			#{ $self }--large & { // large variant
+				position:       absolute;
+				top:            $spacingMD;
+				left:           $spacingMD;
+
+				@include breakpoint('xl', min) {
+					width:      3.5rem;
+					height:     3.5rem;
+					top:        $spacingXL;
+					left:       $spacingXL;
+				}
+			}
+		}
+
+		&__latest-title {
+			margin:             0 0 $spacingXS 0;
+			color:              $colorWhite;
+			text-transform:     uppercase;
+			font:               600 1.4rem #{"/"} 1.2em $fontFamily;
+
+			@include breakpoint('xl', min) {
+				font-size:      1.1rem;
+			}
+
+			@include breakpoint('xxl', min) {
+				font-size:      1.4rem;
+			}
+
+			#{ $self }--large & { // large variant
+
+				@include breakpoint('xl', min) {
+					font-size:  1.4rem;
+				}
+				margin:         0;
+				font:           600 .8rem #{"/"} 1.2em $fontFamily;
+			}
+		}
+
+		&__latest-desc {
+			margin-bottom:      $spacingSM;
+			color:              $colorWhite;
+			text-transform:     uppercase;
+			font:               normal 1rem #{"/"} 1.2em $fontFamily;
+
+			@include breakpoint('xl', min) {
+				font-size:      0.9rem;
+			}
+
+			@include breakpoint('xxl', min) {
+				font-size:      1rem;
+			}
+
+			#{ $self }--large & { // large variant
+				margin:         0;
+				font:           400 .6rem #{"/"} 1.2em $fontFamily;
+
+				@include breakpoint('xl', min) {
+					font-size:  1.1rem;
+				}
+			}
+		}
+
+		&__latest-episode {
+			display:            block;
+
+			#{ $self }--large & { // large variant
+				display:        inline;
+			}
+		}
+
+		&__play {
+			width:              35px;
+			height:             35px;
+			position:           static;
+			margin-right:       $spacingMD;
+			flex:               0 0 auto;
+			fill:               $colorXBlue;
+
+			@include breakpoint('m', min) {
+				width:          50px;
+				height:         50px;
+				margin-right:   $spacingLG;
+			}
+
+			@include breakpoint('xl', min) {
+				width:          40px;
+				height:         40px;
+			}
+
+			@include breakpoint('xxl', min) {
+				width:          50px;
+				height:         50px;
+			}
+
+			&:hover {
+				fill:           #2196D0;
+			}
+
+			#{ $self }--large & { // large variant
+				width:          2.5rem;
+				height:         2.5rem;
+				margin-right:   $spacingSM;
+
+				@include breakpoint('xl', min) {
+					width:      $spacing4XL;
+					height:     $spacing4XL;
+					margin-right: $spacingLG;
+				}
+			}
+		}
+
+		&__desc {
+			max-width:          25em;
+			margin:             0 auto $spacingXL;
+			color:              $colorWhite;
+			line-height:        1.4em;
+
+			@include breakpoint('xl', min) {
+				font-size:      1.3rem;
+			}
+		}
+
+		&__btn-group {
+			#{ $self }--large & { // large variant
+				margin-bottom:  $spacingXL;
+
+				@include breakpoint('xl', min) {
+					display:            flex;
+					margin-bottom:      $spacing3XL;
+					justify-content:    center;
+				}
+			}
+		}
+
+		&__btn.btn {
+			display:            flex;
+			margin:             0 auto;
+			width: 				max-content;
+
+			#{ $self }--large & { // large variant
+				width:          100%;
+				margin-bottom:  $spacingLG;
+
+				@include breakpoint('xl', min) {
+					width:      auto;
+					margin:     0 $spacingMD;
+				}
+			}
+		}
+
+		&__services {
+			display:            flex;
+			flex-wrap:          wrap;
+			justify-content:    space-between;
+
+			@include breakpoint('xl', min) {
+				justify-content: center;
+			}
+
+			.btn {
+				width:          46%;
+				margin:         0 0 $spacingMD;
+				padding:        0.3rem $spacingMD 0.2rem $spacingSM;
+				background-color: #355a7e;
+
+				@include breakpoint('xl', min) {
+					width:      auto;
+					margin:     0 $spacingSM $spacingMD;
+				}
+
+				@include breakpoint('xxl', min) {
+					margin:     0 $spacingMD $spacingMD;
+				}
+
+				.icon {
+					width:      18px;
+					height:     18px;
+				}
+			}
+		}
+	}
+
+
+	/////////////////////////////////
+	// CONTENT COLUMN
+	/////////////////////////////////
+
+	.podteaser__content-wrap {
+		padding-bottom:     $spacingXL;
+		flex:               1;
+	}
+
+	.podteaser--large .podteaser__content-wrap { // large variant
+		padding:        $spacingLG 0;
+		background:     $gradientXBlue;
+
+		@include breakpoint('l', min) {
+			width:      50%;
+			min-height: 350px;
+		}
+
+		@include breakpoint('xl', min) {
+			padding-top: $spacing2XL;
+		}
+
+		@include breakpoint(1350, min) {
+			display:     flex;
+			padding-top: $spacingLG;
+			justify-content: center;
+			flex-flow:    column;
+		}
+	}
+
+	.podteaser--large .podteaser__content {
+		margin:         0 $spacing2XL;
+		text-align:     center;
+	}
+
+
+	/////////////////////////////////
+	// IMAGE
+	/////////////////////////////////
+
+	.podteaser__image-wrap {
+		position:           relative;
+
+		@include breakpoint('l', min) {
+			height:         0;
+			padding-bottom: 80%;
+		}
+	}
+
+
+	.podteaser__image {
+		width:              100%;
+		height: 			100%;
+		display:            block;
+		margin-bottom:      $spacingLG;
+	}
+
+	.podteaser--large .podteaser__image { // large variant
+		@include breakpoint('l', min) {
+			position: 		absolute;
+			object-fit:     cover;
+			object-position: center center;
+		}
+	}
+
+
+	.podteaser--large .podteaser__image {
+
+		margin-bottom:  0;
+	}
+
+
+	@include breakpoint('l', min) {
+
+		.podteaser__image-wrap {
+			height: 100%;
+			padding-bottom: 0;
+		}
+
+		.podteaser--large .podteaser__image {
+			height:         100%;
+			object-fit:     cover;
+		}
+	}
+
+
+	/////////////////////////////////
+	// LATEST
+	/////////////////////////////////
+
+	.podteaser__latest {
+		width:              100%;
+		display:            flex;
+		margin-bottom:      $spacingMD;
+		padding:            0 $spacingMD;
+		justify-content:    center;
+	}
+
+
+	.podteaser--large .podteaser__latest {
+		position:       absolute;
+		left:           0;
+		bottom:         0;
+		margin-bottom:  0;
+		padding:        $spacingMD;
+		background:     $gradientBlack;
+		align-items:    center;
+		justify-content:    flex-start;
+	}
+
+
+	@include breakpoint('xl', min) {
+
+		.podteaser__latest {
+			padding:        0 $spacingLG;
+			justify-content: flex-start;
+		}
+
+		.podteaser--large .podteaser__latest {
+		  padding:    $spacingXL;
+
+		}
+	}
+
+	/////////////////////////////////
+	// DURATION LABEL
+	/////////////////////////////////
+
+	 .podteaser__duration {
+		position:           absolute;
+		bottom:             $spacingMD;
+		right:              $spacingMD;
+		padding:            $spacingXS $spacingSM;
+		background:         rgba(0, 0, 0, 0.55);
+		color:              $colorWhite;
+		z-index:            10;
+		font:               400 0.8rem #{"/"} 1.2em $fontFamily;
+		border-radius:      5px;
+	}
+
+
+	.podteaser--large .podteaser__duration {
+		top:         		1rem;
+		bottom: 			auto;
+		padding:        	$spacingSM $spacingMD;
+	}
+
+
+	@include breakpoint('xl', min) {
+		.podteaser--large .podteaser__duration {
+			top: 			auto;
+			bottom:     	$spacing2XL;
+			font-size:  	0.9rem;
+		}
+	}
+
+
+	/////////////////////////////////
+	// BIG PLAY BUTTON
+	/////////////////////////////////
+
+	.podteaser__big-play {
+		display:                none;
+		transition:             all 0.5s ease;
+		cursor: 				pointer;
+
+		//@include breakpoint('l', min) {
+			width:              35%;
+			height:             35%;
+			display:            block;
+			position:           absolute;
+			top:                0;
+			left:               0;
+			bottom:             0;
+			right:              0;
+			margin:             auto;
+			fill:               rgba(0, 0, 0, 0.3);
+			z-index:            20;
+		//}
+	}
+
+	.podteaser__intro:hover .podteaser__big-play {
+		transform: 				scale(1.1);
+		fill: 					$colorXBlue !important;
+	}

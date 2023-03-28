@@ -1,0 +1,27 @@
+#map-container {
+  margin: 0 auto!important;
+
+  #map {
+    @include breakpoint('l', min) {
+      max-height: 600px!important;
+    }
+  }
+
+  #sidebar{
+    left: calc((400px - 4rem - 1px) * -1)!important;
+  }
+  #sidebar-legend {
+    display: none;
+    width: 390px;
+
+    @include breakpoint('l', min) {
+      display: block;
+    }
+  }
+  #sidebar-location-name {
+    color: #fff;
+  }
+  #sidebar-location-block{
+    color: #fff;
+  }
+}

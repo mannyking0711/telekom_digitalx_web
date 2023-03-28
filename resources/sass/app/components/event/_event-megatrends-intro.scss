@@ -1,0 +1,61 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT MEGATRENDS INTRO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.event-megatrends-intro {
+
+  &__container {
+    background: $colorWhite;
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    justify-content: center;
+    margin-top: -$spacing3XL;
+    padding: $spacingMD $spacing2XL 0;
+
+    @include breakpoint('l', min) {
+      margin-top: -$spacing5XL;
+      padding: $spacing2XL $spacing2XL 0;
+    }
+  }
+
+  &__content {
+    max-width: 650px;
+    text-align: center;
+  }
+
+  &__headline {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__text {
+    color: $colorTypo;
+    margin: 0;
+  }
+
+  &__title {
+    font: 600 1.8rem #{"/"} 1em $fontFamily;
+
+    text-align: center;
+    margin-top: $spacingMD;
+    margin-bottom: $spacingLG;
+
+    @include breakpoint('l', min) {
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    color: $colorXBlue;
+    font: 600 1.3rem #{"/"} 1em $fontFamily;
+
+    text-align: center;
+    margin-bottom: 0;
+
+    @include breakpoint('l', min) {
+      font-size: 1.3rem;
+    }
+  }
+}

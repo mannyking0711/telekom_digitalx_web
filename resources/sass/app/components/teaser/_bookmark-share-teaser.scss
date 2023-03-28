@@ -1,0 +1,72 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	SHARE TEASER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.bookmark-share-teaser {
+
+  &__button {
+    border-radius: $spacingXS;
+    border: none;
+    margin: 0;
+    padding: 0.3rem $spacingSM;
+    font: 0.6rem #{"/"} 0.6rem $fontFamily;
+    background-color: $gradientXBlueDark;
+    color: $colorWhite;
+    display: flex;
+
+    @include breakpoint('m', min) {
+      padding: 0.5rem 0.7rem 0.4rem 0.7rem;
+      font: bold $fontSizeSmall #{"/"} $fontSizeSmall $fontFamily;
+    }
+
+    .icon {
+      display: block;
+      position: relative;
+      flex-grow: 1;
+      height: 1rem;
+      width: 1.5rem;
+      fill: $colorWhite;
+      margin-left: 0.3rem;
+      margin-right: -0.5rem;
+    }
+  }
+
+  &__dropup {
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-color: $gradientXBlueDark;
+    color: $colorWhite;
+    border-radius: $spacingXS;
+
+    svg {
+      fill: $colorWhite;
+    }
+  }
+
+  &__dropup a {
+    @extend %relative-inline-block;
+
+    padding: $spacingMD 0;
+    margin: 0 $spacingSM;
+
+    width: 15px;
+    height: 17px;
+
+    @include breakpoint('m', min) {
+
+      width: 20px;
+      height: 22px;
+    }
+
+  }
+
+  .bookmark-share-teaser:hover &__dropup {
+    display: block;
+  }
+
+
+}

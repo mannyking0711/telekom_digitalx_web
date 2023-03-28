@@ -1,0 +1,240 @@
+
+.dashboardProfile {
+  color: $colorWhite;
+
+  h1, h2, h3 {
+    color: $colorXBlue;
+    text-align: center;
+    line-height: 1.8rem;
+    text-transform: none;
+  }
+
+  section.inner .col-33 {
+    @include breakpoint('xl') {
+      width: calc(99.9% - #{$paddingPageMobileInner*2});
+      margin-left: $paddingPageMobileInner;
+      margin-right: $paddingPageMobileInner;
+    }
+  }
+
+  section.inner .col-33:nth-child(3n+1) {
+    @include breakpoint('xl', 'min') {
+      margin-left: 5.3%;
+    }
+  }
+
+  section.inner .col-33:nth-child(3n+2) &__caption {
+    @include breakpoint('xl') {
+      display: none;
+    }
+  }
+
+  section.inner .col-33:nth-child(3n+0) {
+    @include breakpoint('xl') {
+      margin-top: 7.1rem;
+    }
+    @include breakpoint('xl', 'min') {
+      margin-left: 3.7%;
+      margin-right: 0;
+    }
+  }
+
+
+  &__mydx {
+    text-align: center;
+  }
+
+  &__interesting-item {
+    margin-top: 3.8rem;
+    margin-bottom: 0;
+
+    .image {
+      @extend %relative;
+
+      width: 100%;
+      height: 0;
+      margin-bottom: $spacingMD;
+      padding-bottom: 100%; // intrinsic ratio
+      background: $colorGrayBackground url('../svg/app/loading-content.svg') no-repeat center center;
+      background-size: 30px 30px;
+
+      img {
+
+        @extend %absolute;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    .headline {
+      color: $colorWhite;
+      text-align: left;
+    }
+
+    .colorbox {
+      display: none;
+    }
+  }
+
+  &__btn.blue {
+
+    @include breakpoint('xl') {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    display: inline-block;
+    width: 17vw;
+    height: 17vw;
+    min-width: 200px;
+    min-height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    @include breakpoint('xl') {
+      width: 50vw;
+      height: 50vw;
+    }
+    @include breakpoint('m') {
+      width: 55vw;
+      height: 55vw;
+    }
+  }
+
+  &__fullname {
+    color: $colorWhite;
+    font-size: 2.2rem;
+    padding: 0 4rem;
+    line-height: 2.6rem;
+    margin-top: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  &__company {
+    color: $colorXBlue;
+    font-size: 1.4rem;
+    margin-top: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  &__email {
+    color: $colorGrayLight;
+    font-size: 1.1rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1.9rem;
+  }
+
+  &__panelstack {
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    height: calc(100% - 1.8rem);
+  }
+
+  &__premiumIcon {
+
+    color: black;
+    background-color: $colorWhite;
+    display: inline-block;
+    position: relative;
+    font: bold 0.7rem #{"/"} 0.7rem $fontFamily !important;
+
+    @include breakpoint('m', 'min') {
+      padding: 0.3rem $spacingSM;
+      font: bold $fontSizeSmall #{"/"} $fontSizeSmall $fontFamily;
+    }
+
+    padding: 0.3rem $spacingSM;
+
+    border: none;
+    border-radius: 0.3rem;
+    cursor: default;
+  }
+
+  &__image-link {
+    display: inline-block;
+    position: relative;
+    margin-top: 3.8rem;
+  }
+
+  &__image-icon {
+    height: 2.2rem;
+    top: 46%;
+    left: 50%;
+  }
+
+  &__logo {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    place-self: center;
+    text-align: center;
+  }
+
+  &__clickpanel {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: $colorWhite;
+    flex-grow: 1;
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    border-radius: 0.4rem;
+    max-height: 110px;
+
+
+    &:nth-child(1) {
+      margin-top: 2.8rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 33% 66%;
+      height: 100%;
+    }
+
+    .icon {
+      display: block;
+      position: relative;
+      grid-column-start: 1;
+      grid-column-end: 1;
+      height: 1.8rem;
+      fill: $colorWhite;
+      place-self: center;
+
+      &.newsletter {
+        height: 1.7rem;
+      }
+
+      &.stream {
+        height: 2.2rem;
+      }
+
+      &.star {
+        height: 2rem;
+        //margin-top: 3rem;
+      }
+
+      &.bookmark {
+        height: 2.8rem;
+      }
+    }
+
+    .icontext {
+      font: bold 1.4rem / 1.4rem $fontFamily, sans-serif;
+      display: block;
+      position: relative;
+      grid-column-start: 2;
+      grid-column-end: 2;
+      line-height: 1.8rem;
+
+      align-self: center;
+    }
+  }
+
+}

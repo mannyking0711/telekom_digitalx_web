@@ -1,0 +1,66 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	PODCAST
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .pagepod {
+
+        &__sidebar {
+            margin-bottom:          $spacing2XL;
+
+            @include breakpoint('l', min) {
+                margin-bottom:      $spacing5XL;
+            }
+        }
+
+        &__main {
+            @include breakpoint('l', min) {
+                margin-bottom:      $spacing5XL;
+            }
+        }
+
+        &__headline {
+            text-align:             center;
+            margin-bottom:          $spacingXL;
+            padding:                0 $spacing2XL;
+            font: 		            600 1.4rem #{"/"} 1.4em $fontFamily;
+
+            @include breakpoint('xl', min) {
+                font-size:          1.6rem;
+            }
+
+            &--related {
+                @include breakpoint('xl', min) {
+                    font-size:          2.2rem;
+                }
+            }
+        }
+
+        &__share-teaser {
+            display:                none;
+
+            @include breakpoint('l', min) {
+                display:            flex;
+            }
+
+            &--sidebar {
+                height:             $spacing3XL;
+                margin-bottom:      3.5rem;
+
+                @include breakpoint('xxl', max) {
+                    padding:        0;
+                    flex-wrap:      wrap;
+    
+                    span {
+                        width:      100%;
+                        text-align: center;
+                        margin-bottom: $spacingXS;
+                        font-size:  1rem;
+                        margin-top: -$spacingSM;
+                    }
+                }
+            }
+        }
+
+    }

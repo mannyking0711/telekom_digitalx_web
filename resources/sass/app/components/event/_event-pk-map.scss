@@ -1,0 +1,41 @@
+.event-pk-map {
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing5XL;
+  }
+
+  &__headline {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__subtitle {
+    font: 600 1.2rem #{"/"} 1em $fontFamily;
+
+    text-align: center;
+    color: $colorXBlue;
+    margin: 0 0 $spacingSM 0;
+
+    @include breakpoint('l', min) {
+      font-size: 1.2rem;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font: 600 1.9rem #{"/"} 1em $fontFamily;
+    text-align: center;
+    margin: 0;
+
+    @include breakpoint('l', min) {
+      font-size: 2.9rem;
+      line-height: 3.4rem;
+      text-align: left;
+      white-space: pre-line;
+    }
+  }
+
+  &__map {
+
+  }
+}

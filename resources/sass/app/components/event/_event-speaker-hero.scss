@@ -1,0 +1,115 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT SPEAKER HERO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.event-speaker-hero {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: $colorXDark;
+
+  @include breakpoint('l', min) {
+    height: 40vw;
+    max-height: 600px;
+  }
+
+  &__image {
+    display: flex;
+    width: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% !important;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: flex-start;
+  }
+
+  &__back {
+    margin-top: 35px;
+    padding: 10px 15px;
+    background: $colorWhite !important;
+    color: $colorXBlue;
+
+    &.btn.icon-left .icon {
+      transform: rotate(180deg);
+      fill: $colorXBlue;
+      width: 0.9rem;
+      height: 0.9rem;
+    }
+
+    &:hover {
+      background: $colorXBlue !important;
+      color: $colorWhite;
+
+      &.btn.icon-left .icon {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 70px;
+
+    @include breakpoint('l', min) {
+      margin-top: 0;
+    }
+  }
+
+  &__subtitle {
+    color: $colorWhite;
+    font: 600 $fontSizeNormal #{"/"} 1em $fontFamily;
+
+    text-align: center;
+    margin-bottom: 0;
+
+    @include breakpoint('l', min) {
+      font-size: 1.4rem;
+      text-align: left;
+    }
+
+    span {
+      color: $colorXBlue;
+    }
+  }
+
+  &__title {
+    color: $colorWhite;
+    font: 600 2.2rem #{"/"} 1em $fontFamily;
+
+    text-align: center;
+    margin-top: $spacingSM;
+    margin-bottom: 0;
+
+    @include breakpoint('l', min) {
+      font-size: 3.7rem;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    color: $colorWhite;
+    margin-top: $spacingMD;
+    margin-bottom: 0;
+    white-space: pre-line;
+    text-align: center;
+
+    @include breakpoint('l', min) {
+      max-width: 500px;
+      text-align: left;
+    }
+  }
+}

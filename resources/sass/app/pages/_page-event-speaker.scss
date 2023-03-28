@@ -1,0 +1,117 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT SPEAKER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.page-event-speaker {
+
+  .eventjoin {
+    margin-top: $spacing3XL;
+    @include breakpoint('l', min) {
+      margin-top: $spacing5XL;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include breakpoint('l', min) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  &__filter-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__filter-label {
+    padding-top: 0.5em;
+    font: 600 13px #{"/"} 1.1em $fontFamily;
+    color: $colorTypo;
+
+    @include breakpoint('l', min) {
+      flex: 0 0 150px;
+    }
+  }
+
+  &__filter-clear {
+    padding-top: 0.5em;
+    font: 600 13px #{"/"} 1.1em $fontFamily;
+    color: $colorTypo;
+
+    @include breakpoint('l', min) {
+      flex: 1 0 auto;
+    }
+
+    &__button {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &__icon {
+        margin-left: 10px;
+        border: 1px solid $colorTypo;
+        padding: 1px;
+        border-radius: 5px;
+      }
+
+      svg.icon {
+        position: relative;
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        &__icon {
+          background: $colorXBlue;
+          color: $colorWhite;
+        }
+        svg.icon {
+          fill: $colorXBlue;
+        }
+      }
+    }
+
+  }
+
+  &__megatrend-button {
+    cursor: pointer;
+    font: 600 13px #{"/"} 1.1em $fontFamily;
+    letter-spacing: -0.05px;
+    color: $colorXBlue;
+    text-align: center;
+
+    background: $colorWhite;
+    border: 1px solid $colorXBlue;
+    border-radius: 5px;
+    padding: 0 6px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover, &--active {
+      color: $colorWhite;
+      background: $colorXBlue;
+      border: 1px solid $colorXBlue;
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    img {
+      width: auto;
+      height: 28px;
+      display: inline-block;
+    }
+  }
+}

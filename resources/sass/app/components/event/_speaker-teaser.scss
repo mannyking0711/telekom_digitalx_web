@@ -1,0 +1,81 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	SPEAKER TEASER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+// WRAPPER ELEMENT FOR TWO TEASERS
+
+.speakerteasers {
+    @include breakpoint('l', min) {
+        display:        flex;
+        justify-content: space-between;
+    }
+
+    > * {
+        @include breakpoint('l', min) {
+            width:      47%;
+        }
+    }
+}
+
+
+// SINGLE TEASER
+
+.speakerteaser {
+    text-align:                 center;
+    margin:                     0 auto $spacing3XL;
+    max-width:                  400px;
+
+    @include breakpoint('l', min) {
+        max-width:              initial;
+        margin:                 0 0 $spacing3XL;
+    }
+
+    &__title {
+        font: 		            600 1.2rem #{"/"} 1.2em $fontFamily;
+        text-transform:         uppercase;
+        margin-bottom:          $spacingMD;
+
+        @include breakpoint('m', min) {
+            font-size:          1.4rem;
+        }
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacingXL;
+        }
+
+        @include breakpoint('xl', min) {
+            font-size:          1.8rem;
+        }
+    }
+
+    &__image {
+        width:                  100%;
+        display:                block;
+        margin-bottom:          $spacingMD;
+
+        @include breakpoint('m', min) {
+            margin-bottom:      $spacingLG;
+        }
+    }
+
+    &__text {
+        font: 		            400 0.9rem #{"/"} 1.4em $fontFamily;
+        margin-bottom:          $spacingMD;
+
+        @include breakpoint('m', min) {
+            font-size:          1rem;
+            margin-bottom:      $spacingLG;
+            padding:            0 $spacing2XL;
+        }
+    }
+
+    &__btn {
+        margin:                 0;
+
+        @include breakpoint('l', min) {
+            min-width:          16em;
+        }
+    }
+}

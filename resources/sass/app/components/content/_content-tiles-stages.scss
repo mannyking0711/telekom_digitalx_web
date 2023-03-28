@@ -1,0 +1,262 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  CONTENT TILES STAGES
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.content-tiles-stages {
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing5XL;
+  }
+
+  &__headline {
+    font: 600 1.9rem #{"/"} 1em $fontFamily;
+    text-align: center;
+    margin: 0 0 $spacingXL;
+
+    @include breakpoint('l', min) {
+      font-size: 2.9rem;
+      line-height: 3.4rem;
+    }
+  }
+
+  &__intro {
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto $spacingXL;
+    font: 400 $fontSizeNormal #{"/"} 1.3em $fontFamily;
+    color: $colorTypo;
+  }
+
+  &__grid {
+    display: grid;
+    gap: $spacingLG;
+
+    @include breakpoint('l', min) {
+      gap: 40px;
+      align-items: stretch;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include breakpoint('xl', min) {
+      gap: 40px;
+      align-items: stretch;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &__tile {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    padding: 16px;
+    font: 400 $fontSizeNormal #{"/"} 1.3em $fontFamily;
+
+    &__blue {
+      background-color: $colorXBlue;
+      color: $colorWhite;
+    }
+
+    &__green {
+      background-color: $colorXGreen;
+      color: $colorWhite;
+    }
+
+    &__lila {
+      background-color: #5d2ebe;
+      color: $colorWhite;
+    }
+
+    &__magenta {
+      background-color: $colorXMagenta;
+      color: $colorWhite;
+    }
+
+    &__white {
+      border-color: $colorXMagenta;
+      background-color: $colorWhite;
+      color: $colorTypo;
+    }
+
+    &__yellow {
+      background-color: $colorYellow;
+      color: $colorWhite;
+    }
+
+    &__cyan {
+      border-color: $colorXCyan;
+      background-color: $colorWhite;
+      color: $colorTypo;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 1.7rem;
+    line-height: 2.0rem;
+
+    @include breakpoint('l', min) {
+      font-size: 2.3rem;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__address {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+
+    &__icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 3px;
+
+      svg {
+        display: block;
+        fill: $colorWhite;
+      }
+    }
+  }
+
+  &__tile__white &__address {
+    svg {
+      fill: $colorTypo;
+    }
+  }
+
+  &__tile__cyan &__address {
+    svg {
+      fill: $colorTypo;
+    }
+  }
+
+  &__text {
+    margin-top: 16px;
+  }
+
+  &__button {
+    margin-top: 16px;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    line-height: 1;
+    width: 100%;
+
+    @include breakpoint('l', min) {
+      width: auto;
+    }
+
+    &--blue {
+      background: transparent;
+      color: $colorWhite;
+      border-color: $colorWhite;
+    }
+    &--blue:hover, &--blue:active {
+      background: $normalColorActive;
+      color: $colorXBlue;
+      border-color: $normalColorActive;
+
+      .icon {
+        fill: $colorXBlue!important;
+      }
+    }
+
+    &--green {
+      background: transparent;
+      color: $colorWhite;
+      border-color: $colorWhite;
+    }
+    &--green:hover, &--green:active {
+      background: $colorWhite;
+      color: $colorXGreen;
+      border-color: $colorWhite;
+
+      .icon {
+        fill: $colorXGreen!important;
+      }
+    }
+
+    &--lila {
+      background: transparent;
+      color: $colorWhite;
+      border-color: $colorWhite;
+    }
+    &--lila:hover, &--lila:active {
+      background: $colorWhite;
+      color: #5d2ebe;
+      border-color: $colorWhite;
+
+      .icon {
+        fill: #5d2ebe!important;
+      }
+    }
+
+    &--magenta {
+      background: transparent;
+      color: $colorWhite;
+      border-color: $colorWhite;
+    }
+    &--magenta:hover, &--magenta:active {
+      background: $colorWhite;
+      color: $colorXMagenta;
+      border-color: $colorWhite;
+
+      .icon {
+        fill: $colorXMagenta!important;
+      }
+    }
+
+    &--white {
+      background: transparent;
+      color: $colorGray;
+      border-color: $colorGray;
+
+      .icon {
+        fill: $colorGray!important;
+      }
+    }
+    &--white:hover, &--white:active {
+      background: $colorGray;
+      color: $colorWhite;
+      border-color: $colorGray;
+
+      .icon {
+        fill: $colorWhite!important;
+      }
+    }
+
+    &--yellow {
+      background: transparent;
+      color: $colorWhite;
+      border-color: $colorWhite;
+    }
+    &--yellow:hover, &--yellow:active {
+      background: $colorWhite;
+      color: $colorYellow;
+      border-color: $colorWhite;
+
+      .icon {
+        fill: $colorYellow!important;
+      }
+    }
+
+    &--cyan {
+      background: transparent;
+      color: $colorGray;
+      border-color: $colorGray;
+
+      .icon {
+        fill: $colorGray!important;
+      }
+    }
+    &--cyan:hover, &--cyan:active {
+      background: $colorGray;
+      color: $colorWhite;
+      border-color: $colorGray;
+
+      .icon {
+        fill: $colorWhite!important;
+      }
+    }
+  }
+}

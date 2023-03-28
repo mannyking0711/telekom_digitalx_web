@@ -1,0 +1,194 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	DIGI-INDEX HEADER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.digi-index-header {
+  position: relative;
+
+  &__image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: 50% 40%;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    vertical-align: middle;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+    @include breakpoint('xl') {
+      background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 60%, rgba(255,255,255,0) 80%, rgba(255,255,255,0) 100%);
+    }
+    @include breakpoint('m') {
+      background: linear-gradient(to right, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 80%, rgba(255,255,255,0) 100%);
+    }
+  }
+
+  &__content-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+  }
+
+  &__content {
+    padding-top: 10%;
+    max-width: 50%;
+    @include breakpoint('xl') {
+      max-width: 70%;
+    }
+    @include breakpoint('l') {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    color: $colorTypo;
+    font: normal 600 2.9rem/3.4rem $fontFamily;
+    margin-bottom: $spacingLG;
+
+    @include breakpoint('m') {
+      font-size: 		1.9rem;
+      line-height: 	2.3rem;
+    }
+  }
+
+  &__title + &__subtitle {
+    margin-top: -$spacingLG;
+  }
+
+  &__subtitle {
+    color: $colorTypo;
+    font: normal 400 1.6rem/2.1rem $fontFamily;
+    margin-bottom: $spacingLG;
+  }
+
+  &__copy {
+    color: $colorTypo;
+    font: normal 400 1.12rem/1.3rem $fontFamily;
+    margin-top: $spacingLG;
+  }
+
+  &__nav-container {
+    &--mt-l {
+      margin-top: 6%;
+    }
+
+    &--mt-xl {
+      margin-top: 20%;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 30px;
+
+    @include breakpoint('xl', min) {
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    &__tab {
+      font: bold 12px #{"/"} 1.1em $fontFamily;
+      letter-spacing: -0.05px;
+      color: #FFFFFF;
+      text-align: center;
+
+      background: $colorXDark;
+      border: 1px solid $colorXDark;
+      border-radius: 5px;
+      padding: 7px 9px;
+      overflow: hidden;
+
+      @include breakpoint('xl', min) {
+        font: bold 0.9rem #{"/"} 1.1em $fontFamily;
+        border-radius: 5px 5px 0 0;
+      }
+
+      &.router-link-exact-active {
+        background: $colorXBlue;
+        border: 1px solid $colorXBlue;
+        color: #FFFFFF;
+      }
+
+      @include breakpoint('xl', max) {
+        width: calc(31.5%);
+        //&:first-child {
+        //  width: 100%;
+        //}
+        //&:nth-child(2),
+        //&:nth-child(3),
+        //&:nth-child(4) {
+        //  width: calc(33.33333333% - 3px);
+        //}
+      }
+
+      &--back {
+        position: relative;
+        background: #ffffff;
+        color: $colorTypo;
+        border: 1px solid $colorTypo;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          transition: none;
+          transform: rotate(180deg);
+          fill: $colorTypo;
+          margin-right: 0.2rem;
+          position: static;
+
+          width: 16px;
+          height: 14px;
+        }
+
+        &:hover {
+          svg {
+            fill: #ffffff;
+          }
+        }
+      }
+
+      &--archive {
+        background: $colorGrayDark;
+        border: 1px solid $colorGrayDark;
+
+        &.router-link-exact-active {
+          background: $colorGrayLight;
+          border: 1px solid $colorGrayLight;
+          color: #FFFFFF;
+        }
+      }
+
+      &:hover {
+        background: $colorXBlue;
+        border: 1px solid $colorXBlue;
+        color: #FFFFFF;
+      }
+    }
+  }
+}

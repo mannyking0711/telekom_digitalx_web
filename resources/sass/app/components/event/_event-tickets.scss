@@ -1,0 +1,113 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT Tickets
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/////////////////////////////////
+// COUNTER GLOBAL STYLES
+/////////////////////////////////
+
+.event-tickets {
+  @extend %relative;
+  max-width: 400px;
+  height: 100%;
+  margin: 0 auto 0;
+}
+
+
+.event-tickets-logo {
+
+  @extend %relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+.event-tickets-title {
+  @extend %relative;
+  font: 600 1.8rem/2.2rem $fontFamily;
+  color: $colorXBlue;
+
+  text-align: center;
+  margin-top: $spacingMD;
+}
+
+.event-tickets-text {
+  text-align: center;
+}
+
+.event-tickets-btn {
+  text-align: center;
+}
+
+.event-register-btn {
+  display: block;
+  margin-right: 0;
+}
+
+
+/////////////////////////////////
+// STYLES DESKTOP (INSIDE HERO)
+/////////////////////////////////
+
+.event-hero,
+.index-magazine-hero {
+
+  > .hero-overlay {
+    position: absolute;
+    top: inherit;
+    bottom: -25px;
+    right: 2.78%;
+    left: inherit;
+  }
+
+  > .hero-overlay > .event-tickets {
+    z-index: 10;
+    width: 200px;
+    height: auto;
+    box-shadow: -25px 25px 50px #0000004B;
+    background: transparent linear-gradient(180deg, #193A5B 0%, #0D1F31 100%) 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    padding: 25px 15px 15px;
+
+    @include breakpoint('l') {
+      visibility: hidden; /* "display: none" is causing a bug with counter */
+    }
+
+    .event-tickets-title {
+      margin-bottom: $spacingSM;
+    }
+
+    .event-tickets-text {
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .event-register-btn {
+      margin-bottom: 0;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
+/////////////////////////////////
+// STYLES MOBILE (OUTSIDE HERO)
+/////////////////////////////////
+
+.index-intro-container {
+
+  > .hero-overlay > .event-tickets {
+
+    display: none;
+    margin: $marginBottomSection auto;
+
+    @include breakpoint('l') {
+      display: block;
+    }
+  }
+
+}

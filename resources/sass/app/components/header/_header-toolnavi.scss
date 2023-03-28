@@ -1,0 +1,101 @@
+/* CONFIG */
+$itemHeight: 30px;
+
+/* HEADER META NAVI */
+.header-toolnavi {
+  @extend %relative-flex;
+
+  width: 220px; // same width as .header-logo - required to center .header-navi
+  justify-content: flex-end;
+
+  .header-navi-item:first-child {
+    margin-right: 0;
+  }
+
+  .header-navi-item:last-child {
+    margin-right: 0;
+  }
+
+  .header-toolnavi-mydigitalx {
+    width: auto;
+    display: flex;
+
+    .header-navi-label {
+      padding-right: 6px;
+      padding-left: 6px;
+    }
+
+    .mydigitalxBtn {
+      color: #e50d7d !important;
+    }
+
+    .logoutBtn {
+      margin: 0 !important;
+      padding: 0 !important;
+      text-decoration: underline;
+      cursor: pointer;
+      text-align: center;
+      width: 100%;
+      position: relative;
+      top: -10px;
+    }
+
+    .profileimage {
+      min-width: 30px;
+      min-height: 30px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+
+    a {
+      //float: left;
+      width: auto;
+    }
+  }
+}
+
+/*	MOBILE */
+header.mobile {
+  .header-toolnavi {
+    width: 80vw;
+    max-width: 400px;
+    display: block;
+    padding: 15px $paddingPageMobileInner 0 $paddingPageMobileInner;
+    background: $gradientXGray;
+    border-top: 1px solid $colorGrayMid;
+
+    .header-navi-item {
+      height: auto;
+    }
+  }
+
+  .header-toolnavi-mydigitalx {
+    height: 80px;
+    justify-content: center;
+
+    .logoutBtn {
+      height: auto;
+    }
+
+    .mydigitalxBtn {
+      padding-right: 20px;
+      //margin-left: 50px;
+    }
+
+    .header-navi-label {
+      text-align: center;
+      color: #e50d7d !important;
+      font-weight: bold;
+
+      .profileimage {
+        height: 30px;
+        //float: left;
+        margin: 0;
+        top: 6px;
+      }
+    }
+  }
+}

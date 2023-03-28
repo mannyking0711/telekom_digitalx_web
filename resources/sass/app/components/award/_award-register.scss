@@ -1,0 +1,58 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD REGISTER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.awardRegister {
+
+    &__containers {
+        display:            flex;
+        flex-wrap:          wrap;
+        justify-content:    space-between;
+    }
+
+    &__container {
+        position:           relative;
+        //text-align:         center;
+        border:             1px solid $colorGrayBorder;
+        border-radius:      5px;
+        padding:            4rem 5rem 10rem;
+        width:              100%;
+        margin-bottom:      $spacingXL;
+
+		@include breakpoint('m', 'min') {
+            width:          31.5555%;
+            margin-bottom:  2.6666%;
+		}
+
+		@include breakpoint('xl', 'min') {
+            width:          48%;
+            margin-bottom:  4%;
+		}
+    }
+
+    &__headline {
+        font: 		        600 1.3rem #{"/"} 1.2em $fontFamily;
+        min-height:         2.4em;
+        margin-bottom:      $spacingXL;
+    }
+
+    &__desc {
+        font:               600 1.3rem #{"/"} 1.2em $fontFamily;
+        margin-bottom:      $spacingXL;
+
+    }
+
+
+    &__register-btn {
+        background:         $colorAwardGreen;
+        position:           absolute;
+        top:                auto;
+        bottom:             $spacingXL;
+        left:               $spacingXL;
+        right:              $spacingXL;
+        margin:             0;
+    }
+
+}

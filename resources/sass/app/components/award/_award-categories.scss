@@ -1,0 +1,148 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD CATEGORIES
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.awardCategories {
+    $chevronSize:               12px;
+    $chevronPath:               polygon(0% 0%, 100% 0%, 100% calc(100% - #{$chevronSize}), calc(50% + #{$chevronSize}) calc(100% - #{$chevronSize}), 50% 100%, calc(50% - #{$chevronSize}) calc(100% - #{$chevronSize}), 0% calc(100% - #{$chevronSize}));
+
+    background:                 $awardGradient;
+    color:                      $colorWhite;
+    padding:                    $spacing2XL 0;
+    position:                   relative;
+    clip-path:                  $chevronPath;
+    margin-bottom:              $spacing3XL;
+
+    @include breakpoint('l', min) {
+        background:             $awardGradientAngled;
+        padding:                $spacing4XL 0 $spacingXL;
+        margin-bottom:          $spacing4XL;
+    }
+
+    &:before {
+        @extend                 %absolute;
+
+        content:                '';
+        height: 		        $chevronSize;
+        background:             $colorWhite;
+        clip-path:              $chevronPath;
+    }
+
+    &__headline {
+        color:                  $colorWhite;
+        margin-bottom:          $spacingXL;
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacing3XL;
+        }
+    }
+
+    &__categories {
+        @include breakpoint('m', min) {
+            display:            flex;
+            flex-wrap:          wrap;
+            justify-content:    space-between;
+        }
+    }
+
+    &__category {
+        border:                 1px solid $colorWhite;
+        border-radius:          5px;
+        text-align:             center;
+        margin-bottom:          $spacingXL;
+        padding:                $spacingMD;
+        display:                flex;
+        flex-direction:         column;
+        align-items:            center;
+
+        @include breakpoint('m', min) {
+            width:              48%;
+            margin-bottom:      4%;
+
+          &--fullwidth {
+            width:              100%;
+          }
+        }
+
+        @include breakpoint('l', min) {
+            padding:            $spacingLG $spacingMD;
+        }
+
+        //@include breakpoint('xl', min) {
+        //    width:              23%;
+        //}
+    }
+
+    &__icon {
+        position:               static;
+        fill:                   $colorWhite;
+        transform:              none;
+        width:                  auto;
+        height:                 50px;
+        margin-bottom:          $spacingMD;
+
+        &:hover {
+            fill:               $colorWhite;
+        }
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacingLG;
+        }
+    }
+
+    &__icon-arrow {
+        position:               static;
+        fill:                   $colorWhite;
+        transform:              rotate(90deg);
+        width:                  100%;
+        height:                 $spacingLG;
+        margin-bottom:          $spacingMD;
+
+        &:hover {
+            fill:               $colorWhite;
+        }
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacingLG;
+        }
+    }
+
+    &__title {
+        color:                  $colorWhite;
+        text-transform:         uppercase;
+        font: 		              600 1.4rem #{"/"} 1.2em $fontFamily;
+        max-width:              600px;
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacingLG;
+            min-height:         2.4em;
+        }
+    }
+
+    &__desc {
+        color:                  $colorWhite;
+        margin-bottom:          $spacingLG;
+        max-width:              600px;
+    }
+}
+
+.theme-a .awardCategories {
+  &__headline span {
+    display: none;
+  }
+}
+
+.theme-b .awardCategories {
+  background: $colorXDark;
+
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing5XL;
+  }
+
+  &__headline span {
+    color: $colorXBlue;
+  }
+}

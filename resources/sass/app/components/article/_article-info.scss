@@ -1,0 +1,121 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  CONFIG
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    $smallBookmarkScaling:      0.65;
+    $bookmarkScaling:           0.8;
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  ARTICLE INFO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    .articleinfo {
+        $self: &; // store scope in varaible
+
+        margin-bottom:          $spacingMD;
+
+        &__colorbox {
+
+            @include breakpoint('m', 'max') {
+                width:          68px;
+                height:         5px;
+                margin-bottom:  $spacingMD;
+            }
+            margin-bottom:      $spacingLG;
+        }
+
+        &__content {
+            #{ $self }--large & { // large variant
+                @include breakpoint('m', 'min') {
+                    display:         flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        &__tags {
+            margin-bottom:      $spacingSM;
+        }
+
+        &__tag {
+            @extend %relative-inline-block;
+
+            @include breakpoint('m', 'min') {
+                padding:        0.5rem 0.7rem 0.4rem 0.7rem;
+                font:           bold $fontSizeSmall #{"/"} $fontSizeSmall $fontFamily;
+            }
+
+            margin:             0 $spacingSM $spacingSM 0;
+            padding:            0.3rem $spacingSM;
+
+            font:               bold 0.6rem #{"/"} 0.6rem $fontFamily;
+            color:              $colorGrayLight;
+            border:             1px solid $colorGrayLight;
+            border-radius:      0.3rem;
+            text-transform:     uppercase;
+            cursor:             pointer;
+
+          &:hover {
+            background: 	$normalBackgroundActive;
+            color: 			$normalColorActive;
+            border-color: 	$normalBackgroundActive;
+          }
+        }
+
+        &__metadata {
+            @extend %flex;
+
+            @include breakpoint('m', 'min') {
+                padding-left:   $spacingXL;
+                flex-flow:      column;
+            }
+            position:           relative;
+            padding-left:       $spacingLG;
+
+            font:               $fontSizeSmall #{"/"} $fontSizeSmall*1.2 $fontFamily;
+            color:              $colorGrayLight;
+        }
+
+        &__bookmark {
+            @extend             %absolute;
+
+            @include breakpoint('m', 'min') {
+                width:          1.4rem * $bookmarkScaling;
+                height:         2.4rem * $bookmarkScaling;
+                top:            -1rem * (1 - $bookmarkScaling);
+            }
+
+            width:              1.4rem * $smallBookmarkScaling;
+            height:             2.4rem * $smallBookmarkScaling;
+            top:                -0.1rem;
+
+            svg.sprite {
+                fill: none;
+                stroke: #ADAFB1;
+            }
+            &.active svg.sprite {
+                fill: $colorXBlue;
+                stroke: $colorXBlue;
+            }
+        }
+
+        &__date {
+
+            @include breakpoint('m', 'min') {
+                margin-right:   0;
+            }
+            margin-right:       $spacingXS;
+        }
+
+        &__author {
+            font-weight:        bold;
+        }
+
+    }

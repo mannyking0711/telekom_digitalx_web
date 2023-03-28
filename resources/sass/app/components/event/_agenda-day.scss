@@ -1,0 +1,52 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AGENDA DAY
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.agenda-day {
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing3XL;
+  }
+
+  .dx-agenda {
+    * {
+      box-sizing: content-box;
+    }
+
+    p {
+      line-height: 1.2;
+    }
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+    // Sticky fix for header
+    //.agenda-stage-title {
+    //  top: 90px;
+    //}
+
+    .agenda-stage-title {
+      &, h3 {
+        font: 600 18px #{"/"} 1em $fontFamily;
+        color: $colorWhite;
+      }
+
+      &.stage-magenta {
+        &, h3 {
+          color: $colorXMagenta;
+        }
+      }
+    }
+
+    .tns-controls button:nth-child(1) {
+      //left: 24px;
+      top: 48px;
+    }
+
+    .tns-controls button:nth-child(2) {
+      //right: 24px;
+      top: 48px;
+    }
+  }
+}

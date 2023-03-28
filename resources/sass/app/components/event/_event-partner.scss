@@ -1,0 +1,243 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT PARTNER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.event-partner {
+
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing3XL;
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include breakpoint('l', min) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  &__filter + &__filter {
+    margin-top: 40px;
+  }
+
+  &__filter-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__filter-label {
+    padding-top: 0.5em;
+    font: 600 13px #{"/"} 1.1em $fontFamily;
+    color: $colorTypo;
+
+    @include breakpoint('l', min) {
+      flex: 0 0 150px;
+    }
+  }
+
+  &__filter-clear {
+    padding-top: 0.5em;
+    font: 600 13px #{"/"} 1.1em $fontFamily;
+    color: $colorTypo;
+
+    @include breakpoint('l', min) {
+      flex: 1 0 auto;
+    }
+
+    &__button {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &__icon {
+        margin-left: 10px;
+        border: 1px solid $colorTypo;
+        padding: 1px;
+        border-radius: 5px;
+      }
+
+      svg.icon {
+        position: relative;
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        &__icon {
+          background: $colorXBlue;
+          color: $colorWhite;
+        }
+        svg.icon {
+          fill: $colorXBlue;
+        }
+      }
+    }
+
+  }
+
+  &__megatrend-button {
+    cursor: pointer;
+    font: 600 13px #{"/"} 1.1em $fontFamily;
+    letter-spacing: -0.05px;
+    color: $colorXBlue;
+    text-align: center;
+
+    background: $colorWhite;
+    border: 1px solid $colorXBlue;
+    border-radius: 5px;
+    padding: 0 6px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover, &--active {
+      color: $colorWhite;
+      background: $colorXBlue;
+      border: 1px solid $colorXBlue;
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    img {
+      width: auto;
+      height: 28px;
+      display: inline-block;
+    }
+  }
+
+  &__quarter-button {
+    cursor: pointer;
+    font: 600 13px #{"/"} 1.1em $fontFamily;
+    letter-spacing: -0.05px;
+    text-align: center;
+
+    border-radius: 5px;
+    padding: 7px 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--yellow {
+      color: $colorYellow;
+      background: $colorWhite;
+      border: 1px solid $colorYellow;
+      &--active, &:hover {
+        color: $colorWhite;
+        background: $colorYellow;
+        border: 1px solid $colorYellow;
+      }
+    }
+    &--pink {
+      color: $colorXMagenta;
+      background: $colorWhite;
+      border: 1px solid $colorXMagenta;
+      &--active, &:hover {
+        color: $colorWhite;
+        background: $colorXMagenta;
+        border: 1px solid $colorXMagenta;
+      }
+    }
+    &--green {
+      color: $colorXGreen;
+      background: $colorWhite;
+      border: 1px solid $colorXGreen;
+      &--active, &:hover {
+        color: $colorWhite;
+        background: $colorXGreen;
+        border: 1px solid $colorXGreen;
+      }
+    }
+    &--blue {
+      color: $colorXBlue;
+      background: $colorWhite;
+      border: 1px solid $colorXBlue;
+      &--active, &:hover {
+        color: $colorWhite;
+        background: $colorXBlue;
+        border: 1px solid $colorXBlue;
+      }
+    }
+  }
+
+  &__tab {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid $colorGrayLight;
+
+    @include breakpoint('l', min) {
+      flex-direction: row;
+      gap: 20px;
+
+      > div {
+        width: 33%;
+      }
+    }
+  }
+
+  &__label {
+    font: 600 13px #{"/"} 1.1em $fontFamily;
+    color: $colorTypo;
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__button {
+      padding: 10px 20px;
+
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      font: 600 $fontSizeNormal #{"/"} 1.1em $fontFamily;
+      color: $colorGrayLight;
+      text-align: center;
+
+      svg {
+        margin-right: 10px;
+        fill: $colorGrayLight;
+      }
+
+      &:hover, &--active {
+        color: $colorXBlue;
+
+        svg {
+          fill: $colorXBlue;
+        }
+      }
+
+      &--active {
+        color: $colorXBlue;
+
+        svg {
+          fill: $colorXBlue;
+        }
+      }
+    }
+  }
+
+  &__spacer {
+    display: none;
+    @include breakpoint('l', min) {
+      display: block;
+    }
+  }
+}

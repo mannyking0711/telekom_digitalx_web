@@ -1,0 +1,88 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD OTHER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.awardOther {
+    background:             $awardGradientAngled;
+    text-align:             center;
+    //max-width:              1415px;
+    margin:                 0 auto $marginBottomSectionMobile;
+    padding:                $paddingPageMobileInner;
+
+    @include breakpoint('m', min) {
+        padding:            $spacing2XL $paddingPageInner;
+    }
+
+    @include breakpoint('l', min) {
+        display:            flex;
+        align-items:        center;
+        justify-content:    space-between;
+        padding:            $spacingLG;
+        margin-bottom:      $marginBottomSection;
+    }
+
+    &__wrap {
+        @include breakpoint('l', min) {
+            width:          65%;
+        }
+    }
+
+    &__subheadline {
+        color:              $colorAwardGreen;
+        margin-bottom:      0;
+
+        @include breakpoint('l', min) {
+            margin-bottom:  $spacingXS;
+        }
+    }
+
+    &__headline {
+        color:              $colorWhite;
+        margin-bottom:      $spacingLG;
+    }
+
+    &__image {
+        width:              100%;
+
+        &--mobile {
+            display:        block;
+            max-width:      400px;
+            margin:         0 auto $spacingLG;
+            padding:        0 $paddingPageMobileInner;
+
+            @include breakpoint('l', min) {
+                display:    none;
+            }
+        }
+
+        &--desktop {
+            display:        none;
+            width:          30%;
+
+            @include breakpoint('l', min) {
+                display:    block;
+            }
+        }
+    }
+
+    &__text {
+        color:              $colorWhite;
+        margin:             0 auto $spacingLG;
+
+        @include breakpoint('l', min) {
+            max-width:      35em;
+        }
+    }
+
+    &__button {
+        background:         $colorAwardGreen;
+        width:              100%;
+        margin:             0 0 $spacingMD;
+
+        @include breakpoint('l', min) {
+            width:          35%;
+        }
+    }
+}

@@ -1,0 +1,135 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD HERO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.award-hero {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: $colorXDark;
+
+  @include breakpoint('l', min) {
+    height: 40vw;
+    max-height: 600px;
+  }
+
+  &.loading {
+    background-size: 30px 30px;
+    background-image: url('../svg/app/loading-content.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &__image {
+    display: flex;
+    width: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% !important;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-left: $paddingPage;
+    padding: 0 40px 0 40px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem auto;
+
+    @include breakpoint('l', min) {
+      flex-direction: row;
+      margin: 0;
+    }
+  }
+
+  &__headline {
+    color: $colorWhite;
+    font-size: 1.7rem;
+    line-height: 2.0rem;
+    text-align: center;
+    margin-bottom: 0;
+    white-space: pre-line;
+    order: 2;
+
+    @include breakpoint('l', min) {
+      width: 60%;
+      font-size: 2.3rem;
+      line-height: 2.4rem;
+      text-align: left;
+      order: 1;
+    }
+  }
+
+  &__logo {
+    max-height: 600px;
+    order: 1;
+
+    @include breakpoint('l', min) {
+      width: 40%;
+      order: 2;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@include breakpoint('xl') {
+
+  .event-hero {
+    &__headline {
+      font-size: 2.5em;
+      line-height: 2.8rem;
+    }
+  }
+}
+
+@include breakpoint('l') {
+  .event-hero {
+    &__headline {
+      font-size: 1.8em;
+      line-height: 2.0rem;
+      margin-bottom: $spacingMD;
+    }
+  }
+}
+
+@include breakpoint('m') {
+  .event-hero {
+    &__headline {
+      font-size: 1.5em;
+      line-height: 1.6rem;
+      margin-bottom: $spacingSM;
+    }
+  }
+}
+
+@include breakpoint('s') {
+  .event-hero {
+    &__headline {
+      font-size: 1.1em;
+      line-height: 1.2rem;
+      margin-bottom: $spacingXS;
+    }
+  }
+}

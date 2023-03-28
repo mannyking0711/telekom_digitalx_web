@@ -1,0 +1,139 @@
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    HTML
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<template>
+
+	<div class="bookmark-share-teaser">
+		<button type="button" class="bookmark-share-teaser__button">{{ $t("shareTeaser.button") }}
+			<svg-icon class="icon" icon="app/icon-share"></svg-icon>
+		</button>
+		<span class="bookmark-share-teaser__dropup">
+			<a :href="linkedinUrl" target="_blank"><svg-icon icon="app/icon-linkedin"></svg-icon></a>
+			<a :href="xingUrl" target="_blank"><svg-icon icon="app/icon-xing"></svg-icon></a>
+			<a :href="twitterUrl" target="_blank"><svg-icon icon="app/icon-twitter"></svg-icon></a>
+			<a :href="facebookUrl" target="_blank"><svg-icon icon="app/icon-facebook"></svg-icon></a>
+			<a :href="mailUrl" target="_blank"><svg-icon icon="app/icon-mail"></svg-icon></a>
+		</span>
+	</div>
+
+</template>
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    JAVASCRIPT
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<script>
+
+export default {
+
+	/////////////////////////////////
+	// INIT
+	/////////////////////////////////
+
+	name: `BookmarkShareTeaser`,
+
+	props: {
+		subject: {type: String, default: 'Artikel'},
+		itemUrl: Object,
+		itemType: String
+	},
+
+	data() {
+		return {};
+	},
+
+	computed: {
+		type() {
+			if (this.itemType === 'article' && this.$i18n.locale === 'de') {
+				return 'artikel';
+			} else {
+				return this.itemType
+			}
+		},
+
+
+		shareUrl() {
+			if (this.itemUrl && this.itemType) {
+				return this.$store.getters.env.origin + '/' + this.$i18n.locale + '/magazin/' + this.type + '/' + this.itemUrl.group + '/' + this.itemUrl.slug;
+			}
+
+		},
+		linkedinUrl: function () {
+			return `https://www.linkedin.com/shareArticle?mini=true&url=${this.shareUrl}&title=&summary=&source=`;
+		},
+		xingUrl: function () {
+			return `https://www.xing.com/social/share/spi?url=${this.shareUrl}`;
+		},
+		twitterUrl: function () {
+			return `https://twitter.com/intent/tweet?url=${this.shareUrl}`;
+		},
+		facebookUrl: function () {
+			return `https://www.facebook.com/sharer/sharer.php?u=${this.shareUrl}`;
+		},
+		mailUrl: function () {
+			return `mailto:info@example.com?&subject=&body=${this.shareUrl}`;
+		}
+	}
+	,
+
+
+/////////////////////////////////
+// EVENTS
+/////////////////////////////////
+
+
+/////////////////////////////////
+// METHODS
+/////////////////////////////////
+
+	methods: {}
+
+}
+; // end export
+
+</script>
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    LANG
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<i18n>
+{
+	"de": {
+		"shareTeaser.button": "Teilen"
+	},
+	"en": {
+		"shareTeaser.button": "Share"
+	}
+}
+</i18n>
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    CSS
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<style lang="scss">
+
+</style>
+
+
+<style lang="scss" scoped>
+
+</style>
+
+

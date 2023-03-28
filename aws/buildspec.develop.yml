@@ -1,0 +1,85 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      # dump versions
+      - php -v
+      - which php
+      - composer -V
+      - node -v
+      - npm -v
+      - which npm
+      - yarn -v
+      - which yarn
+      - whoami
+
+      # install frontend app dependencies
+      - yarn install
+      # comment out the next line to allow a temporary installation with critical modules
+      - /bin/bash -c 'yarn audit --no-progress --level critical; [[ $? -ge 16 ]] && exit 1 || exit 0'
+
+      # install sitemap generator dependencies
+      - yarn --cwd ./tools/sitemap/ install
+      # comment out the next line to allow a temporary installation with critical modules
+#      - /bin/bash -c 'yarn --cwd ./tools/sitemap/ audit audit --no-progress --level critical; [[ $? -ge 16 ]] && exit 1 || exit 0'
+
+      # install Laravel dependencies
+      - composer install
+
+      # create .env files
+      - cp .env.example .env
+      - cp .env.testing.example .env.testing
+
+      # add trailing "/" to vars
+      - appUrl=$APP_URL"/"
+      - appUrl="$(sed -E 's/\/\/$/\//g' <<<$appUrl)"
+      - mixUrl=$MIX_URL"/"
+      - mixUrl="$(sed -E 's/\/\/$/\//g' <<<$mixUrl)"
+      - contentUrl=$CONTENT_URL"/"
+      - contentUrl="$(sed -E 's/\/\/$/\//g' <<<$contentUrl)"
+
+      # update APP_URL in .env
+      - appUrl="$(sed -E 's/\//\\\//g' <<<$appUrl)"
+      - sed -i "/^APP_URL/ s/=.*/=\"$appUrl\"/" .env
+
+      # update MIX_URL in .env
+      - mixUrl="$(sed -E 's/\//\\\//g' <<<$mixUrl)"
+      - sed -i "/^MIX_URL/ s/=.*/=\"$mixUrl\"/" .env
+
+      # update CONTENT_URL in .env
+      - contentUrl="$(sed -E 's/\//\\\//g' <<<$contentUrl)"
+      - sed -i "/^CONTENT_URL/ s/=.*/=\"$contentUrl\"/" .env
+
+      # FORCE_HTTPS in .env must always be set to "true"
+      - sed -i "/^FORCE_HTTPS/ s/=.*/=true/" .env
+
+      # update dev environment
+      - sed -i "/^APP_LIVERELOAD/ s/.*/APP_LIVERELOAD=false/" .env
+
+
+  build:
+    commands:
+      # build frontend app
+      - yarn run dev-ssr
+
+      # init laravel app
+      - php artisan key:generate
+      - php artisan key:generate --env=testing
+
+
+  post_build:
+    commands:
+      # run tests
+      # - vendor/bin/phpunit
+
+      # remove unnecessary assets
+      - rm -rf node_modules
+      - rm -rf _assets
+      - rm -f storage/logs/*
+      - rm -rf tests
+
+
+artifacts:
+  files:
+    - '**/*'

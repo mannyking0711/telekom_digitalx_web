@@ -1,0 +1,56 @@
+.event-pk-banner {
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing5XL;
+  }
+
+  &__grid {
+    background: $colorXDark;
+    border-radius: 5px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    @include breakpoint('l', min) {
+      flex-direction: row;
+      gap: 50px;
+    }
+  }
+
+  &__logo {
+    max-width: 300px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font: 600 1.9rem #{"/"} 1em $fontFamily;
+
+    text-align: center;
+    color: $colorWhite;
+    margin: 0 0 $spacingXL;
+
+    @include breakpoint('l', min) {
+      font-size: 2.9rem;
+      line-height: 3.4rem;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    font: 400 $fontSizeNormal #{"/"} 1.3em $fontFamily;
+    text-align: center;
+    color: $colorWhite;
+
+    @include breakpoint('l', min) {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "sitemap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sitemap-de": "node index.js --lang de --with-cron",
+    "sitemap-en": "node index.js --lang en --with-cron",
+    "sitemap": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-cron": "^3.0.2",
+    "simple-node-logger": "^21.8.12",
+    "sitemap-generator": "^8.5.1",
+    "yargs": "^17.6.2"
+  }
+}

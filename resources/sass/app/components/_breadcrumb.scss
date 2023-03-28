@@ -1,0 +1,59 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	BREADCRUMB
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+$gap: 15px;
+$caretHeight: 3px;
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 (-$gap);
+  padding: 0;
+  list-style: none;
+
+  li {
+    list-style: none;
+  }
+
+  &, a {
+    font: normal 400 13px/13px $fontFamily;
+    color: $colorGrayLight;
+
+    &.router-link-exact-active {
+      font-weight: bold;
+    }
+
+    &:hover {
+      color: $colorXBlue;
+    }
+  }
+
+  .breadcrumb-item {
+    position: relative;
+    padding-right: $gap;
+    padding-left: $gap;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    border-left: $caretHeight+1 solid $colorXBlue;
+    border-top: $caretHeight+1 solid transparent;
+    border-bottom: $caretHeight+1 solid transparent;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 9px;
+    border-left: $caretHeight solid #fff;
+    border-top: $caretHeight solid transparent;
+    border-bottom: $caretHeight solid transparent;
+  }
+}

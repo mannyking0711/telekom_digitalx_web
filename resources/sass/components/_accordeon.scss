@@ -1,0 +1,138 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	ACCORDEON
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	.accordeon {
+
+		@extend %relative;
+
+		margin-bottom:	$spacingMD;
+	}
+
+
+	/////////////////////////////////
+	// HEADER
+	/////////////////////////////////
+
+	.accordeon-header {
+
+		@extend %relative;
+		@extend %no-select;
+
+		cursor: 		pointer;
+		border:			1px solid $colorGrayBorder;
+		border-radius: 	5px;
+		padding:		0.75rem 60px 0.75rem $spacingLG;
+
+		@include breakpoint('m', 'min') {
+			padding-right: 110px;
+		}
+
+		h3 {
+			margin: 	0;
+			color:		$colorGray;
+			font-size: 	1.1rem;
+			line-height: 1.2em;
+		}
+	}
+
+	.open .accordeon-header {
+
+		border-color: 	$colorGray;
+
+		h3 {
+			color:		$colorGrayDark;
+		}
+	}
+
+
+	// HEADER ICON
+
+	.accordeon-header-icon {
+
+		@extend %absolute;
+
+		width: 			50px;
+		height: 		100%;
+		top: 			50%;
+		left: 			auto;
+		right: 			0;
+		transform: 		translate(0,-50%);
+		z-index: 		2;
+		border-left: 	1px solid $colorGrayBorder;
+
+		@include breakpoint('m', 'min') {
+			width: 		100px;
+		}
+
+		svg {
+			width: 		15px;
+			height: 	15px;
+			transform: 	translate(-50%, -50%) rotate(90deg);
+			fill:		$colorGrayBorder;
+			top:		50%;
+			left:		50%;
+		}
+	}
+
+	.open .accordeon-header-icon {
+
+		border-color: 	transparent;
+		background: 	$agendaGradient;
+		height: 		calc(100% + 3px);
+		right: 			-1px;
+		border-radius: 	0 5px 5px 0;
+
+		svg {
+			fill:		$colorWhite;
+			transform: 	translate(-50%, -50%) rotate(-90deg);
+			left:		calc(50% - 1px);
+		}
+	}
+
+
+	/////////////////////////////////
+	// CONTENT
+	/////////////////////////////////
+
+	.accordeon-content-wrap {
+
+		@extend %relative;
+
+		height: 		0;
+		overflow: 		hidden;
+	}
+
+	.accordeon-content {
+
+		// align spacing with accordeon header
+		border:			1px solid transparent;
+		padding:		$spacingMD 60px $spacingMD $spacingLG;
+
+		@include breakpoint('m', 'min') {
+			padding-right: 110px;
+		}
+	}
+
+
+	/////////////////////////////////
+	// GROUP
+	/////////////////////////////////
+
+	.accordeon-group {
+		
+		margin-bottom: 	$spacing2XL;
+	}
+
+	.accordeon-group-headline {
+		
+		margin-bottom: 	$spacingMD;
+		font-size: 		1.2rem;
+		line-height: 	1.2em;
+		color:			$colorXBlue;
+		border:			1px solid transparent;
+		padding-left:	$spacingLG;
+	}

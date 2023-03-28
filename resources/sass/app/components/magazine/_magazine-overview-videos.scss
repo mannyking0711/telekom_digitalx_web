@@ -1,0 +1,73 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MAGAZINE OVERVIEW VIDEOS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.magOverVideos {
+    @include breakpoint('l', 'min') {
+        padding-top:            $spacingMD;
+    }
+
+    &__headline {
+        color:                  $colorWhite;
+    }
+
+    &__highlight-wrap {
+        position: relative;
+
+        @include breakpoint('l', 'min') {
+            margin-left:        7rem;
+        }
+
+        &:after {
+            content:            '';
+            background:         $colorWhite;
+            position:           absolute;
+            top:                100%;
+            left:               50%;
+            width:              18px;
+            height:             18px;
+            transform:          rotate(45deg);
+            margin:             -9px 0 0 -9px;
+        }
+    }
+
+    &__highlight {
+        &.article-hero-list {
+            margin: 0;
+
+            @include breakpoint('l', 'min') {
+                margin:             5rem 0;
+            }
+        }
+    
+        .article-list-hero-item .image {
+            margin-top:         -$spacing3XL;
+
+            @include breakpoint('l', 'min') {
+                width:          75%;
+                height:         auto;
+                margin:         -$spacing3XL 0 $spacing3XL -9rem;
+            }
+
+            &:after {
+                display:        none;
+            }
+        }
+
+        .article-list-hero-item .content {
+            @include breakpoint('l', 'min') {
+                min-height:     400px;
+            }
+        }
+    }
+
+    &__list-headline {
+        margin-bottom:          $spacing2XL;
+    }
+
+    &__list {
+        padding-top:            $spacing2XL;
+    }
+}

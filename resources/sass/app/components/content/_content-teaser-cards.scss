@@ -1,0 +1,92 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  CONTENT TEASER CARDS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.content-teaser-cards {
+  // background with image and gradient to smoothly blend into the next section
+  background-image: linear-gradient(180deg, rgba(26, 60, 93, 0) 80%, rgb(26, 60, 93) 100%),
+  url('../img/app/event/agenda-background.jpg');
+  background-position: center center, center center;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+
+  text-align: center;
+  color: $colorWhite;
+  padding: $spacing3XL 0;
+
+  @include breakpoint('l', min) {
+    padding: $spacing5XL 0;
+  }
+
+  &__headline {
+    font: 600 1.8rem #{"/"} 1em $fontFamily;
+    color: $colorWhite;
+
+    margin-bottom: $spacingXL;
+    @include breakpoint('l', min) {
+      margin-bottom: $spacing3XL;
+      font-size: 2.2rem;
+    }
+  }
+
+  &__desc {
+    margin: 0 auto;
+    max-width: 650px;
+    color: $colorWhite;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint('l', min) {
+      margin-right: -45px;
+      margin-left: -45px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    width: 100%;
+
+    margin-top: $spacing3XL;
+    flex: 0 0 100%;
+    max-width: 100%;
+    @include breakpoint('l', min) {
+      margin-top: $spacing5XL;
+      padding-right: 45px;
+      padding-left: 45px;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &__image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &__title {
+      margin-top: $spacingMD;
+      font: 600 1.4rem / 1.2em "Source Sans Pro", sans-serif;
+      color: $colorXBlue;
+
+      @include breakpoint('l', min) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__text {
+      margin: $spacingSM auto 0;
+      max-width: 70%;
+      color: $colorWhite;
+      text-align: center;
+    }
+
+    &__button {
+      margin-top: $spacingLG;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT CAMPUS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.eventcampus {
+    text-align:                 center;
+    margin-bottom:              $spacing4XL;
+    margin-left:                -$paddingPageMobileInner;
+    margin-right:               -$paddingPageMobileInner;
+
+    @include breakpoint('m', min) {
+        margin-left:             0;
+        margin-right:            0;
+    }
+
+    &__headline {
+        font: 		            600 1.8rem #{"/"} 1em $fontFamily;
+        text-transform:         uppercase;
+        margin:                 0 0 $spacingXL;
+    }
+
+    &__teaser {
+        background:             $gradientXBlue;
+        padding:                $spacingXL $paddingPageMobileInner $spacing3XL;
+        margin-bottom:          $spacingLG;
+
+        @include breakpoint('l', min) {
+            display:            flex;
+            padding:            0;
+        }
+    }
+
+    &__section {
+        @include breakpoint('l', min) {
+            padding:            $spacing5XL $spacing4XL;
+        }
+
+        &--wide {
+            @include breakpoint('l', min) {
+                width:          55%;
+                display:        flex;
+                flex-flow:      column;
+                justify-content: center;
+            }
+        }
+
+        &--narrow {
+            @include breakpoint('l', min) {
+                width:          45%;
+                min-width:      350px;
+            }
+        }
+    }
+
+    &__teaser-headline {
+        color:                  $colorWhite;
+        font: 		            600 2.2rem #{"/"} 1.2em $fontFamily;
+        text-transform:         uppercase;
+    }
+
+    &__teaser-text {
+        color:                  $colorWhite;
+
+        em {
+            font-style:         normal;
+            color:              $colorYellow;
+        }
+    }
+
+    // selector chosen to overwrite .pageevent__list
+    ul.eventcampus__list {
+        margin-bottom:          $spacing2XL;
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacingLG;
+        }
+
+        li {
+            color:              $colorWhite;
+        }
+    }
+
+    &__btn {
+        margin:                 0;
+        width:                  100%;
+
+        @include breakpoint('l', min) {
+            width:              auto;
+        }
+    }
+}

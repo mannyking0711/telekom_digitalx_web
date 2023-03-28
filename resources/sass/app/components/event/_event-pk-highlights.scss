@@ -1,0 +1,153 @@
+.event-pk-highlights {
+  padding: 50px 0;
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    padding: 80px 0;
+    margin-top: $spacing5XL;
+  }
+
+  &:before {
+    background: #ededed;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: -100%;
+  }
+
+  &:after {
+    background: #ededed;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    right: -100%;
+  }
+
+  &--magenta {
+    background-color: $colorXMagenta;
+
+    &:before, &:after {
+      background-color: $colorXMagenta;
+    }
+  }
+
+  &--blue {
+    background-color: $colorXDark;
+
+    &:before, &:after {
+      background-color: $colorXDark;
+    }
+  }
+
+  &__headline {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__subtitle {
+    font: 600 1.2rem #{"/"} 1em $fontFamily;
+
+    text-align: center;
+    color: $colorWhite;
+    margin: 0 0 $spacingSM 0;
+
+    @include breakpoint('l', min) {
+      font-size: 1.2rem;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font: 600 1.9rem #{"/"} 1em $fontFamily;
+    text-transform: none;
+    text-align: center;
+    color: $colorWhite;
+    margin: 0 0 $spacingXL;
+
+    @include breakpoint('l', min) {
+      font-size: 2.9rem;
+      line-height: 3.4rem;
+      text-align: left;
+      white-space: pre-line;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 60px;
+
+
+    @include breakpoint('l', min) {
+      margin-top: 0;
+      gap: 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+
+    @include breakpoint('l', min) {
+      flex-direction: row;
+      gap: 30px;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 300px;
+      flex: 1 0 100%;
+
+      img {
+        border-radius: 5px;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__icon {
+      position: static;
+      transform: none;
+      width: auto;
+      height: 60px;
+      margin: 0 auto 1rem;
+      display: block;
+
+      @include breakpoint('l', min) {
+        margin: 0 0 1rem;
+      }
+    }
+
+    &__title {
+      //font: 700 $fontSizeNormal #{"/"} 1.3em $fontFamily;
+      text-align: center;
+      color: $colorWhite;
+
+      @include breakpoint('l', min) {
+        text-align: left;
+      }
+    }
+
+    &__text, &__text p, &__text li {
+      font: 400 $fontSizeNormal #{"/"} 1.3em $fontFamily;
+      text-align: center;
+      color: $colorWhite;
+
+      @include breakpoint('l', min) {
+        text-align: left;
+      }
+    }
+
+    &__button {
+      font: normal 700 1.3rem #{"/"} 1.2em $fontFamily;
+      padding: 0.7rem 1.3rem;
+      line-height: 1;
+    }
+  }
+}

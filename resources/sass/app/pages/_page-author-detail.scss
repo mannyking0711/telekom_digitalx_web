@@ -1,0 +1,238 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AUTHOR DETAIL
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+$sidebarWidth: 40%;
+
+.pageAuthorDetail {
+
+  &__intro {
+    background: $gradientXBlue;
+    padding: $spacingMD 0 $spacing2XL;
+
+    @include breakpoint('l', min) {
+      padding: $spacingXL 0;
+    }
+  }
+
+  &__back {
+    font: 600 0.9rem #{"/"} 1em $fontFamily;
+    color: $colorWhite;
+    margin-bottom: $spacingXL;
+    padding-left: $spacingMD;
+    display: inline-block;
+
+    position: relative;
+
+    @include breakpoint('l', min) {
+      position: absolute;
+      left: $sidebarWidth;
+      bottom: 0;
+      margin: 0;
+    }
+
+    &:hover {
+      color: $colorXBlue;
+
+      svg {
+        fill: $colorXBlue;
+      }
+    }
+
+    svg {
+      width: 0.5rem;
+      height: 0.5rem;
+      top: 0.2rem;
+      fill: $colorWhite;
+      transition-duration: 0s;
+    }
+  }
+
+  &__info {
+    position: relative;
+
+    @include breakpoint('m', min) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @include breakpoint('l', min) {
+      max-width: initial;
+      margin: 0;
+      padding: $spacingLG 0 $spacing4XL $sidebarWidth;
+    }
+  }
+
+  &__headline {
+    font: 600 1.8rem #{"/"} 1.2em $fontFamily;
+    color: $colorWhite;
+    margin-bottom: $spacingSM;
+
+    @include breakpoint('l', min) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__subline {
+    font: 400 0.9rem #{"/"} 1.4em $fontFamily;
+    color: $colorWhite;
+    margin-bottom: $spacingLG;
+    max-width: 50em;
+
+    @include breakpoint('l', min) {
+      font-size: $fontSizeNormal;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    margin-bottom: $spacingLG;
+
+    @include breakpoint('l', min) {
+      margin-bottom: $spacingMD;
+    }
+  }
+
+  &__company {
+    font: 400 0.9rem #{"/"} 1.3em $fontFamily;
+    color: $colorXBlue;
+    margin-bottom: $spacingMD;
+
+    @include breakpoint('l', min) {
+      font-size: $fontSizeNormal;
+      margin-bottom: $spacingLG;
+    }
+  }
+
+  &__social {
+    color: $colorWhite;
+    display: flex;
+    justify-content: flex-start;
+
+    svg {
+      position: static;
+      display: inline-block;
+      fill: $colorWhite;
+      width: 20px;
+      height: 20px;
+      margin-right: 0.75rem;
+
+      &:hover {
+        fill: $colorXBlue;
+      }
+    }
+  }
+
+  &__sidebar {
+    @include breakpoint('l', min) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: $sidebarWidth - 6%;
+    }
+  }
+
+  &__desc {
+    padding: $spacingXL 0 $spacing4XL;
+
+    @include breakpoint('m', min) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @include breakpoint('l', min) {
+      max-width: initial;
+      min-height: 30vw;
+      padding-left: $sidebarWidth;
+    }
+
+    @include breakpoint(1500, min) {
+      min-height: 35rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: $spacingLG;
+    max-width: 50em;
+    font: 400 1.2rem #{"/"} 1.3em $fontFamily;
+  }
+
+  &__share {
+
+    @include breakpoint('l', min) {
+      display: flex;
+    }
+
+    &--mobile {
+      display: flex;
+
+      @include breakpoint('l', min) {
+        display: none;
+      }
+    }
+  }
+
+  &__events {
+    margin-bottom: $spacing4XL;
+  }
+
+  &__events-headline {
+    line-height: 1em;
+    margin-bottom: $spacing2XL;
+
+    @include breakpoint('m', min) {
+      margin-bottom: $spacing4XL;
+    }
+  }
+
+  &__event {
+    text-align: center;
+    color: $colorGrayDark;
+    border: 1px solid $colorGrayBorder;
+    padding: $spacingMD $spacingLG $spacingLG;
+  }
+
+  &__event-text {
+    max-width: 35em;
+    margin: 0 auto;
+  }
+
+  &__event-date {
+    font: 600 1.2rem #{"/"} 1.2em $fontFamily;
+    margin-bottom: $spacingXS;
+  }
+
+  &__event-time {
+    font: 600 1rem #{"/"} 1.2em $fontFamily;
+    margin-bottom: $spacingLG;
+    color: $colorXBlue;
+  }
+
+  &__event-title {
+    font: 600 1.2rem #{"/"} 1.2em $fontFamily;
+    margin-bottom: $spacingLG;
+
+  }
+
+  &__event-desc {
+    font: 400 1rem #{"/"} 1.2em $fontFamily;
+    margin-bottom: $spacingXL;
+  }
+
+  &__event-topic {
+    font: 600 1rem #{"/"} 1.2em $fontFamily;
+    margin-bottom: $spacingMD;
+  }
+
+  &__event-btn {
+    margin: 0;
+  }
+
+  .tns-outer {
+    margin-bottom: $spacingMD; // spacing between event slides and slider controls
+  }
+
+}

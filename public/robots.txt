@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /en/magazine/podcast/
+Disallow: /en/magazine/article/
+Disallow: /en/magazine/video/
+Disallow: /de/my-digital-x/
+Disallow: /en/my-digital-x/
+
+Sitemap: https://www.digital-x.eu/sitemap.xml
+

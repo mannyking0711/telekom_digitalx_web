@@ -1,0 +1,141 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	CONFIG
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	$iconSize: 			$formInputHeight;
+	$paddingLeft: 		0;
+	$colorBackground: 	#fff;
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	RADIO / CHECKBOX
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// LAYOUT
+	/////////////////////////////////
+
+	.input-radio,
+	.input-checkbox {
+
+		@extend %relative-inline-block;
+
+		margin-right: 	5px;
+		padding-left: 	0;
+		background: 	transparent;
+		border: 		0;
+		cursor: 		pointer;
+	}
+
+	/* hide default element */
+	.input-radio     input[type=radio],
+	.input-checkbox  input[type=checkbox] {
+
+		@extend %absolute;
+
+		width: 		0;
+		height: 	100%;
+		opacity: 	0;
+	}
+
+
+	/////////////////////////////////
+	// LABEL
+	/////////////////////////////////
+
+	/* label triggers checked state on default element */
+	.input-radio     label,
+	.input-checkbox  label {
+
+		width: 		100%;
+		height: 	100%;
+		padding: 	($formInputPaddingTop*0.7) 10px 0 ($iconSize+$paddingLeft);
+		cursor: 	pointer;
+		z-index: 	2;
+	}
+
+
+	/////////////////////////////////
+	// BULLET ICON
+	/////////////////////////////////
+
+	.input-radio svg,
+	.input-checkbox svg {
+
+		@extend %absolute;
+
+		width: 		$iconSize;
+		height: 	$iconSize;
+
+		.normal-fill {
+			fill: 	$colorInputBackground;
+		}
+	}
+
+
+	/////////////////////////////////
+	// HOVER
+	/////////////////////////////////
+
+	/* hover for text label */
+	.input-radio:hover label,
+	.input-checkbox:hover label {
+
+		color: $colorCta;
+	}
+
+	// animation for hover item
+	.input-radio svg #hover,
+	.input-checkbox svg #hover {
+
+		transform: 			scale(0);
+		transform-origin: 	50% 50%;
+		transition: 		transform 0.2s ease;
+	}
+
+	/* show svg group "hover" */
+	.input-radio:hover svg #hover,
+	.input-checkbox:hover svg #hover {
+
+		display: block;
+		transform: scale(1);
+	}
+
+
+	/////////////////////////////////
+	// ACTIVE
+	/////////////////////////////////
+
+	/* show svg group "active" */
+	.input-radio     input[type=radio]:checked + label + svg #active,
+	.input-checkbox  input[type=checkbox]:checked + label + svg #active {
+
+		display: block;
+	}
+
+	/* hover for text label */
+	.input-radio     input[type=radio]:checked + label,
+	.input-checkbox  input[type=checkbox]:checked + label {
+
+		//color: $colorRadioActiveText;
+	}
+
+
+	/////////////////////////////////
+	// ERROR
+	/////////////////////////////////
+
+	/*
+	.input-select.error svg {
+
+		background: $formColorErrorBackground;
+	}*/
+
+

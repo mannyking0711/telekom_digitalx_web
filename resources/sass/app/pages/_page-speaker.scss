@@ -1,0 +1,113 @@
+.pagespeaker {
+  $self: &; // store scope in variable
+
+  text-align: center;
+
+  &__intro {
+    background: $gradientXBlue;
+    padding: $spacing2XL 0 10rem;
+
+    @include breakpoint('l', min) {
+      padding: $spacing5XL 0 12rem;
+    }
+  }
+
+  &__headline {
+    color: $colorWhite;
+
+    font: 600 1.8rem #{"/"} 1em $fontFamily;
+    margin-bottom: $spacingMD;
+
+    @include breakpoint('l', min) {
+      font-size: 2.2rem;
+      margin-bottom: $spacingXL;
+    }
+
+    em {
+      color: $colorYellow;
+      font-style: normal;
+      display: block;
+
+      @include breakpoint('l', min) {
+        display: inline;
+      }
+    }
+  }
+
+  &__text {
+    color: $colorWhite;
+    margin: 0 auto;
+    line-height: 1.4em;
+
+    @include breakpoint('l', min) {
+      max-width: 650px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    justify-content: center;
+
+    margin-top: $spacing3XL;
+    @include breakpoint('l', min) {
+      margin-top: $spacing5XL;
+    }
+
+    @include breakpoint('m', min) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    @include breakpoint('l', min) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint('xl', min) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    @include breakpoint('xxl', min) {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 36px;
+    }
+  }
+
+  &__speaker {
+    margin-bottom: $spacingLG;
+    text-align: center;
+
+    &:hover {
+      #{$self}__name,
+      #{$self}__company {
+        color: $colorActive;
+      }
+    }
+  }
+
+
+  &__image {
+    width: 100%;
+    display: block;
+    margin-bottom: $spacingMD;
+    border-radius: 5px;
+  }
+
+  &__name {
+    font: 600 1rem #{"/"} 1em $fontFamily;
+    margin-bottom: $spacingXS;
+  }
+
+  &__company {
+    font: 400 0.9rem #{"/"} 1em $fontFamily;
+    margin: 0;
+    color: $colorGray;
+  }
+
+  &__btn {
+    margin: 0;
+    width: 100%;
+  }
+}

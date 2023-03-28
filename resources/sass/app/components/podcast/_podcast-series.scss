@@ -1,0 +1,204 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	PODCAST SERIES
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.podseries {
+
+    @include breakpoint('xl', min) {
+        margin-bottom:      $spacing2XL;
+    }
+
+    &__intro {
+        text-align:             center;
+
+        @include breakpoint('l', min) {
+            display:            flex;
+        }
+    }
+
+    &:nth-child(even) {
+        .podseries__intro {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__intro-mood {
+        position:               relative;
+        flex:                   1;
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacing2XL;
+            width:              50%;
+            flex:               0 1 auto;
+        }
+    }
+
+    &__intro-detail {
+        background: 	        $gradientXBlue;
+        position:               relative;
+        margin-bottom:          $spacing2XL;
+        padding:                $spacingMD $spacingLG;
+        flex:                   1;
+
+        @include breakpoint('l', min) {
+            width:              50%;
+            flex:               0 1 auto;
+            padding:            $spacingLG $spacingXL;
+            display:            flex;
+            flex-flow:          column;
+            justify-content:    center;
+            align-items:        center;
+        }
+
+        // blue chevron
+        &:after {
+            content: 			'';
+            position: 			absolute;
+            top: 				100%;
+            left: 				50%;
+            width: 				18px;
+            height: 			18px;
+            background:			$gradientXBlueDark;
+            transform: 			rotate(45deg);
+            margin: 			-9px 0 0 -9px;
+        }
+    }
+
+    &__image {
+        width:                  100%;
+        max-height:             40vw;
+        display:                block;
+        object-fit:             cover;
+        object-position:        center center;
+
+        @include breakpoint('l', min) {
+            height:             100%;
+            max-height:         initial;
+        }
+    }
+
+    &__podlogo {
+        width:                  $spacingLG;
+        height:                 $spacingLG;
+        top:                    $spacingSM;
+        left:                   $spacingSM;
+        fill:                   $colorWhite;
+        filter:                 drop-shadow(0 0 7px rgba(255, 255, 255, 0.6));
+
+        @include breakpoint('m', min) {
+            width:              $spacingXL;
+            height:             $spacingXL;
+            top:                $spacingMD;
+            left:               $spacingMD;
+        }
+    }
+
+    &__digitallogo {
+        height:                 1rem;
+        top:                    50%;
+        margin-top:             -1.4rem;
+
+        @include breakpoint('m', min) {
+            height:             1.2rem;
+            margin-top:         -2.8rem;
+        }
+    }
+
+    &__title {
+        @extend                 %absolute;
+
+        top:                    50%;
+        margin-top:             -0.4rem;
+        color:                  $colorWhite;
+        font: 		            600 2rem #{"/"} 1em $fontFamily;
+
+        @include breakpoint('m', min) {
+            font-size: 		    2.8rem;
+            margin-top:         -1.2rem;
+        }
+    }
+
+    &__desc {
+        color:                  $colorWhite;
+        font: 		            600 1.2rem #{"/"} 1.2em $fontFamily;
+        margin-bottom:          $spacingMD;
+
+        @include breakpoint('l', min) {
+            text-align:         left;
+            font-size:          1.4rem;
+        }
+    }
+
+    &__desc-detail {
+        display:                none;
+        color:                  $colorWhite;
+        font: 		            400 1rem #{"/"} 1.4em $fontFamily;
+        margin-bottom:          $spacingMD;
+        text-align:             left;
+
+        @include breakpoint('l', min) {
+            display:            block;
+        }
+    }
+
+    &__episodes {
+        margin-bottom:          $spacingMD;
+
+        @include breakpoint('m', min) {
+            display:            flex;
+            flex-wrap:          wrap;
+        }
+    }
+
+    &__episode {
+        display:                none;
+
+        // hide all but the first two items on mobile
+        &:nth-child(1) { display: flex; }
+        &:nth-child(2) { display: flex; }
+
+        @include breakpoint('m', min) {
+            display:            flex;
+            width:              50%;
+            padding-right:      $spacingXL;
+        }
+
+        @include breakpoint('l', min) {
+            width:              100%;
+            padding-right:      0;
+        }
+
+        @include breakpoint('xl', min) {
+            width:              50%;
+            padding-right:      $spacingXL;
+        }
+    }
+
+    &__play {
+        flex:                   0 0 auto;
+        position:               static;
+        fill:                   $colorXBlue;
+        width:                  $spacingXL;
+        height:                 $spacingXL;
+        margin-right:           $spacingMD;
+    }
+
+    &__episode-title {
+        text-transform:         uppercase;
+        font: 		            600 1rem #{"/"} 1.4em $fontFamily;
+        margin-bottom:          $spacingSM;
+        color:                  $colorGrayDark;
+
+        span {
+            color:              $colorXBlue;
+        }
+    }
+
+    &__episode-desc {
+        font: 		            400 1rem #{"/"} 1.4em $fontFamily;
+        color:                  $colorGray;
+    }
+
+}

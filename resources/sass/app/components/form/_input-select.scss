@@ -1,0 +1,132 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	CONFIG
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	$iconSize: 			$formInputHeight;
+	$paddingRight: 		0.2rem;
+	$colorBackground: 	$colorInputBackground;
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	SELECT
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// LAYOUT
+	/////////////////////////////////
+
+	.input-select {
+
+		@extend %relative-inline-block;
+
+		min-width: 			100px;
+		background: 		$colorBackground;
+		overflow: 			hidden;
+		vertical-align: 	middle; 	// remove margin caused by line-height
+	}
+
+
+	.input-select select {
+
+		@extend %relative;
+
+		height: 			100%;
+		margin: 			0;
+		padding-right: 		$iconSize + $paddingRight;
+		background: 		transparent;
+		border: 			0;
+		border-radius: 		0;
+		-webkit-appearance: none;
+		-moz-appearance:    none;
+		appearance:         none;
+		cursor: 			pointer;
+		outline: 			none;
+		white-space: 		nowrap;
+		color: 				$colorTypo;
+		line-height: 		1rem; 			// overwrite standard line-height of input with font-size
+	}
+
+
+	.input-select svg {
+
+		@extend %absolute;
+
+		width: 			$iconSize;
+		height: 		$iconSize;
+		top: 			50%;
+		left: 			auto;
+		right: 			0;
+		background: 	$colorBackground;
+		transform: 		translate(0,-50%);
+	}
+
+
+	/////////////////////////////////
+	// HOVER
+	/////////////////////////////////
+
+	.input-select:hover {
+
+	}
+
+
+	.input-select:hover select {
+
+		color: $colorCta;
+	}
+
+
+	.input-select:hover svg {
+
+		fill: $colorCta;
+	}
+
+
+	/////////////////////////////////
+	// ERROR
+	/////////////////////////////////
+
+	.input-select.error svg {
+
+		background: $colorFormErrorBackground;
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	BROWSER FIXES
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/* Remove Firefox outline */
+	.input-select select:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 #000;
+	}
+
+	/* prevent <option> from becoming transparent as well */
+	.input-select option:not(:checked) {
+		color: black;
+	}
+
+	/* Remove IE10 default arrow icon */
+	.input-select select::-ms-expand {
+		display: none;
+	}
+
+	/* Remove blue background color in IE10 */
+	.input-select select:focus::-ms-value {
+		background-color: transparent;
+		color: $colorTypo;
+	}
+
+

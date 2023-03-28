@@ -1,0 +1,28 @@
+
+.dashboardNewDX {
+  color: $colorXDark;
+
+  h1, h2 {
+    color: $colorXDark;
+  }
+
+  p {
+    color: $colorXDark;
+  }
+
+  &__headline {
+    margin-left: 8.3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-weight: bold;
+  }
+
+  &__headline em {
+    color: $blueColor;
+    font-style: normal;
+  }
+
+  .article-list.inner {
+    margin-bottom: 3%;
+  }
+}

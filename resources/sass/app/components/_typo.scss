@@ -1,0 +1,327 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	CONFIG
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// GLOBAL
+	/////////////////////////////////
+
+	$colorTypo: 			$colorGrayDarkHover;
+	$fontFamily: 			'Source Sans Pro', sans-serif; // 400 regular
+	$fontSizeNormal:		1rem;  // used for small buttons, tags, etc.
+	$fontSizeSmall:			0.875rem;  // used for small buttons, tags, etc.
+
+
+	/////////////////////////////////
+	// HEADLINES
+	/////////////////////////////////
+
+	$colorTypoH1:			$colorGrayDarkHover;
+	$colorTypoH2:			$colorGrayDarkHover;
+	$colorTypoH3:			$colorGrayDarkHover;
+	$colorTypoH4:			$colorGrayDarkHover;
+
+
+	/////////////////////////////////
+	// TYPO LINK
+	/////////////////////////////////
+
+	$colorTypoLink: 		$colorXBlue;
+	$colorTypoLinkHover: 	$colorCtaHover;
+	$colorTypoLinkActive: 	$colorCtaHover;
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	FONTS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	@include font-face("Bebas", "../fonts/bebas-regular/Bebas-Regular", normal, normal);
+	@include font-face("Source Sans Pro", "../fonts/sourcesanspro-light-300/source-sans-pro-v14-latin-300", 300, normal);
+	@include font-face("Source Sans Pro", "../fonts/sourcesanspro-regular-400/source-sans-pro-v14-latin-regular", 400, normal);
+	@include font-face("Source Sans Pro", "../fonts/sourcesanspro-semi-bold-600/source-sans-pro-v14-latin-600", 600, normal);
+	@include font-face("Source Sans Pro", "../fonts/sourcesanspro-bold-700/source-sans-pro-v14-latin-700", 700, normal);
+	//@include font-face("OpenSans", "../fonts/opensans-semibold/OpenSans-SemiBold", bold, normal);
+	//@include font-face("OpenSans Light", "../fonts/opensans-light/OpenSans-Light", normal, normal);
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	GLOBAL
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	html {
+		scroll-behavior: smooth;
+		font-size: 		16px;
+		line-height: 	150%;
+	}
+
+
+	* {
+
+		-webkit-font-smoothing: 	antialiased;
+		-moz-osx-font-smoothing: 	grayscale;
+	}
+
+
+	/////////////////////////////////
+	// TEXT BREAKPOINTS
+	/////////////////////////////////
+
+	@include breakpoint('m', min) { br.mobile { display: none; } }
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	HEADLINES
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	h1, .h1 {
+		color: 			$colorTypoH1;
+		font-weight: 	700;
+		font-size: 		3.5rem;
+		font-family: 	$fontFamily;
+		line-height: 	120%;
+		margin-bottom: 	1rem;
+	}
+
+
+	h2, .h2 {
+		color: 			$colorTypoH2;
+		font-weight: 	700;
+		font-size: 		3rem;
+		font-family: 	$fontFamily;
+		line-height: 	120%;
+		margin-bottom: 	1rem;
+	}
+
+
+	h3, .h3 {
+		color: 			$colorTypoH3;
+		font-weight: 	700;
+		font-size: 		2.5rem;
+		font-family: 	$fontFamily;
+		line-height: 	120%;
+		margin-bottom: 	1rem;
+	}
+
+
+	h4, .h4 {
+		color: 			$colorTypoH4;
+		font-weight: 	700;
+		font-size: 		2rem;
+		font-family: 	$fontFamily;
+		line-height: 	120%;
+		margin-bottom: 	1rem;
+	}
+
+	h5, .h5{
+		color: 			$colorTypoH4;
+		font-weight: 	700;
+		font-size: 		1.75rem;
+		font-family: 	$fontFamily;
+		line-height: 	120%;
+		margin-bottom: 	1rem;
+	}
+
+	h6, .h6{
+		color: 			$colorTypoH4;
+		font-weight: 	700;
+		font-size: 		1.5rem;
+		font-family: 	$fontFamily;
+		line-height: 	120%;
+		margin-bottom: 	1rem;
+	}
+
+	.preheading{
+		color:			$colorXBlue;
+		font-size: 		1.25rem;
+		font-weight: 	700;
+		margin: 		0;
+	}
+
+	.heading{
+		margin-bottom: 	1rem;
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	TEXT
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	p, label, input, textarea, .input-select select, blockquote {
+		margin: 	0 0 1rem 0;
+		color: 		$colorTypo;
+		font-family: $fontFamily;
+		font-size: $fontSizeNormal;
+		line-height: 150%;
+	}
+
+
+	p {
+		margin: 	0 0 1rem 0;
+	}
+
+	.text-large{
+		font-size: 1.25rem;
+		line-height: 150%;
+	}
+
+  // Remove margin on last item in a group
+  .space-between {
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+	/////////////////////////////////
+	// HEADLINES AFTER TEXT
+	/////////////////////////////////
+
+	//p + h1 { margin-top: 6rem; }
+	//p + h2 { margin-top: 4rem; }
+	//p + h3 { margin-top: 2rem; }
+
+
+	/////////////////////////////////
+	// TEXT LINK
+	/////////////////////////////////
+
+	p > a, .textlink {
+		color: 		$colorTypoLink;
+
+		font: 		normal 1rem/1.5rem $fontFamily;
+	}
+
+
+	p > a:hover, .textlink:hover {
+
+		color: 				$colorTypoLinkHover;
+		text-decoration: 	underline;
+	}
+
+
+	p > a.active, .textlink.active {
+
+		color: 	$colorTypoLinkActive;
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	LISTS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    ul, ol {
+
+        margin: 	0 0 2rem 0;
+    }
+
+    li {
+
+        color: 		$colorTypo;
+        font: 		normal $fontSizeNormal #{"/"} 1.7rem $fontFamily;
+    }
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	TABLE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    table {
+
+        margin: 	0 0 2rem 0;
+        color: 		$colorTypo;
+        font: 		normal $fontSizeNormal #{"/"} 1.7rem $fontFamily;
+    }
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	@include breakpoint('m') {
+
+		html {
+
+			font-size: 		15px;
+			line-height: 	19px;
+		}
+
+
+		/////////////////////////////////
+		// HEADLINES
+		/////////////////////////////////
+
+		h1 {
+
+			font-size: 		2.5rem;
+			line-height: 	3rem;
+
+			-moz-hyphens: 		auto;
+			-o-hyphens: 		auto;
+			-webkit-hyphens: 	auto;
+			-ms-hyphens: 		auto;
+			hyphens: 			auto;
+		}
+
+
+		h2 {
+			margin-bottom: 2.5rem;
+
+			font-size: 		1.9rem;
+			line-height: 	2.3rem;
+		}
+
+
+		h3 {
+
+			font-size: 		1.4rem;
+			line-height: 	1.8rem;
+		}
+
+
+		/////////////////////////////////
+		// TEXT
+		/////////////////////////////////
+
+		h4, p, label, input, .input-select select, p > a, a.textlink {
+
+			font-size: 		1rem;
+			line-height: 	1.6rem;
+		}
+
+		p {
+			-moz-hyphens: 		auto;
+			-o-hyphens: 		auto;
+			-webkit-hyphens: 	auto;
+			-ms-hyphens: 		auto;
+			hyphens: 			auto;
+		}
+	}
+

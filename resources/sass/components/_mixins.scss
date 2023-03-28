@@ -1,0 +1,219 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MIXINS LAYOUT
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// RELATIVE
+	/////////////////////////////////
+
+	%relative {
+
+		width: 		100%;
+		display: 	block;
+		position: 	relative;
+		top: 		0;
+		left: 		0;
+	}
+
+
+	%relative-inline-block {
+
+		width: 		auto;
+		display: 	inline-block;
+		position: 	relative;
+		top: 		0;
+		left: 		0;
+	}
+
+
+	%relative-flex {
+
+		@extend %relative;
+		@extend %flex;
+	}
+
+
+	/////////////////////////////////
+	// ABSOLUTE
+	/////////////////////////////////
+
+	%absolute {
+
+		width: 		100%;
+		display: 	block;
+		position: 	absolute;
+		top: 		0;
+		left: 		0;
+	}
+
+
+	%absolute-flex {
+
+		@extend %absolute;
+		@extend %flex;
+	}
+
+
+	/////////////////////////////////
+	// FIXED
+	/////////////////////////////////
+
+	%fixed {
+
+		width: 		100%;
+		display: 	block;
+		position: 	fixed;
+		top: 		0;
+		left: 		0;
+	}
+
+
+	/////////////////////////////////
+	// FLEX
+	/////////////////////////////////
+
+	%flex {
+
+		display: 	-webkit-box;
+		display: 	-moz-box;
+		display: 	-ms-flexbox;
+		display: 	-webkit-flex;
+		display: 	-o-flex;
+		display: 	flex;
+	}
+
+
+	/////////////////////////////////
+	// DEVELOPMENT
+	/////////////////////////////////
+
+	%dev {
+		background: 		transparent url('../img/app/dev/dev-grid.png') no-repeat center center;
+		background-size: 	100% 100%;
+	}
+
+
+	%wip {
+
+		border: 1px solid rgba(240,35,135,0.6) !important;
+
+		&::after {
+			@extend %absolute;
+			display: block;
+			padding: 5px 0 6px 0;
+			background: rgba(240,35,135,0.6);
+			color: #fff;
+			content: "work in progress";
+			font: bold 10px/10px sans-serif;
+			text-align: center;
+		}
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MIXINS FONTS/TYPO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/* https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6 */
+	@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf) {
+
+		$src: null;
+		$extmods: (	eot: "?");
+		$formats: ( otf: "opentype", ttf: "truetype");
+
+		@each $ext in $exts {
+			$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+			$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+			$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+		}
+
+		@font-face {
+			font-family: quote($name);
+			font-style: $style;
+			font-weight: $weight;
+			font-display: swap;
+			src: $src;
+		}
+	}
+
+
+	%hyphens {
+
+		-moz-hyphens: 		auto;
+		-o-hyphens: 		auto;
+		-webkit-hyphens: 	auto;
+		-ms-hyphens: 		auto;
+		hyphens: 			auto;
+	}
+
+
+	%no-hyphens {
+
+		-moz-hyphens: 		none !important;
+		-o-hyphens: 		none !important;
+		-webkit-hyphens: 	none !important;
+		-ms-hyphens: 		none !important;
+		hyphens: 			none !important;
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MIXINS STYLING
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	%no-select {
+
+		-webkit-touch-callout: 	none;
+		-webkit-user-select: 	none;
+		-moz-user-select: 		none;
+		-ms-user-select: 		none;
+		user-select: 			none;
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MIXINS SHAODW
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	@mixin box-shadow ($id) {
+
+		@if $id == 'normal' { box-shadow: 0px 0px 50px rgba(0,0,0,0.2); }
+		@if $id == 'popup' 	{ box-shadow: 0px 0px 30px rgba(0,0,0,0.2); }
+		@if $id == 'small' 	{ box-shadow: 0px 2px 2px rgba(0,0,0,0.1); }
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MIXINS HELPER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/* used by font-face */
+	@function str-replace($string, $search, $replace: "") {
+
+		$index: str-index($string, $search);
+		@if $index {
+			@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+		}
+		@return $string;
+	}
+
+

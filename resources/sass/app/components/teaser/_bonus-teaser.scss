@@ -1,0 +1,55 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	BONUS TEASER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .bonusteaser {
+        background: 	            $gradientXBlue;
+        padding:                    $spacingMD 6% 0;
+        text-align:                 center;
+        margin-bottom:              $spacing3XL;
+
+        @include breakpoint('l', 'min') {
+            padding:                $spacingMD 0 0;
+        }
+
+        &__headline {
+            color:                  $colorWhite;
+            padding:                0 $spacingMD;
+        }
+
+        &__image {
+            position:               relative;
+            margin-bottom:          $spacingMD;
+
+            img {
+                display:            block;
+                width:              100%;
+            }
+
+            &::after {
+                content:            '+';
+                color:              $colorWhite;
+                background:         $colorYellow;
+                position:           absolute;
+                top:                0;
+                right:              0;
+                font: 		        700 1.4rem #{"/"} 1.8rem $fontFamily;
+                width:              1.8rem;
+                height:             1.8rem;
+                border-radius:      0 0 0 5px;
+            }
+        }
+
+        &__text {
+            color:                  $colorWhite;
+            margin-bottom:          $spacingMD;
+            padding:                0 $spacingMD;
+        }
+
+        &__button {
+            margin:                 0 auto $spacing3XL;
+            width:                  calc(100% - 3rem);
+        }
+    }

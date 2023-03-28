@@ -1,0 +1,291 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AGENDA SUBJECTS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.agendaSubjects {
+    &__toggle {
+        background:         rgba(11, 25, 39, 0.75);
+        width:              100%;
+        margin:             0 0 $spacingMD;
+
+        @include breakpoint('l', min) {
+            width:          auto;
+            margin:         0 auto $spacingLG;
+        }
+
+        &.btn {
+            display:        flex;
+        }
+    }
+
+    &__subjects {
+        padding:            0;
+    }
+
+    $subject:               #{&}__subject; // store scope in varaible
+    &__subject {
+        list-style:         none;
+        padding:            0;
+        margin-bottom:      $spacingMD;
+
+        @include breakpoint('l', min) {
+            margin-bottom:  $spacingLG;
+        }
+    }
+
+    &__title-bar {
+        height:             $spacing2XL;
+        position:           relative;
+        display:            flex;
+        align-items:        center;
+        border-radius:      5px;
+        background:         linear-gradient(0deg, #1f8dd9, #56b9f8 100%);
+        padding:            0 $spacing2XL 0 $spacing3XL;
+        cursor:             pointer;
+
+        #{$subject}.active & {
+            background:     $agendaGradient;
+            border-radius:  5px 5px 0 0;
+        }
+
+        @include breakpoint('l', min) {
+            padding:        0 7% 0 $spacing5XL;
+            height:         $spacing3XL;
+        }
+
+        &:after {
+            width: 			10px;
+            height: 		10px;
+            position: 		absolute;
+            top: 			100%;
+            left: 			50%;
+            margin: 		-5px 0 0 -5px;
+            background:		linear-gradient(-45deg, #35a3d9, #35a3d9 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
+            content: 		'';
+            transform: 		rotate(45deg);
+            display:        none;
+        }
+        
+        #{$subject}.active &:after { // active subject styles
+            display:        block;
+        }
+    }
+
+    &__subject-icon {
+        background:         $colorWhite;
+        border:             1px solid $colorXBlue;
+        border-radius:      100%;
+        width:              2.9rem;
+        height:             2.9rem;
+        position:           absolute;
+        left:               -.7rem;
+        top:                -.2rem;
+
+        @include breakpoint('l', min) {
+            width:              3.8rem;
+            height:             3.8rem;
+            left:               -.9rem;
+            top:                -.4rem;
+        }
+
+        svg {
+            fill:           $colorXBlue;
+        }
+    }
+
+    &__subject-title {
+        font: 		        600 0.9rem #{"/"} 1.2em $fontFamily;
+        color:              #1a3a55;
+
+        @include breakpoint('l', min) {
+            font-size:      1rem;
+            width:          30%;
+            flex-shrink:    0;
+            padding-right:  $spacingXL;
+        }
+    }
+
+    &__subject-subtitle {
+        font: 		        400 1rem #{"/"} 1.2em $fontFamily;
+        display:            none;
+        width:              100%;
+        height:             3rem;
+        background:         $agendaGradient;
+        padding:            0 $spacingXL;
+        position:           relative;
+        align-items:        center;
+        color:              #1a3a55;
+
+        @include breakpoint('l', min) {
+            display:        flex;
+        }
+
+        &::before {
+            width: 		    10px;
+            height: 	    10px;
+            position: 	    absolute;
+            top: 		    50%;
+            left: 		    0;
+            margin: 	    -5px 0 0 -5px;
+            background:	    linear-gradient(-45deg, #35a3d9, #35a3d9 50%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
+            content: 	    '';
+            transform: 	    rotate(-45deg);
+        
+            #{$subject}.active & { // active subject styles
+                display:    none;
+            }
+        }
+    }
+
+    &__subject-toggle {
+        position:           absolute;
+        right:              0;
+        top:                0;
+        height:             100%;
+        width:              $spacingXL;
+        background:         linear-gradient(0deg, #319fd9, #87d1f8 100%);
+        box-shadow:         inset 0px 0px 2px #2b8dc1;
+        border-radius:      0 5px 5px 0;
+
+        #{$subject}.active & {
+            border-radius:  0 5px 0 0;
+        }
+
+        #{$subject}:hover & {
+            background:     $agendaGradient;
+        }
+
+        @include breakpoint('l', min) {
+            width:          7%;
+            flex-shrink:    0;
+        }
+
+        svg {
+            fill:           $colorWhite;
+            transform:      rotate(90deg);
+            width:          0.8rem;
+            height:         0.8rem;
+            left:           50%;
+            top:            50%;
+            margin-left:    -0.4rem;
+            margin-top:     -0.4rem;
+
+            @include breakpoint('l', min) {
+                width:      1rem;
+                height:     1rem;
+                margin-left: -0.5rem;
+                margin-top: -0.5rem;
+            }
+        }
+
+        #{$subject}.active & svg {
+            transform:      rotate(-90deg);
+        }
+    }
+
+    &__presented-by {
+        color:              $colorWhite;
+        text-align:         center;
+        font: 		        600 0.9rem #{"/"} 1.4em $fontFamily;
+        margin-bottom:      $spacingMD;
+
+        @include breakpoint('m', min) {
+            font-size:      1.2rem;
+            margin-bottom:  $spacingXL;
+        }
+    }
+
+    &__presenters {
+        background:         rgba(11, 25, 39, 0.75);
+        padding:            $spacingMD $spacingXL $spacingLG;
+        margin-bottom:      -$spacingLG;
+        display:            none;
+        
+        #{$subject}.active & { // active subject styles
+            display:        block;
+        }
+
+        @include breakpoint('m', min) {
+            padding:        $spacingXL;
+        }
+    }
+
+    &__presenters-list {
+        padding:            0;
+
+        @include breakpoint('m', min) {
+            display:        flex;
+            flex-wrap:      wrap;
+            justify-content: space-around;
+        }
+    }
+
+    &__presenter {
+        list-style:         none;
+        padding:            0 $spacingMD 0 0;
+        margin-bottom:      $spacingXL;
+
+        @include breakpoint('m', min) {
+            width:          50%;
+        }
+
+        @include breakpoint('xl', min) {
+            display:        flex;
+            max-width:      30rem;
+        }
+    }
+
+    &__presenter-info {
+        display:            flex;
+        align-items:        center;
+        margin-bottom:      0.75rem;
+
+        @include breakpoint('xl', min) {
+            flex-flow:      column;
+            margin:         0 $spacingMD 0 0;
+            text-align:     center;
+            width:          38rem;
+        }
+    }
+
+    &__presenter-image {
+        border-radius:      100%;
+        width:              70px;
+        height:             70px;
+        margin-right:       0.75rem;
+        object-fit:         cover;
+        object-position:    top;
+
+        @include breakpoint('xl', min) {
+            margin:         0 0 $spacingMD 0;
+            width:          90px;
+            height:         90px;
+        }
+    }
+
+    &__presenter-name {
+        font: 		        600 1rem #{"/"} 1.2em $fontFamily;
+        color: $colorWhite;
+
+        @include breakpoint('xl', min) {
+            margin-bottom:  $spacingXS;
+        }
+    }
+
+    &__presenter-company {
+        color:              $colorGrayLight;
+        font: 		        400 0.9rem #{"/"} 1.2em $fontFamily;
+    }
+
+    &__presenter-desc {
+        color:              $colorGrayLight;
+        font: 		        400 0.9rem #{"/"} 1.4em $fontFamily;
+        margin:             0;
+
+        @include breakpoint('l', min) {
+            font-size:      1rem;
+        }
+    }
+}

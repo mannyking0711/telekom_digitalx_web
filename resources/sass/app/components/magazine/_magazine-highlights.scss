@@ -1,0 +1,103 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MAGAZINE HIGHLIGHTS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.inhighlights {
+    margin:             0 auto;
+    max-width:          32em;
+
+    @include breakpoint('xl', 'min') {
+        max-width:      20em;
+    }
+    
+    &__headline {
+        text-align:         center;
+        margin-bottom:      $spacingLG;
+        font: 		        600 1.2rem #{"/"} 1.4em $fontFamily;
+        color:              $colorGrayDark;
+    
+        @include breakpoint('xl', 'min') {
+            font-size: 		1.4rem;
+            margin-bottom:  $spacing2XL;
+        }
+    }
+    
+    &__tabs {
+        display:            flex;
+        justify-content:    space-around;
+        margin-bottom:      $spacingLG;
+    
+        @include breakpoint('xl', 'min') {
+            margin-bottom:  $spacing2XL;
+        }
+    }
+    
+    &__tab {
+        text-align:         center;
+        text-transform:     uppercase;
+        color:              $colorGrayLight;
+        font: 		        600 0.9rem #{"/"} 1.2em $fontFamily;
+        margin-bottom:      $spacingSM;
+        cursor:             pointer;
+    }
+    &__tab:hover,
+    .tns-nav-active &__tab { // tiny slider active class
+        color:              $colorGrayDark;
+    }
+    
+    &__colorbox {
+        visibility:         hidden;
+        width:              2.75em;
+        height:             3px;
+        margin:             0 auto;
+    }
+    .tns-nav-active &__colorbox { // tiny slider active class
+        visibility:         visible;
+    }
+
+    &__articles {
+        padding-left:       $spacingLG;
+    
+        @include breakpoint('l', 'min') {
+            padding-left:   $spacingXL;
+        }
+    }
+
+    // hide all but the first group until tiny slider takes over
+    &__articles:not(:first-child) {
+        opacity:            0;
+    }
+    .tns-slider &__articles:not(:first-child) {
+        opacity:            1;
+    }
+    
+    &__article {
+        font: 		        400 1rem #{"/"} 1.3em $fontFamily;
+        list-style:         none;
+        counter-increment:  count;
+        position:           relative;
+        margin-bottom:      $spacingXL;
+    
+        &::before {
+            content:        counter(count) ".";
+            position:       absolute;
+            top:            0;
+            right:          100%;
+            font: 		    600 1.2rem #{"/"} 1em $fontFamily;
+            padding-right:  $spacingSM;
+            color:          $colorGrayDark;
+    
+            @include breakpoint('l', 'min') {
+                font-size:  1.4rem;
+                padding-right: $spacingMD;
+            }
+        }
+    
+        a {
+            color:          $colorGrayDark;
+        }
+    }
+}
+

@@ -1,0 +1,200 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENT TEASER TICKETS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.event-teaser-tickets {
+  background-color: $colorWhite;
+  padding-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    padding-top: $spacing5XL;
+  }
+
+  &__headline {
+    font: 600 1.9rem #{"/"} 1em $fontFamily;
+    text-align: center;
+
+    margin: 0 0 $spacingXL;
+
+    @include breakpoint('l', min) {
+      font-size: 2.9rem;
+      line-height: 3.4rem;
+    }
+
+    &__tag {
+      color: $colorXBlue
+    }
+  }
+
+  &__intro {
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto $spacingXL;
+    font: 400 $fontSizeNormal #{"/"} 1.3em $fontFamily;
+    color: $colorTypo;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacingMD;
+  }
+
+  &__tile {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 100%;
+
+    width: 100%;
+    @include breakpoint('xl', min) {
+      flex: 1;
+    }
+
+    &__blue .event-teaser-tickets__content {
+      background-color: $colorXBlue;
+    }
+
+    &__darkblue .event-teaser-tickets__content {
+      background-color: $colorXDark;
+    }
+
+    &__magenta .event-teaser-tickets__content {
+      background-color: $colorXMagenta;
+    }
+
+    &__yellow .event-teaser-tickets__content {
+      background-color: $colorYellow;
+    }
+  }
+
+  &__image {
+    display: flex;
+    width: 100%;
+
+    img {
+      border-radius: 5px 5px 0 0;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    padding: 16px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    color: $colorWhite;
+    font: 600 1.7rem #{"/"} 1.1em $fontFamily;
+    margin: 0;
+    text-align: center;
+
+
+    @include breakpoint('l', min) {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__text {
+    margin-top: 16px;
+    color: $colorWhite;
+    font: normal 400 $fontSizeNormal #{"/"} 1.1em $fontFamily;
+    text-align: center;
+  }
+
+  &__image-desktop {
+    margin-top: 16px;
+    display: none;
+
+    @include breakpoint('l', min) {
+      display: flex;
+      gap: 16px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__image-mobile {
+    margin-top: 16px;
+    display: flex;
+    gap: 16px;
+
+    @include breakpoint('l', min) {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__button {
+    margin-top: 16px;
+    line-height: 1;
+    width: 100%;
+
+    @include breakpoint('l', min) {
+      width: auto;
+    }
+
+    background: transparent;
+    color: $colorWhite;
+    border: 1px solid $colorWhite;
+    padding: 10px 20px;
+
+    &--blue:hover, &--blue:active {
+      background: $colorWhite;
+      color: $colorXBlue;
+      border-color: $colorWhite;
+
+      .icon {
+        fill: $colorXBlue!important;
+      }
+    }
+
+    &--darkblue:hover, &--darkblue:active {
+      background: $colorWhite;
+      color: $colorXDark;
+      border-color: $colorWhite;
+
+      .icon {
+        fill: $colorXDark!important;
+      }
+    }
+
+    &--magenta:hover, &--magenta:active {
+      background: $colorWhite;
+      color: $colorXMagenta;
+      border-color: $colorWhite;
+
+      .icon {
+        fill: $colorXMagenta!important;
+      }
+    }
+
+    &--yellow:hover, &--yellow:active {
+      background: $colorWhite;
+      color: $colorYellow;
+      border-color: $colorWhite;
+
+      .icon {
+        fill: $colorYellow!important;
+      }
+    }
+  }
+}

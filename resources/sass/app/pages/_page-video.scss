@@ -1,0 +1,210 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	VIDEO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .pagevid {
+        &__intro {
+
+        }
+
+        &__intro-main {
+        }
+
+        &__main,
+        &__sidebar {
+            @include breakpoint('l', 'min') {
+                margin-bottom:       $spacing3XL;
+            }
+        }
+
+        &__full-width {
+            // full width of the player
+            // values are based on the parents 6% margin
+            // 88%*113.6363%=100%
+            width:                  calc(100vw - (100vw - 113.6363%)); 
+            margin-left:            -6.8181%;
+
+            @include breakpoint('l', 'min') {
+                width:              100%;
+                margin:             0;
+            }
+        }
+
+        &__player {
+            margin-bottom:          $spacingMD;
+        }
+
+        &__headline {
+            font: 		            600 1.4rem #{"/"} 1.4em $fontFamily;
+            margin-bottom:          $spacingMD;
+        }
+
+        &__subheadline {
+            font: 		            600 1.4rem #{"/"} 1.8rem $fontFamily;
+            margin-bottom:          $spacingMD;
+            text-align:             center;
+
+            @include breakpoint('l', 'min') {
+                margin-top:         -2.8rem; // align .pagevid__persons with .pagevid__sidebar
+            }
+        }
+
+        &__persons {
+            background:             $colorGrayBackground;
+            display:                flex;
+            flex-wrap:              wrap;
+            padding:                $spacingMD 0;
+            text-align:             center;
+            justify-content:        center;
+            margin-bottom:          $spacingXL;
+        }
+
+        &__person {
+            list-style:             none;
+            padding:                $spacingSM;
+            width:                  80px;
+        }
+
+        &__person-image {
+            width:                  50px;
+            height:                 50px;
+            border-radius:          100%;
+            margin-bottom:          $spacingXS;
+            object-fit:             cover;
+        }
+    
+        &__person-name {
+            font: 		            600 0.8rem #{"/"} 1.2em $fontFamily;
+            color:                  $colorGrayDark;
+        }
+
+        &__desc {
+            margin-bottom:          $spacing2XL;
+        }
+
+        &__share {
+            margin-bottom:          $spacing4XL;
+
+            @include breakpoint('l', 'min') {
+                margin-bottom:          $spacing2XL;
+            }
+        }
+
+        &__intro-recommendations {
+            display:                none;
+
+            @include breakpoint('l', 'min') {
+                display:            block;
+                width:              22%;
+            }
+        }
+
+        &__mobile-recommendations {
+            display:                block;
+
+            // tiny slider has some problems calculating the correct width
+            width:                  100%;
+            margin:                 0 6% $spacingXL;
+            overflow:               hidden;
+
+            @include breakpoint('l', 'min') {
+                display:            none;
+            }
+        }
+
+        &__recommendations {
+            margin-bottom:          $spacingSM;
+        }
+
+        &__recommended-headline {
+            font: 		            600 1.4rem #{"/"} 1.8rem $fontFamily;
+            text-align:             center;
+            margin-bottom:          $spacingMD;
+            color:                  $colorGrayDark;
+
+            @include breakpoint('l', 'min') {
+                font: 		         600 1.2rem #{"/"} 1.4rem $fontFamily;
+                margin-top:          -2.4rem;
+            }
+        }
+
+        &__recommended-image {
+            position:               relative;
+            margin-bottom:          $spacingSM;
+
+            img {
+                display:            block;
+                width:              100%;
+            }
+        }
+
+        &__recommended-title {
+            font: 		            600 1.2rem #{"/"} 1.2em $fontFamily;
+            color:                  $colorGrayDark;
+            margin-bottom:          $spacingXL;
+
+            @include breakpoint('l', 'min') {
+                font-size: 		     0.9rem;
+                margin-bottom:       $spacingMD;
+            }
+        }
+
+        &__recommended-play {
+            position:               absolute;
+            top:                    auto;
+            bottom:                 $spacingSM;
+            left:                   $spacingSM;
+            fill:                   rgba(0, 0, 0, 0.55);
+            width:                  $spacingXL;
+            height:                 $spacingXL;
+        }
+
+        &__recommended-duration {
+            position:               absolute;
+            bottom:                 $spacingSM;
+            right:                  $spacingSM;
+            color:                  $colorWhite;
+            background:             rgba(0, 0, 0, 0.55);
+            font: 		            400 0.7rem #{"/"} 1.5em $fontFamily;
+            padding:                0.15rem $spacingSM;
+            border-radius:          5px;
+        }
+
+        &__loginteaser {
+            margin-bottom:          $spacingXL;
+            position:               relative;
+
+            @include breakpoint('l', 'min') {
+                padding:            4vw;
+            }
+        }
+
+        &__loginteaser-image {
+            width:                  calc(100% + 12vw);
+            filter:                 grayscale(100%);
+            opacity:                0.4;
+            margin:                 0 -6vw -58px;
+
+            @include breakpoint('m', 'min') {
+                margin-bottom:      -120px;
+            }
+
+            @include breakpoint('l', 'min') {
+                margin:             0;
+                width:              100%;
+                height:             100%;
+                position:           absolute;
+                top:                0;
+                left:               0;
+                z-index:            5;
+                object-fit:         cover;
+            }
+        }
+
+        &__loginteaser-teaser {
+            z-index:                10;
+            position:               relative;
+        }
+    }

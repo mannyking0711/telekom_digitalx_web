@@ -1,0 +1,134 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MEDIA GALLERY
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.mediaGallery {
+    $self: &; // store scope in varaible
+
+    margin-bottom:      $spacing2XL;
+
+    @include breakpoint('l', min) {
+        padding-left:   $spacingMD;
+        padding-right:  $spacingMD;
+    }
+
+    img {
+        display:            block;
+        width:              100%;
+        height:             100%;
+        object-fit:         cover;
+        object-position:    center center;
+    }
+
+    &__row {
+        display:            flex;
+        margin-bottom:      $spacingMD;
+        margin-right:       -$spacingSM;
+        margin-left:        -$spacingSM;
+
+        @include breakpoint('l', min) {
+            margin-bottom:  $spacingXL;
+            margin-right:   -$spacingXL;
+            margin-left:    -$spacingXL;
+        }
+
+        &--video {
+            margin-left:    -$paddingPageMobileInner;
+            margin-right:   -$paddingPageMobileInner;
+            position:       relative;
+
+            @include breakpoint('m', min) {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            @include breakpoint('l', min) {
+                margin-right: -$spacingMD;
+                margin-left: -$spacingMD;
+            }
+        }
+    }
+
+    &__col-4,
+    &__col-8 {
+        flex:               0 0 auto;
+        padding-right:      $spacingSM;
+        padding-left:       $spacingSM;
+        position:           relative;
+
+        @include breakpoint('l', min) {
+            padding-right:  $spacingMD;
+            padding-left:   $spacingMD;
+        }
+
+        &:hover #{ $self }__teaser {
+            opacity:        1;
+        }
+    }
+
+    &__col-4 {
+        flex-basis:         33.33333333%;
+        max-width:          33.33333333%;
+    }
+
+    &__col-8 {
+        flex-basis:         66.66666667%;
+        max-width:          66.66666667%;
+    }
+
+    &__teaser {
+        display:            none;
+        position:           absolute;
+        width:              calc(100% - #{$spacingXL});
+        height:             100%;
+        background:         rgba(0, 0, 0, 0.6);
+        text-align:         center;
+        flex-flow:          column;
+        justify-content:    flex-end;
+        padding:            0 $spacingXL $spacing3XL $spacingXL;
+
+        @include breakpoint('xl', min) {
+            display:        flex;
+            opacity:        0;
+            transition:     all 0.5s ease;
+        }
+    }
+
+    &__teaser-headline {
+        font: 		        600 1.4rem #{"/"} 1.2em $fontFamily;
+        color:              $colorYellow;
+        margin-bottom:      $spacingMD;
+
+        #{ $self }--green & { // green variant
+            color:         $colorAwardGreen;
+        }
+
+        #{ $self }--blue & { // blue variant
+            color:         $colorXBlue;
+        }
+    }
+
+    &__teaser-text {
+        font: 		        400 0.9rem #{"/"} 1.4em $fontFamily;
+        color:              $colorWhite;
+        margin-bottom:      $spacingLG;
+    }
+
+    &__teaser-btn {
+        margin:             0 auto;
+    }
+
+    &__play {
+        position:           absolute;
+        top:                0;
+        bottom:             0;
+        left:               0;
+        right:              0;
+        fill:               rgba(255, 255, 255, 0.7);
+        width:              15vw;
+        height:             15vw;
+        margin:             auto;
+    }
+}

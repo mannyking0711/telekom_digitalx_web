@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://dm1-s-swdev-507.aditus.ads:9200/Identity/Account/Login -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <title>OIDC Identity Provider</title>
+
+  <link rel="icon" type="image/x-icon" href="https://dm1-s-swdev-507.aditus.ads:9200/Identity/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="https://dm1-s-swdev-507.aditus.ads:9200/Identity/favicon.ico">
+
+  <link rel="stylesheet" href="./OIDC Identity Provider_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./OIDC Identity Provider_files/font-awesome.min.css">
+  <link rel="stylesheet" href="./OIDC Identity Provider_files/site.css">
+  <link rel="stylesheet" href="./OIDC Identity Provider_files/custom.css">
+  <!--<link rel="stylesheet" href="./OIDC Identity Provider_files/digital-x.css">-->
+  <link rel="stylesheet" href="https://online.e-graphics-germany.de/clients/telekom-digital-x/aditus/OIDC Identity Provider_files/digital-x.css">
+  <script src="https://online.e-graphics-germany.de/clients/telekom-digital-x/aditus/OIDC Identity Provider_files/explus.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav-page">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+       <a class="navbar-brand logo-wrapper"></a>
+    </nav>
+</div>
+  </header>
+
+  <main role="main">
+    <div class="container body-container">
+      <div class="card small">
+        <div class="card-body">
+          
+
+    <form method="post" novalidate="novalidate">
+      
+      <input type="hidden" id="ReturnUrl" name="ReturnUrl" value="">
+      <h3 class="mb-4 text-center">
+        Willkommen
+          <small class="text-muted">
+            Melden Sie sich mit Ihrem Benutzerkonto an
+          </small>
+      </h3>
+      <div class="form-group">
+        <input class="form-control" placeholder="E-Mail" autofocus="" type="text" data-val="true" data-val-required="Die E-Mail ist erforderlich!" id="Username" name="Username" value="">
+        <span class="text-danger field-validation-valid" data-valmsg-for="Username" data-valmsg-replace="true"></span>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Passwort" autocomplete="off" data-val="true" data-val-required="Das Passwort ist erforderlich!" id="Password" name="Password">
+        <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+      </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" data-val="true" data-val-required="The RememberLogin field is required." id="RememberLogin" name="RememberLogin" value="true">
+            <label class="form-check-label" for="RememberLogin">
+              Meine Anmeldung merken
+            </label>
+          </div>
+        </div>
+      <button class="btn btn-secondary btn-block btn-sm mt-3" name="button" value="login">Anmelden</button>
+      <div class="d-flex justify-content-end">
+        <div>
+          <button class="btn btn-link btn-sm text-danger" name="button" value="cancel" formnovalidate="">
+            <i class="fa fa-times"></i>
+            Abbrechen
+          </button>
+        </div>
+      </div>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8FtRcu5Is11HkeDwWh0g_SiT3PI3hi5SPMWWeJlA6TjT5Gl1fhY2WiVMfsh-itAF0XphcC-DpSTtsFpLAWZu2KSR2UI7Mzv8ARE52Wsxnnxg8vpAdWKp7I7feex1jFY14KB7mg3dLHSDiieHzlElOHY"><input name="RememberLogin" type="hidden" value="false"></form>
+    <div class="mt-3">
+      <div class="bordertitle text-center"><span>Sie haben noch kein Benutzerkonto?</span></div>
+      <a class="btn-link" href="https://dm1-s-swdev-507.aditus.ads:9200/Identity/account/register">
+        <button class="btn btn-primary btn-block btn-sm mt-3">
+          Registrieren  
+        </button>
+      </a>
+    </div>
+      <div class="text-center mt-3 mb-3">oder</div>
+    <ul class="list-inline mb-0">
+        <li>
+          <a class="btn btn-social-bordered btn-facebook btn-block text-center" href="https://dm1-s-swdev-507.aditus.ads:9200/Identity/External/Challenge?scheme=Facebook">
+            <i class="fa fa-fw fa-facebook"></i>
+            Mit Facebook anmelden
+          </a>
+        </li>
+        <li>
+          <a class="btn btn-social-bordered btn-google btn-block text-center" href="https://dm1-s-swdev-507.aditus.ads:9200/Identity/External/Challenge?scheme=Google">
+            <i class="fa fa-fw fa-google"></i>
+            Mit Google anmelden
+          </a>
+        </li>
+        <li>
+          <a class="btn btn-social-bordered btn-xing btn-block text-center" href="https://dm1-s-swdev-507.aditus.ads:9200/Identity/External/Challenge?scheme=Xing">
+            <i class="fa fa-fw fa-xing"></i>
+            Mit Xing anmelden
+          </a>
+        </li>
+        <li>
+          <a class="btn btn-social-bordered btn-linkedin btn-block text-center" href="https://dm1-s-swdev-507.aditus.ads:9200/Identity/External/Challenge?scheme=LinkedIn">
+            <i class="fa fa-fw fa-linkedin"></i>
+            Mit LinkedIn anmelden
+          </a>
+        </li>
+    </ul>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer small">
+    <div class="container">
+      <div class="footer-content-wrap">
+        <span class="links">
+            <span>
+              <a href="http://www.aditus.de/agb">Allgemeine Geschäftsbedingungen</a>
+            </span>
+            <span>
+              <a href="http://www.aditus.de/privacy">Datenschutzhinweise</a>
+            </span>
+            <span>
+              <a href="http://www.aditus.de/imprint">Impressum</a>
+            </span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./OIDC Identity Provider_files/jquery.slim.min.js.Download"></script>
+  <script src="./OIDC Identity Provider_files/jquery.validate.min.js.Download"></script>
+  <script src="./OIDC Identity Provider_files/jquery.validate.unobtrusive.min.js.Download"></script>
+  <script src="./OIDC Identity Provider_files/bootstrap.bundle.min.js.Download"></script>
+  <script src="./OIDC Identity Provider_files/validation.js.Download"></script>
+
+
+</body></html>

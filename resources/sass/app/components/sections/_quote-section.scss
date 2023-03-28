@@ -1,0 +1,43 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	QUOTE SECTION
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.quoteSection {
+    $self: &; // store scope in varaible
+
+    color:                      $colorGrayDark;
+
+    &__image-wrapper {
+        position: relative;
+        padding-bottom: 66.66%;
+
+    }
+
+    &__image {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__text {
+        padding:                $spacingLG $spacingMD;
+        text-align: center;
+    }
+
+    &__quote {
+
+    }
+
+    &__name {
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    &__desc {
+
+    }
+
+}

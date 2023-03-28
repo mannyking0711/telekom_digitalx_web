@@ -1,0 +1,156 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT HERO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.event-hero {
+
+  display: flex;
+  position: relative;
+  height: 40vw;
+  max-height: 600px;
+  width: 100%;
+
+  background: $colorXDark;
+
+  &.loading {
+    background-size: 30px 30px;
+    background-image: url('../svg/app/loading-content.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  .image {
+    display: flex;
+    width: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% !important;
+  }
+
+  .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+
+  .headline {
+    color: $colorWhite;
+    font-size: 3.0rem;
+    line-height: 3.3rem;
+    margin-bottom: $spacingXL;
+    white-space: pre-line;
+  }
+
+  .colorbox {
+    margin-bottom: $spacingXL;
+  }
+
+  .tag {
+    @extend %relative-inline-block;
+
+    @include breakpoint('m', 'min') {
+      padding: 0.5rem 0.7rem 0.4rem 0.7rem;
+      font: bold $fontSizeSmall #{"/"} $fontSizeSmall $fontFamily;
+    }
+
+    margin: 0 $spacingSM $spacingSM 0;
+    padding: 0.3rem $spacingSM;
+
+    font: bold 0.6rem #{"/"} 0.6rem $fontFamily;
+    color: $colorWhite;
+    border: 1px solid $colorWhite;
+    border-radius: 0.3rem;
+    cursor: pointer;
+
+    &:hover {
+      background: $normalBackgroundActive;
+      color: $normalColorActive;
+      border-color: $normalBackgroundActive;
+    }
+  }
+
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@include breakpoint('xl') {
+
+  .event-hero {
+
+    .content {
+      padding: 50px 50px 0 40px;
+    }
+
+    .headline {
+      font-size: 2.5em;
+      line-height: 2.8rem;
+    }
+
+  }
+
+}
+
+@include breakpoint('l') {
+
+  .event-hero {
+
+    .content {
+      padding: 50px 50px 0 40px;
+    }
+
+    .btn {
+      margin-bottom: $spacingMD;
+    }
+
+    .headline {
+      font-size: 1.8em;
+      line-height: 2.0rem;
+      margin-bottom: $spacingMD;
+    }
+
+    .colorbox {
+      margin-bottom: $spacingMD;
+    }
+
+    .tags {
+      display: none;
+    }
+
+  }
+
+}
+
+@include breakpoint('m') {
+
+  .event-hero {
+
+    .btn {
+      display: none;
+    }
+
+    .headline {
+      font-size: 1.5em;
+      line-height: 1.6rem;
+      margin-bottom: $spacingSM;
+    }
+  }
+}
+
+@include breakpoint('s') {
+
+  .event-hero {
+    .headline {
+      font-size: 1.1em;
+      line-height: 1.2rem;
+      margin-bottom: $spacingXS;
+    }
+  }
+}

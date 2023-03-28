@@ -1,0 +1,111 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	META HEADER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	.meta-header {
+
+		@extend %relative-flex;
+
+		min-height: 			200px;
+		background: 			$gradientXBlue;
+		align-items: 			center;
+
+		@include breakpoint('m', 'min') {
+			min-height: 		350px;
+		}
+	}
+
+
+	.meta-header .col-100 {
+
+		padding: 				10% 0;
+
+		@include breakpoint('m', 'min') {
+			padding: 			5% 0;
+		}
+
+		h1, p, .meta-header__text {
+			color:  			$colorWhite;
+			text-align: 		center;
+		}
+
+		h1 {
+			text-transform: 	uppercase;
+			font-size: 			2.4rem;
+			line-height: 		1em;
+			margin-bottom: 		$spacingMD;
+
+			@include breakpoint('m', 'min') {
+				font-size: 		3.2rem;
+			}
+		}
+
+		p, .meta-header__text {
+			max-width: 			760px;
+			margin: 			0 auto;
+			font: 				normal 1.2rem #{"/"} 1.3em $fontFamily;
+
+			@include breakpoint('m', 'min') {
+				font-size: 		1.6rem;
+			}
+		}
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	CONTENT
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	.meta-header + section .col-100:first-child {
+
+		margin-top: 			$spacingXL;
+
+		@include breakpoint('m', 'min') {
+			margin-top: 		5%;
+		}
+	}
+
+	.meta-header + section .col-100 {
+
+		margin-bottom: 			2%;
+	}
+
+	.meta-header + section .col-100:last-child {
+
+		margin-top: 			$spacingXL;
+
+		@include breakpoint('m', 'min') {
+			margin-top: 		5%;
+		}
+	}
+
+	.meta-content p {
+		margin-bottom: 			$spacingMD;
+	}
+
+	.meta-content ul {
+		font: 					normal $fontSizeNormal #{"/"} 1.7rem $fontFamily;
+		color: 					$colorTypo;
+	}
+
+	.meta-content ul a {
+		@extend .textlink;
+	}
+
+	.meta-box {
+		border: 				1px solid $colorGrayBorder;
+		padding:				$spacingLG;
+		margin-bottom:			$spacingMD;	
+	}
+
+	.ql-indent-1 {
+		margin-left:			$spacingLG;
+	}
+

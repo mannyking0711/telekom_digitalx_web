@@ -1,0 +1,129 @@
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    HTML
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<template>
+
+	<section class="inner no-spacing">
+		<div class="col-100">
+
+			<div class="eventcampus">
+
+				<h3 class="eventcampus__headline">{{ $t('pageevent.campusHeadline') }}</h3>
+
+				<slider :items="[{}, {}]" class="slider--large">
+
+					<template>
+						<div class="eventcampus__teaser">
+							<div class="eventcampus__section eventcampus__section--wide">
+								<h4 class="eventcampus__teaser-headline">Guides Tours</h4>
+								<p class="eventcampus__teaser-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsa illum quos <em>consequatur non</em> autem, quia quidem quod et sequi tempore esse magni iusto necessitatibus vero eum tenetur exercitationem cum!</p>
+							</div>
+							<div class="eventcampus__section eventcampus__section--narrow">
+								<ul class="pageevent__list eventcampus__list">
+									<li>Lorem ipsum dolor sit amet, consetetur</li>
+									<li>Lorem ipsum dolor sit amet, consetetur</li>
+									<li>Lorem ipsum dolor sit amet, consetetur</li>
+								</ul>
+								<router-link to="" class="btn blue icon-left eventcampus__btn">
+									<svg-icon icon="app/icon-arrow"></svg-icon>
+									<span>{{ $t('pageevent.campusButton') }}</span>
+								</router-link>
+							</div>
+						</div>
+					</template>
+
+				</slider>
+
+			</div>
+
+		</div>
+	</section>
+
+</template>
+
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    JAVASCRIPT
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<script>
+
+	export default {
+
+		/////////////////////////////////
+		// INIT
+		/////////////////////////////////
+
+		name: 'EventJoin',
+
+		props: {
+
+		},
+
+		data() {
+			return {
+
+			};
+		},
+
+		computed: {
+
+		},
+
+
+		/////////////////////////////////
+		// EVENTS
+		/////////////////////////////////
+
+		created() {
+
+		},
+
+		mounted() {
+
+		},
+
+
+		/////////////////////////////////
+		// METHODS
+		/////////////////////////////////
+
+		methods: {
+
+		}
+
+	}; // end export
+
+</script>
+
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    CSS
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+	<style lang="scss">
+
+	</style>
+
+
+	<style lang="scss" scoped>
+
+	</style>
+
+
+
+
+
+

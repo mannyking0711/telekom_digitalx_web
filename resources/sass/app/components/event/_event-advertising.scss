@@ -1,0 +1,118 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT ADVERTISING
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.event-advertising {
+  background: $colorGrayBackground;
+  padding: 0 0 $spacingXL;
+  margin-bottom: 0;
+
+  @include breakpoint('l', min) {
+    padding: 0 0 $spacing3XL;
+    margin-bottom: 0;
+  }
+
+  &__bg-image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__bg-image {
+    object-fit: cover;
+    object-position: 50% 40%;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    vertical-align: middle;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+  }
+
+  &__content {
+    padding: $spacingXL 0;
+    width: 100%;
+    text-align: right;
+  }
+
+  &__logo {
+    margin-left: auto;
+    margin-bottom: $spacing2XL;
+    max-height: 45px;
+    text-align: right;
+
+    @include breakpoint('m') {
+      margin-left: inherit;
+    }
+
+    img {
+      height: auto;
+      max-height: 45px;
+
+      @include breakpoint('m') {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__subtitle {
+    text-align: right;
+    color: #fff;
+    font: normal 400 1.6rem/2.1rem $fontFamily;
+    margin: 0;
+  }
+
+  &__title {
+    white-space: pre-line;
+    text-align: right;
+    color: #fff;
+    margin: 0;
+
+    font: normal 600 3.0rem/3.3rem $fontFamily;
+
+    @include breakpoint('m') {
+      font-size: 1.5em;
+      line-height: 1.6rem;
+    }
+  }
+
+  &__button {
+    margin-top: $spacing2XL;
+    position: initial;
+
+    &.btn.secondary {
+      border-color: transparent;
+    }
+  }
+
+  // stretched link
+  &__button::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+  }
+  .inner.no-spacing {
+    position: relative;
+  }
+  .col-100 {
+    position: static;
+  }
+  // stretched link
+}

@@ -1,0 +1,498 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	CONFIG
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	$naviHeight: 			40px;
+	$naviPreviewWidth:		340px;
+	$naviButtonWidth: 		40px;
+	$naviDropdownMinWidth:	100px;
+	$naviItemPadding:		13px 1vw 0 1vw;
+	$colorNavi: 			$colorGray;
+	$colorNaviActive: 		$colorActive;
+	$colorNaviHover: 		$colorXBlue;
+
+	$naviMobileHeight: 		50px;
+	$mobileBorderColor: 	$colorGrayMid;
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	NAVI
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// LAYOUT
+	/////////////////////////////////
+
+	.header-navi {
+
+		@extend %relative-flex;
+		@extend %no-select;
+
+		width: 		auto;
+		height: 	$naviHeight;
+	}
+
+	// add space between last navi and browser window
+	.header-navi:last-of-type {	margin-right: 25px;	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	 NAVI BUTTON
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	.header-navi-button {
+
+		@extend %absolute;
+		@extend %no-select;
+
+		width: 			$naviButtonWidth;
+		height: 		$naviHeight;
+		display: 		none;
+		top: 			50%;
+		left: 			auto;
+		right: 			$paddingPageMobileInner*0.8;
+		transform: 		translate(0,-50%);
+		cursor: 		pointer;
+
+		.normal-fill 	{ fill: $colorGray; }
+	}
+
+
+	/////////////////////////////////
+	// HOVER
+	/////////////////////////////////
+
+	.header-navi-button:hover {
+
+		.normal-fill { fill: $colorXBlue !important; }
+	}
+
+
+	/////////////////////////////////
+	// OPEN
+	/////////////////////////////////
+
+	header.open .header-navi-button {
+
+		.normal-fill 	{ fill: $colorGray; }
+
+		#normal { display: none; }
+		#active { display: block; }
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	 SEARCH
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  .mobile .header-search-button {
+    display: none;
+  }
+
+	.header-search-button {
+		cursor: pointer;
+    width: 1.2rem;
+    height: 1.2rem;
+
+    svg {
+      margin-top: 3px;
+      fill: $colorGray;
+    }
+	}
+
+
+  .header-search-input {
+    display: none;
+  }
+
+  .mobile .header-search-input {
+    display: block;
+
+    .search-input {
+      //&__icon {
+      //  display: none;
+      //}
+
+      &__button {
+        display: none;
+      }
+    }
+  }
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	NAVI ITEMS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// ITEM
+	/////////////////////////////////
+
+	.header-navi-item {
+
+		@extend %relative;
+
+		width: 			auto;
+		height: 		$naviHeight;
+		margin: 		0 10px;
+		white-space: 	nowrap;
+		font: 			normal bold 16px/16px $fontFamily;
+	}
+
+	.header-navi-label {
+
+		@extend %relative;
+
+		height: 		$naviHeight;
+		padding: 		$naviItemPadding;
+		color: 			$colorNavi;
+		cursor: 		pointer;
+		transition: 	color 0.2s ease;
+	}
+
+
+	/////////////////////////////////
+	// ITEM HOVER
+	/////////////////////////////////
+
+	.header-navi-label:hover {
+
+		color: 			$colorNaviHover !important; 	// !important to overwrite mobile color definition
+	}
+
+
+	/////////////////////////////////
+	// ITEM ACTIVE
+	/////////////////////////////////
+
+	.header-navi-label.router-link-exact-active,
+	.header-navi-label.active {
+
+		color: 			$colorNaviActive !important; 	// !important to overwrite mobile color definition
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	SUBNAVI
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	.header-navi-content {
+
+		@extend %absolute-flex;
+
+		width: 			auto;
+		display: 		none;
+		top: 			100%;
+		padding: 		15px 0 0 0;
+		opacity: 		0;
+
+		&--right {
+			left:       -$naviPreviewWidth;
+			flex-flow: 	row-reverse;
+		}
+	}
+
+
+	/////////////////////////////////
+	// SUBNAVI
+	/////////////////////////////////
+
+	.header-subnavi {
+
+		@extend %relative;
+
+		width: 			auto;
+		min-width:		150px;
+		min-height: 	190px;
+		margin: 		0 8px 0 0;
+		padding: 		15px 35px 15px 15px;
+		background: 	rgba(255,255,255,0.7);
+		border-radius:  6px;
+		overflow: 		hidden;
+
+		.header-navi-content--right & {
+			margin: 		0 0 0 8px;
+		}
+	}
+
+
+	/////////////////////////////////
+	// SUBNAVI ITEM
+	/////////////////////////////////
+
+	.header-subnavi-item {
+
+		@extend %relative;
+
+		margin: 			0 0 7px 0;
+		padding: 			4px 5px 4px 20px;
+		background-image: 	url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMy4yIDUxLjciPjxwYXRoIGZpbGw9IiM0REI0RTciIGQ9Ik0zMi40IDI1LjlMOC44IDQ5LjUgMiA0Mi43bDE2LjktMTYuOUwyIDlsNi43LTYuNyAyMy43IDIzLjZ6Ii8+PC9zdmc+");
+		background-position: -10px center;
+		background-size: 	8px 12px;
+		background-repeat: 	no-repeat;
+		color: 				#000;
+		font: 				normal 400 15px/15px $fontFamily;
+		transition-property: color, background-position;
+		transition-duration: 0.2s, 0.2s;
+		transition-timing-function: ease-out;
+	}
+
+
+	header .header-subnavi-item:hover,
+	header .header-subnavi-item.router-link-exact-active {
+		background-position: 3px center;
+		color: $colorXBlue !important;
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	SUBNAVI PREVIEW
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	.header-navi-preview {
+
+		@extend %relative-flex;
+
+		width: $naviPreviewWidth;
+		padding: 10px;
+		background-position: center center;
+		background-size: cover;
+		background-color: #000;
+		border-radius: 	6px;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
+
+
+	.navi-preview-label {
+		@extend %relative;
+		width: auto;
+		margin-bottom: 10px;
+		padding: 5px 10px 5px 10px;
+		background: $colorXGreen;
+		color: #fff;
+		border-radius: 3px;
+
+		font-size: 12px;
+		line-height: 12px;
+
+	}
+
+	.navi-preview-copy {
+		@extend %relative;
+		width: auto;
+		margin-bottom: 0;
+		color: #fff;
+		font: 600 18px/22px $fontFamily;
+		white-space: normal;
+		text-shadow: 0 0 7px #000;
+	}
+
+
+	/////////////////////////////////
+	// EVENT
+	/////////////////////////////////
+
+	.navi-preview-event {
+		justify-content: center;
+		align-items: center;
+
+		.navi-preview-label {
+			background: $colorXYellowDark;
+		}
+
+		.navi-preview-logo {
+			@extend %relative;
+			width: 270px;
+      height: min-intrinsic; /* Safari bugfix */
+		}
+	}
+
+
+	/////////////////////////////////
+	// AWARD
+	/////////////////////////////////
+
+	.navi-preview-award {
+		align-items: center;
+		background: $colorWhite;
+
+		img {
+			max-height: 170px;
+			max-width: 320px;
+		}
+	}
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	header.mobile .header-navi {
+
+		flex-grow: 			2;
+		flex-direction: 	column;
+		order: 				2;
+		overflow-x: 		hidden; 			// only vetical scrolling via simplebar library
+		border-top: 		1px solid $colorGrayLightHover;
+	}
+
+	/////////////////////////////////
+	// NAVI BUTTON
+	/////////////////////////////////
+
+	header.mobile .header-navi-button {
+
+		display: block;
+	}
+
+
+	/////////////////////////////////
+	// NAVI ITEM
+	/////////////////////////////////
+
+	header.mobile .header-navi-item {
+
+		height: 	$naviMobileHeight;
+		margin: 	0;
+		font: 		normal 400 17px/17px $fontFamily;
+		overflow: 	hidden;
+	}
+
+	header.mobile .header-navi-label {
+
+		height:		$naviMobileHeight;
+		padding: 	17px $paddingPageMobileInner 0 $paddingPageMobileInner;
+		color: 		$colorGrayDark;
+	}
+
+	header.mobile .header-navi .header-navi-item {
+
+		border-bottom: 1px solid $mobileBorderColor;
+	}
+
+
+	/////////////////////////////////
+	// SUBNAVI BUTTON
+	/////////////////////////////////
+
+	.header-subnavi-button { display: none; }
+
+	header.mobile .header-subnavi-button {
+
+		@extend %absolute;
+
+		width: 			50px;
+		height: 		40px;
+		display: 		block;
+		top: 			5px;
+		left: 			auto;
+		right: 			5px;
+		cursor: 		pointer;
+	}
+
+	header.mobile .header-subnavi-button:hover {
+
+		transform: 		scale(1.1);
+
+		svg .normal-fill {
+			fill: $colorXBlue !important;
+		}
+	}
+
+
+	/////////////////////////////////
+	// SUBNAVI CONTENT
+	/////////////////////////////////
+
+	header.mobile .header-navi-content {
+		display: block;
+		position: relative;
+		top: 	 0;
+		left:    0;
+		padding: 0;
+		opacity: 1 !important;
+	}
+
+	header.mobile .header-subnavi {
+		min-height: 	0;
+		margin: 		0;
+		padding: 		18px 0 18px $paddingPageMobileInner;
+		background: 	linear-gradient(180deg, #e6e5e5 0%, #FCFBFB 70px);
+		border-radius: 	0;
+	}
+
+	header.mobile .header-subnavi-item {
+		margin: 		7px 0;
+		padding: 		7px 5px 7px 20px;
+		background: 	transparent;
+		font-size: 		16px;
+		line-height: 	16px;
+	}
+
+	header.mobile .header-subnavi-item:hover {
+		background: transparent;
+	}
+
+
+	/////////////////////////////////
+	// SUBNAVI PREVIEW
+	/////////////////////////////////
+
+	header.mobile .header-navi-preview {
+		display: none;
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	TRANSPARENT HEADER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	header.transparent:not(.mobile) .header-navi-label 		{ color: #fff; }
+	header.transparent:not(.mobile) .header-subnavi 		{ background: rgba(0,0,0,0.5); }
+	header.transparent:not(.mobile) .header-subnavi-item 	{ color: #fff; }
+  header.transparent:not(.mobile) .header-search-button svg { fill: #fff; }
+
+	header.mobile.transparent:not(.open) .header-navi-button {
+
+		.normal-fill {
+			fill: #fff;
+		}
+	}
+
+
+

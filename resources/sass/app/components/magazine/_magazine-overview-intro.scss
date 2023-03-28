@@ -1,0 +1,37 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MAGAZINE OVERVIEW INTRO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.magOverIntro {
+	&__desc {
+		color: 					$colorWhite;
+		margin: 				0 auto;
+	}
+
+	&.pageParticipate__intro {
+		margin-bottom: 			$spacing5XL;
+
+		@include breakpoint('l', min) {
+			height: 			calc(100vh - 300px);
+			margin-bottom: 		$spacing3XL;
+		}
+
+		@media screen and (max-height: 600px) {
+			height: 100vh;
+		}
+	}
+
+	>.pageParticipate__arrow {
+		@media screen and (max-height: 700px) {
+			position: relative;
+		}
+	}
+
+	>.pageParticipate__dashes {
+		@media screen and (max-height: 600px) {
+			visibility: hidden;
+		}
+	}
+}

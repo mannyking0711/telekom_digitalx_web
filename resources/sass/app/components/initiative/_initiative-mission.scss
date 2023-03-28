@@ -1,0 +1,69 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INITIATIVE MISSION
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.iniMission {
+    display:                    flex;
+    flex-flow:                  column-reverse;
+
+    @include breakpoint('l', min) {
+        flex-flow:              row;
+    }
+
+    &__info {
+        padding:                $spacing2XL $spacing3XL $spacing2XL 0;
+
+        @include breakpoint('l', min) {
+            padding-top:        0;
+            width:              50%;
+        }
+
+        @include breakpoint('xl', min) {
+            padding-top:        $spacing2XL;
+        }
+    }
+
+    &__headline {
+        color:                  $colorWhite;
+        text-align:             left;
+    }
+
+    &__text p {
+        color:                  $colorWhite;
+    }
+
+    &__patron {
+        position: relative;
+    }
+
+    &__patron-image {
+        width:                  100%;
+        display:                block;
+    }
+
+    &__patron-caption {
+        position:               absolute;
+        bottom:                 1.5rem;
+        right:                  1.5rem;
+        text-align:             center;
+        background:           rgba(255,255,255,0.8);
+        border-radius:          3px;
+        padding:                1rem;
+
+    }
+
+    &__patron-name {
+        font-weight: 700;
+        color:      $colorGrayDark;
+        font-family: "Source Sans Pro", sans-serif;
+
+    }
+
+    &__patron-title {
+        font-weight:    400;
+        color:          $colorGray;
+        font-family: "Source Sans Pro", sans-serif;
+    }
+}

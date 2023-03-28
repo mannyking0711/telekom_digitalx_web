@@ -1,0 +1,257 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENTS INTRO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.eventsintro {
+    background:                 $gradientXBlueLight url('../img/app/event/events-background.jpg') no-repeat center center;
+    background-size:            cover;
+    padding:                    $spacingXL 0 $spacingMD;
+
+    @include breakpoint('m', 'min') {
+        padding:                $spacing3XL 0 $spacingLG;
+    }
+
+    @include breakpoint('m', 'min') {
+        padding:                $spacing4XL 0 $spacing3XL;
+    }
+
+    &__logo {
+        display:                block;
+        max-width:              200px;
+        margin:                 0 auto $spacingXS;
+
+        @include breakpoint('m', 'min') {
+            max-width:          300px;
+        }
+
+        @include breakpoint('l', 'min') {
+            max-width:          320px;
+        }
+    }
+
+    &__headline {
+        font:                   600 1.1rem #{"/"} 1em $fontFamily;
+        text-align:             center;
+        color:                  $colorYellow;
+        text-transform:         uppercase;
+        margin-bottom:          $spacingLG;
+
+        @include breakpoint('m', 'min') {
+            font-size:          1.5rem;
+            margin-bottom:      $spacing2XL;
+        }
+
+        @include breakpoint('l', 'min') {
+            font-size:          1.8rem;
+            margin-bottom:      $spacing3XL;
+        }
+    }
+
+    &__events {
+        max-width:              300px;
+        margin:                 0 auto;
+
+        @include breakpoint('m', 'min') {
+            max-width:          400px;
+        }
+
+        @include breakpoint('l', 'min') {
+            max-width:          920px;
+            display:            flex;
+            justify-content:    space-between;
+        }
+    }
+
+    &__list {
+        @include breakpoint('l', 'min') {
+            width:              75%;
+            display:            flex;
+            flex-wrap:          wrap;
+            justify-content:    space-between;
+            padding-right:      0.5rem;
+        }
+    }
+
+    // only for two events
+    &__list-two {
+        @include breakpoint('l', 'min') {
+            width:              100%;
+            display:            flex;
+            flex-wrap:          wrap;
+            justify-content:    space-between;
+            padding-right:      0.5rem;
+        }
+    }
+
+    // only for one event
+    &__list-one {
+        @include breakpoint('l', 'min') {
+            width:              100%;
+            display:            flex;
+            flex-wrap:          wrap;
+            justify-content:    center;
+            padding-right:      0.5rem;
+        }
+    }
+
+    &__event {
+        font:                   400 0.8rem #{"/"} 1.2em $fontFamily;
+        background:             $colorXDark;
+        color:                  $colorWhite;
+        display:                flex;
+        padding:                $spacingMD;
+        margin-bottom:          $spacingSM;
+        border-radius:          5px;
+        justify-content:        space-between;
+        align-items:            center;
+        width:                  100%;
+
+        @include breakpoint('l', 'min') {
+            width:              33%;
+            margin-right:       -0.5rem;
+            flex-flow:          column;
+            text-align:         center;
+        }
+
+        &--highlight {
+            flex-flow:          column;
+            text-align:         center;
+            padding:            $spacingMD $spacingLG $spacingLG;
+
+            @include breakpoint('l', 'min') {
+                width:          25%;
+                margin-right:   0.5rem;
+                padding-bottom: $spacingXL;
+            }
+
+            .btn {
+                margin:         0;
+                width:          100%;
+
+                @include breakpoint('l', 'min') {
+                    width:      auto;
+                }
+            }
+
+            .eventsintro__highlight {
+                margin-bottom:  $spacingMD;
+            }
+    
+            .eventsintro__event-logo {
+                height:         2rem;
+                margin:         0 0 $spacingMD;
+            }
+        }
+    }
+
+    // only for two events
+    &__event-two {
+        font:                   400 0.8rem #{"/"} 1.2em $fontFamily;
+        background:             $colorXDark;
+        color:                  $colorWhite;
+        display:                flex;
+        padding:                $spacingMD;
+        margin-bottom:          $spacingSM;
+        border-radius:          5px;
+        justify-content:        space-between;
+        align-items:            center;
+        width:                  100%;
+
+        @include breakpoint('l', 'min') {
+            width:              50%;
+            margin-right:       -0.5rem;
+            flex-flow:          column;
+            text-align:         center;
+        }
+    }
+
+    &__event-info {
+        display:                flex;
+        align-items:            center;
+
+        @include breakpoint('l', 'min') {
+            flex-flow:          column-reverse;
+        }
+    }
+
+    &__event-logo {
+        height:                 1.7rem;
+        margin-right:           $spacingXL;
+
+        @include breakpoint('l', 'min') {
+            height:             2.2rem;
+            margin:             $spacingLG 0;
+        }
+    }
+
+    // only for lange nacht des mittelstandes
+    &__event-logo-lndm {
+        height:                 5rem;
+        margin-right:           0;
+
+        @include breakpoint('l', 'min') {
+            height:             3.5rem;
+            margin:             $spacingLG 0;
+        }
+    }
+
+    &__highlight {
+        color:                  $colorYellow;
+        font-size:              0.9rem;
+    }
+
+    &__textlink {
+        @include breakpoint('l', 'min') {
+            display:            flex;
+            align-items:        center;
+            margin-bottom:      $spacingXS;
+        }
+    }
+
+    &__textlink-arrow {
+        width:                  1rem;
+        height:                 1rem;
+        position:               static;
+        fill:                   $colorWhite;
+
+        @include breakpoint('l', 'min') {
+            width:              0.6rem;
+            height:             0.6rem;
+            margin-right:       $spacingXS;
+        }
+    }
+
+    &__textlink-text {
+        display:                none;
+        text-transform:         uppercase;
+        font-weight:            700;
+        line-height:            1em;
+
+        @include breakpoint('l', 'min') {
+            display:            block;
+        }
+    }
+
+    &__countdown {
+        .index-event-counter {
+            max-width:          60%;
+            margin-bottom:      $spacingLG;
+        }
+
+        .index-event-counter-digits {
+            position:           static;
+            width:              100%;
+        }
+
+        .index-event-counter-daysleft {
+            padding:            0;
+            text-align:         center;
+            font-size:          0.9rem;
+            line-height:        1.2em;
+            hyphens:            initial;
+        }
+    }
+
+}

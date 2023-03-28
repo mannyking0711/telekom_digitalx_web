@@ -1,0 +1,56 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  LIB SECTION HEADER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.lib-section-header {
+  background-color: $colorWhite;
+  padding-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    padding-top: $spacing5XL;
+  }
+
+  &__headline {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__title {
+
+    text-align: center;
+    margin: 0;
+
+    &__tag {
+      color: $colorXBlue
+    }
+  }
+
+  &__subtitle {
+    color: $colorTypo;
+    font: 600 1.3rem #{"/"} 1em $fontFamily;
+
+    text-align: center;
+    margin: 0 0 $spacingSM;
+
+    @include breakpoint('l', min) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__intro {
+    max-width: 650px;
+    text-align: center;
+    margin: $spacingXL auto 0;
+    font: 400 $fontSizeNormal #{"/"} 1.3em $fontFamily;
+    color: $colorTypo;
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    margin: $spacing3XL 0 0;
+  }
+}

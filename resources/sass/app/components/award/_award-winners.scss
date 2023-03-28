@@ -1,0 +1,78 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD WINNERS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.awardWinners {
+    &__headline {
+        margin-bottom:      $spacing3XL;
+
+        @include breakpoint('l', min) {
+            margin-bottom:  $spacing4XL;
+        }
+    }
+
+    &__winners {
+        display:            flex;
+        flex-wrap:          wrap;
+
+        gap: $spacingMD;
+        @include breakpoint('l', min) {
+          gap: $spacingXL;
+        }
+    }
+
+    &__winner {
+        position:           relative;
+        text-align:         center;
+        border:             1px solid $colorGrayBorder;
+        border-radius:      5px;
+        padding:            $spacingLG $spacingMD $spacing5XL;
+        width:              100%;
+        margin-bottom:      0;
+
+        @include breakpoint('m', 'min') {
+                width:          48%;
+        }
+
+        @include breakpoint('xl', 'min') {
+                width:          31.5555%;
+        }
+    }
+
+    &__winner-category {
+        font: 		        600 1.3rem #{"/"} 1.2em $fontFamily;
+        min-height:         2.4em;
+        margin-bottom:      $spacingXL;
+    }
+
+    &__winner-logo {
+        height:             4rem;
+        max-width:          100%;
+        margin:             0 auto $spacingXL;
+    }
+
+    &__winner-title {
+        font: 		        600 1.1rem #{"/"} 1em $fontFamily;
+        color:              $colorGrayDark;
+        margin-bottom:      $spacingMD;
+    }
+
+    &__winner-desc {
+        font: 		        400 1rem #{"/"} 1.4em $fontFamily;
+        color:              $colorGray;
+        margin-bottom:      $spacingXL;
+    }
+
+    &__winner-btn {
+        background:         $colorAwardBlue;
+        position:           absolute;
+        top:                auto;
+        bottom:             $spacingXL;
+        left:               $spacingXL;
+        right:              $spacingXL;
+        margin:             0;
+    }
+
+}

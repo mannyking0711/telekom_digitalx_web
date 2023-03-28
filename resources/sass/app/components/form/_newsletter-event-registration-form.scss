@@ -1,0 +1,65 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// NEWSLETTER EVENT REGISTRATION FORM
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .newsletter-event-registration-form {
+
+        .input-radio, .input-checkbox {
+            height: auto;
+        }
+
+        .privacy {
+            display: flex;
+
+            @include breakpoint('m') {
+                display: block;
+            }
+
+            label {
+                font-weight: normal;
+                font-size: 1rem;
+                line-height: 1.3rem;
+            }
+
+            p {
+                color: #28659B;
+                padding-top: 0.7rem;
+                font-size: 1rem;
+                line-height: 1.3rem;
+                margin: 0;
+            }
+        }
+
+        .submit-row {
+            text-align: center;
+        }
+
+
+        /////////////////////////////////
+        // DARK BACKGROUND
+        /////////////////////////////////
+        &.dark {
+
+            label {
+                color: $colorWhite;
+            }
+
+            input {
+                color: $colorWhite;
+                background: transparent;
+                border-color: $colorXBlue;
+
+                &::placeholder {
+                    color: $colorXBlue;
+                }
+            }
+
+            .input-checkbox svg .normal-fill,
+            .input-radio svg .normal-fill {
+                fill: transparent;
+            }
+        }
+
+    }

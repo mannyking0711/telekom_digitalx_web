@@ -1,0 +1,264 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  ARTICLE LIST
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	.article-list {
+
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  ARTICLE LIST ITEM
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	.article-list-item {
+
+		margin-bottom: 			$spacingLG;
+
+		.content {
+
+			@extend %relative;
+
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+
+		.image-wrapper-square {
+			position: relative;
+			padding-bottom: 100%;
+			margin-bottom: 1rem;
+		}
+
+		.image-wrapper-square img {
+			position: absolute;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+		}
+
+		.headline {
+			//margin-bottom:      $spacingMD;
+		}
+
+		.__headlineComplete {
+			margin-bottom:      $spacingSM;
+			display:         	flex;
+			justify-content: 	space-between;
+			flex-flow: 			row;
+		}
+
+		.premiumIcon {
+			text-transform: 	uppercase;
+			color: 				$colorWhite;
+			background-color: 	$blueColor;
+			display: 	inline-block;
+			position: 	relative;
+
+			align-self: flex-start;
+
+			@include breakpoint('m', 'min') {
+				padding:        0.5rem 0.7rem 0.4rem 0.7rem;
+				font:           bold $fontSizeSmall #{"/"} $fontSizeSmall $fontFamily;
+			}
+
+			margin:             0 $spacingSM 0 0;
+			padding:            0.3rem $spacingSM;
+
+			font:               bold 0.6rem #{"/"} 0.6rem $fontFamily;
+			border:             1px solid $blueColor;
+			border-radius:      0.3rem;
+			cursor:             default;
+		}
+
+	}
+
+
+	/////////////////////////////////
+	// PODCAST
+	/////////////////////////////////
+
+	.list-item-podcast-icon {
+
+		@extend %absolute;
+
+		width: 		45px;
+		height: 	45px;
+		top: 		15px;
+		left: 		15px;
+
+		svg { fill: #fff; }
+	}
+
+
+	/////////////////////////////////
+	// VIDEO
+	/////////////////////////////////
+
+	.list-item-duration {
+		position: 	absolute;
+		bottom: 	15px;
+		right: 		15px;
+		z-index: 	10;
+		color: 		$colorWhite;
+		background: rgba(0,0,0,0.4);
+		padding: 	5px 9px;
+		border-radius: 3px;
+		font:       600 0.9rem #{"/"} 1em $fontFamily;
+
+		display: none;
+	}
+
+	.list-item-play {
+		.icon {
+			fill:	$colorWhite;
+			opacity: 0.7;
+			height: 25%;
+			top: 	37.5%;
+		}
+	}
+
+
+	/////////////////////////////////
+	// DESKTOP
+	/////////////////////////////////
+
+	@include breakpoint('l', min) {
+
+		.article-list-item {
+
+			margin-bottom: 4%;
+
+			.headline {
+				min-height: 		60px; 		// force height of two text lines
+			}
+		}
+	}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  ARTICLE HERO LIST
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	.article-hero-list {
+		margin-bottom: 8rem;
+	}
+
+	// mobile is just a regular article-list
+	@include breakpoint('l') {
+
+		.article-hero-list {
+			margin-bottom: calc($marginBottomSectionMobile/2);
+		}
+
+		.article-hero-list .col-33{
+			width: 100% !important;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+
+		.article-hero-list .article-list-item .image {
+			padding-bottom: 80%;
+		}
+
+		.article-hero-list .headline  {
+
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+		}
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  ARTICLE LIST HERO ITEM
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+		.article-list-hero-item {
+			position: 					relative;
+
+			// every other hero article is flipped around
+			&:nth-child(even) .row {
+				flex-direction: 		row-reverse;
+
+				.content {
+				}
+
+				.image:after {
+					left: 				auto;
+					right: 				100%;
+					margin-right: 		-14px;
+				}
+
+				.articleinfo__colorbox {
+					display: 			inline-block;
+				}
+
+				.articleinfo__tags {
+					margin-right: 		-$spacingSM;
+				}
+
+				.articleinfo__metadata {
+					padding: 			0 $spacingXL 0 0;
+				}
+
+				.articleinfo__bookmark {
+					left: 				auto;
+					right: 				0;
+				}
+			}
+
+			.image-wrapper {
+				position: relative;
+				padding-bottom: 66.66%;
+				margin-bottom: 1rem;
+			}
+
+			.image-wrapper img {
+				position: absolute;
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+				max-width: 100%;
+			}
+
+
+
+
+
+
+			.headline {
+				min-height: 			0;
+				font-size: 				3.7rem;
+				line-height: 			4.3rem;
+			}
+
+			.list-item-duration {
+				bottom: 	20px;
+				right: 		20px;
+				padding: 	9px 16px;
+				font-size:  1rem;
+
+				display: none;
+			}
+
+			.list-item-play .icon {
+				height: 	35%;
+				top:		32.5%;
+			}
+		}
+
+
+

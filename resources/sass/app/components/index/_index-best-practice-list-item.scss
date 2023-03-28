@@ -1,0 +1,67 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INDEX BEST PRACTISE LIST ITEM
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.index-best-practice-list-item {
+    width: 50%;
+
+    .image {
+        @extend %relative;
+
+        width:              100%;
+        height: 			0;
+        margin-bottom:      $spacingMD;
+        background: 		$colorGrayBackground url('../svg/app/loading-content.svg') no-repeat center center;
+        background-size: 	30px 30px;
+        padding-bottom:     52.53%;
+
+        img {
+
+            @extend				%absolute;
+
+            height: 			100%;
+            object-fit: 		cover;
+            object-position: 	center center;
+        }
+    }
+
+    .headline {
+        margin: 0;
+    }
+
+}
+
+.index-best-practice-list-item {
+	padding-right: 20px;
+}
+
+.index-best-practice-list-item:last-child {
+	border-left: 1px solid #DADBDD;
+	padding-left: 20px;
+	padding-right: 0px;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@include breakpoint('xl') {
+
+    .index-best-practice-list-item {
+		
+		margin-bottom: 1em;
+
+        h4 {
+            line-height: 1.1rem;
+        }
+
+    }
+
+}

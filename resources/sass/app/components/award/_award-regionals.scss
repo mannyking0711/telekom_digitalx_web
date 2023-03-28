@@ -1,0 +1,148 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD REGIONALS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.awardRegionals {
+    &__headline {
+        margin-bottom:      $spacingMD;
+
+        @include breakpoint('l', min) {
+            margin-bottom:  $spacingLG;
+        }
+
+        &.pageaward__headline span {
+            color:          $colorXBlue;
+        }
+    }
+
+    &__desc {
+        text-align:         center;
+        margin:             0 auto $spacingXL;
+
+        @include breakpoint('l', min) {
+            margin-bottom:  $spacing2XL;
+            max-width:      35em;
+        }
+
+        b {
+            font-weight:    600;
+        }
+    }
+
+    &__region {
+        @include breakpoint('l', min) {
+            display:        flex;
+            align-items:    center;
+        }
+    }
+
+    &__logos {
+        border:             1px solid $colorGrayBorder;
+        display:            flex;
+        flex-wrap:          wrap;
+        position:           relative;
+        margin-bottom:      $spacingLG;
+        min-height:         40vw;
+
+        @include breakpoint('l', min) {
+            width:          50%;
+            min-height:     30vw;
+        }
+
+        // blue cross
+        &::before,
+        &::after {
+            content:        '';
+            width:          1px;
+            height:         1px;
+            position:       absolute;
+            left:           50%;
+            top:            50%;
+            background:     $colorXBlue;
+        }
+        &::before {
+            height:         25vw;
+            margin-top:     -12.5vw;
+
+            @include breakpoint('l', min) {
+                height:         15vw;
+                margin-top:     -7.5vw;
+            }
+        }
+        &::after {
+            width:          25vw;
+            margin-left:    -12.5vw;
+
+            @include breakpoint('l', min) {
+                width:          15vw;
+                margin-left:    -7.5vw;
+            }
+        }
+    }
+
+    &__logo {
+        width:              50%;
+        height:             20vw;
+        padding:            5vw;
+        display:            flex;
+        align-items:        center;
+        justify-content:    center;
+
+        @include breakpoint('l', min) {
+            height:         15vw;
+            max-height:     200px;
+            padding:        $spacing3XL;
+        }
+
+        img {
+            max-width:      100%;
+            max-height:     100%;
+        }
+    }
+
+    &__region-info {
+        @include breakpoint('l', min) {
+            padding-left:   $spacingXL;
+        }
+
+        @include breakpoint('xl', min) {
+            padding-left:   $spacing3XL;
+        }
+    }
+
+    &__region-title {
+    }
+
+    &__winners {
+        padding:            0;
+        color:              $colorGrayDark;
+        margin-bottom:      $spacingLG;
+    }
+
+    &__winner {
+        padding:            0;
+        list-style:         none;
+        margin-bottom:      $spacingMD;
+    }
+
+    &__winner-title {
+        font: 		        600 1rem #{"/"} 1.2em $fontFamily;
+
+        @include breakpoint('xl', min) {
+            font-size:      1.1rem;
+            line-height:    1.4em;
+        }
+    }
+
+    &__winner-category {
+        font: 		        400 1rem #{"/"} 1.2em $fontFamily;
+        color:              $colorGray;
+
+        @include breakpoint('xl', min) {
+            font-size:      1.1rem;
+            line-height:    1.4em;
+        }
+    }
+}

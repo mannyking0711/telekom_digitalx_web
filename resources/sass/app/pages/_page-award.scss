@@ -1,0 +1,82 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .pageaward {
+        p > a,
+        p > a:hover {
+            color:              $colorAwardGreen;
+        }
+
+        &__headline {
+            font: 		        600 1.8rem #{"/"} 1em $fontFamily;
+
+            @include breakpoint('l', min) {
+                font-size:      2.4rem;
+            }
+
+            span {
+                color:          $colorAwardGreen;
+            }
+        }
+
+        &__text-headline {
+            margin-bottom:      $spacingMD;
+            text-align:         center;
+
+            @include breakpoint('l', min) {
+                margin-bottom:  $spacingLG;
+            }
+        }
+
+        &__text {
+            text-align:         center;
+            margin:             0 auto;
+            max-width:          50em;
+
+            p {
+                margin-bottom:  $spacingMD;
+            }
+        }
+
+        &__patron-headline,
+        &__quotes-headline {
+            margin-bottom:      $spacingXL;
+
+            @include breakpoint('xl', min) {
+                margin-bottom:  $spacing3XL;
+            }
+        }
+
+        &__patron-quote {
+            margin-bottom:      $spacingMD;
+
+            @include breakpoint('l', min) {
+                margin-bottom:  $spacing3XL;
+            }
+
+            @include breakpoint('xl', min) {
+                margin-bottom:  $spacing4XL;
+            }
+        }
+
+        &__patron-button {
+            margin:             0;
+            width:              100%;
+            background:         $colorAwardBlue;
+        }
+
+        &__intro-spacing {
+            margin-bottom:      $spacingXL;
+
+            @include breakpoint('l', min) {
+                margin-bottom:  $spacing3XL;
+            }
+
+            @include breakpoint('xl', min) {
+                margin-bottom:  $spacing4XL;
+            }
+        }
+    }

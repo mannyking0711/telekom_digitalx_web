@@ -1,0 +1,68 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INITIATIVE AWARD
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.iniAward {
+    &__headline-wrap {
+        padding:            $spacingXL 0 0;
+
+        @include breakpoint('l', min) {
+            padding:         $spacing3XL 0 $spacingMD;
+        }
+    }
+
+    &__content {
+        padding:            $spacing3XL 0;
+
+        @include breakpoint('xl', min) {
+            display:        flex;
+            justify-content: space-between;
+            flex-flow:      row-reverse;
+            padding:        $spacing5XL 0;
+        }
+    }
+
+    &__image {
+        width:              100%;
+        max-width:          550px;
+        display:            block;
+        border-radius:      5px;
+        background:         $colorWhite;
+        padding:            $spacingMD $spacing5XL;
+        align-self:         center;
+        margin:             0 auto $spacing2XL;
+
+        @include breakpoint('xl', min) {
+            width:          40%;
+            margin:         0;
+        }
+    }
+
+    &__info {
+        max-width:          550px;
+        margin:             0 auto;
+
+        @include breakpoint('xl', min) {
+            max-width:      750px;
+            padding-right:  $spacing5XL;
+            width:          60%;
+            align-self:     center;
+            margin:         0;
+        }
+    }
+
+    &__subheadline {
+        text-transform:     uppercase;
+        color:              $colorWhite;
+    }
+
+    &__desc {
+        color:              $colorWhite;
+    }
+
+    &__btn {
+        margin:             0;
+    }
+}

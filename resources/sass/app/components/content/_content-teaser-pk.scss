@@ -1,0 +1,31 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  CONTENT TEASER PK
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.content-teaser-pk {
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing5XL;
+  }
+
+  &__headline {
+    font: 600 1.9rem #{"/"} 1em $fontFamily;
+    text-align: center;
+    margin: 0 0 $spacingXL;
+
+    @include breakpoint('l', min) {
+      font-size: 2.9rem;
+      line-height: 3.4rem;
+    }
+  }
+
+  &__intro {
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto $spacingXL;
+    font: 400 $fontSizeNormal #{"/"} 1.3em $fontFamily;
+    color: $colorTypo;
+  }
+}

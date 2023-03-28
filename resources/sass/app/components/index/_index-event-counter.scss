@@ -1,0 +1,117 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INDEX EVENT COUNTER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    /////////////////////////////////
+    // COUNTER GLOBAL STYLES
+    /////////////////////////////////
+
+    .index-event-counter {
+        @extend %relative;
+        max-width: 400px;
+        height: 100%;
+        margin: 0 auto 0;
+    }
+
+
+    .index-event-counter-logo {
+
+        @extend %relative;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .index-event-counter-digits {
+        @extend %relative;
+
+        svg {
+            overflow: visible;
+        }
+    }
+
+    .event-counter-digits-text {
+
+        font: 700 80px/80px 'Bebas', sans-serif;
+        text-align: center;
+    }
+
+
+    .index-event-counter-daysleft {
+        @extend %relative;
+        font: 600 1.8rem/2.2rem $fontFamily;
+        color: $colorXBlue;
+        text-transform:uppercase;
+        text-align: center;
+    }
+
+    .index-event-counter-text {
+        text-align: center;
+    }
+
+    .index-event-counter-btn {
+        text-align: center;
+    }
+
+    .index-event-register-btn {
+        display: flex;
+      justify-content: center;
+    }
+
+
+    /////////////////////////////////
+    // COUNTER HEADER STYLES DESKTOP (INSIDE HERO)
+    /////////////////////////////////
+
+    .event-hero,
+    .index-magazine-hero {
+
+        > .index-event-counter {
+            z-index: 10;
+            width: 214px;
+            height: auto;
+            box-shadow: -25px 25px 50px #0000004B;
+            background: transparent linear-gradient(180deg, #193A5B 0%, #0D1F31 100%) 0% 0% no-repeat padding-box;
+            border-radius: 5px;
+            padding: 25px;
+            position: absolute;
+            top: inherit;
+            bottom: -25px;
+            right: 2.78%;
+            left: inherit;
+
+            @include breakpoint('l') {
+                visibility: hidden; /* "display: none" is causing a bug with counter */
+            }
+
+            .index-event-counter-daysleft {
+                margin: 0;
+            }
+
+            .index-event-register-btn {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    /////////////////////////////////
+    // COUNTER HEADER STYLES MOBILE (OUTSIDE HERO)
+    /////////////////////////////////
+
+    .index-intro-container {
+
+        > .index-event-counter {
+
+            display: none;
+            margin: $marginBottomSection auto;
+
+            @include breakpoint('l') {
+                display: block;
+            }
+        }
+
+    }

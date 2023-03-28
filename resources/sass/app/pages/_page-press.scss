@@ -1,0 +1,134 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	PRESS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	.pagePress {
+		&__info {
+			background:         $colorGrayDark url('../img/app/press/background.jpg') no-repeat center center;
+			background-size:    cover;
+			padding:			$spacing3XL 0 $spacingXL;
+
+            @include breakpoint('m', min) {
+				padding:		$spacing5XL 0 6rem;
+            }
+		}
+
+		&__info-headline {
+			color: 				$colorWhite;
+			overflow-wrap:      break-word;
+			word-wrap:          break-word;
+			hyphens:            auto;
+			text-align: 		left;
+
+            @include breakpoint('m', min) {
+				text-align: 	center;
+            }
+		}
+
+		&__info-text {
+			max-width: 			900px;
+			margin: 			0 auto;
+
+            @include breakpoint('l', min) {
+				columns: 		2;
+				column-gap: 	$spacing2XL;
+            }
+
+			p {
+				color: 			$colorWhite;
+			}
+
+			a {
+				font-size: 		1.12rem;
+				line-height: 	1.7rem;
+			}
+		}
+
+		&__info-intro {
+			font-weight: 		600;
+			font-size: 			1.2rem;
+		}
+
+		&__info-btn {
+			margin:				0 0 $spacingXL;
+		}
+
+		&__coverage {
+			padding:			$spacing3XL 0 $spacingXL;
+
+            @include breakpoint('m', min) {
+				padding:		$spacing5XL 0 $spacing4XL;
+            }
+		}
+
+		&__coverage-headline {
+			text-align: 		left;
+
+            @include breakpoint('m', min) {
+				text-align: 	center;
+            }
+		}
+
+		&__events {
+			max-width: 			1000px;
+			margin: 			0 auto;
+		}
+
+		&__list-headline {
+		}
+
+		&__list {
+			padding: 			0;
+			margin-bottom: 		$spacing3XL;
+		}
+
+		&__list-item {
+			list-style: 		none;
+			padding: 			0;
+			border-bottom:		1px solid $colorGrayBorder;
+			padding:			$spacingMD 0;
+		}
+
+		&__list-link {
+			position: 			relative;
+			display: 			block;
+			padding-right:		$spacing3XL;
+		}
+
+		&__list-title {
+            font: 		        600 1.1rem #{"/"} 1.1em $fontFamily;
+			color:				$colorGray;
+			display: 			block;
+			margin-bottom: 		$spacingXS;
+			position: 			relative;
+		}
+
+		&__list-url {
+            font: 		        600 0.9rem #{"/"} 1.1em $fontFamily;
+			color:				$colorXBlue;
+			display: 			block;
+		}
+
+		&__list-arrow {
+			fill:				$colorXBlue;
+			width: 				$spacingSM;
+			left: 				-$spacingMD;
+		}
+
+		&__list-button {
+			fill:				$colorWhite;
+			background: 		$colorGrayLight;
+			border-radius: 		5px;
+			width: 				$spacing2XL;
+			height:				$spacing2XL;
+			left: 				auto;
+			right: 				0;
+			padding:			0.75rem;
+		}
+		&__list-link:hover &__list-button {
+			background: 		$colorXBlue;
+			fill:				$colorWhite;
+		}
+	}

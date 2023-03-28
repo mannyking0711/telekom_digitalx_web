@@ -1,0 +1,50 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MAGAZINE OVERVIEW STAFF
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.magOverStaff {
+    border-radius:                  0;
+
+    &__wrapper {
+        display:                    flex;
+        flex-flow:                  column-reverse;
+        padding:                    $spacing3XL 0;
+
+        @include breakpoint('l', 'min') {
+            flex-flow:              row;
+        }
+    }
+
+    &__img {
+        width:                      100%;
+        margin:                     0 0 $spacing3XL 0;
+        align-self:                 flex-start;
+
+        @include breakpoint('l', 'min') {
+            width:                  40%;
+            margin:                 0 0 0 $spacingXL;
+        }
+
+        @include breakpoint('xl', 'min') {
+            width:                  55%;
+            margin:                 0 0 0 $spacing4XL;
+        }
+    }
+
+    &__text {
+        align-self:                 center;
+
+        p {
+            color:                  $colorGray;
+        }
+    }
+
+    &__headline {
+        font-size: 			        2.2rem;
+        line-height: 		        1.2em;
+        text-align:                 left;
+        margin-bottom:              $spacingLG;
+    }
+}

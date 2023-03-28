@@ -1,0 +1,64 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// NEWSLETTER REGISTRATION FORM
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .newsletter-registration-form {
+
+        > .intro {
+            width: 50% - $paddingPage;
+            margin: 0 0 1rem $paddingPage;
+
+            @include breakpoint('xl') {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        > form {
+
+            display: flex;
+            flex-wrap: wrap;
+
+            > .left {
+                @extend %relative;
+
+                padding-right: 2%;
+                width: 50% - $paddingPage;
+                margin: 0 0 1rem $paddingPage;
+
+                @include breakpoint('xl') {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+
+            > .right {
+                @extend %relative;
+
+                padding-left: 2%;
+                width: 50% - $paddingPage;
+                margin: 0 $paddingPage 1rem 0;
+
+                @include breakpoint('xl') {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+            >.btn {
+                width: 100%;
+            }
+
+            label {
+                font-weight: normal;
+            }
+
+        }
+
+    }

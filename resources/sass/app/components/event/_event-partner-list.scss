@@ -1,0 +1,71 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT PARTNER LIST
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.event-partner-list {
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing5XL;
+  }
+
+  &__title {
+    font: 600 1.8rem #{"/"} 1.2em $fontFamily;
+
+    text-align: center;
+  }
+
+  &__grid {
+    margin-top: 20px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include breakpoint('l', min) {
+      //align-items: stretch;
+      //grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+  }
+
+  &__item {
+    flex: 0 1 0;
+  }
+
+
+  &__link {
+    display: block;
+    border: 1px solid #ADAFB1;
+    border-radius: 5px;
+    width: 238px;
+    height: 143px;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(76, 180, 231, .4);
+    }
+  }
+
+  &--small &__link {
+    width: 170px;
+    height: 102px;
+  }
+
+  &__logo {
+    @extend %absolute;
+    height: 100%;
+    object-fit: contain;
+
+    &--brandhouse {
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    margin-top: 0.5em;
+    font: 400 $fontSizeNormal #{"/"} 1.1em $fontFamily;
+    color: $colorTypo;
+    text-align: center;
+  }
+}

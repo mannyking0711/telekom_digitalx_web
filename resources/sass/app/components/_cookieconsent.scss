@@ -1,0 +1,215 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	COOKIE CONSENT
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    $borderRadius: 6px;
+
+	.cookie-consent {
+        @include box-shadow('popup');
+        z-index: 9999;
+        width: auto;
+        max-width: 500px;
+        max-height: calc(100vh - 7.5%); 
+        padding: 15px 30px;
+        background: $colorWhite;
+        border-radius: $borderRadius;
+        overflow: auto;
+	}
+
+
+    /////////////////////////////////
+    // TEXT
+    /////////////////////////////////
+
+    #cookie-consent-title {
+        text-align: center;
+	}
+
+    #cookie-consent-description {
+        a {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+
+	/////////////////////////////////
+	// BUTTONS
+	/////////////////////////////////
+
+	.cookie-consent-buttons {
+        margin: 0;
+
+        .btn {
+            margin: 0;
+            border: 2px solid transparent;
+        }
+	}
+
+
+    /////////////////////////////////
+    // Backdrop
+    /////////////////////////////////
+    .cookie-consent-backdrop {
+        z-index: 9998;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /////////////////////////////////
+    // Transitions
+    /////////////////////////////////
+
+    .cookie-consent-fade-enter,
+    .cookie-consent-fade-leave-active {
+        opacity: 0;
+    }
+
+    .cookie-consent-fade-enter-active,
+    .cookie-consent-fade-leave-active {
+        transition: opacity .5s ease
+    }
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	@include breakpoint(560px) { // max-width + (2 * right)
+
+		.cookie-consent {
+
+			width: 	90%;
+			left: 	5%;
+			right: 	auto;
+
+			.form-row-buttons { text-align: center; }
+		}
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	KLARO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+$var-border-radius: $borderRadius;
+$var-font-family: $fontFamily;
+$var-title-font-family: $fontFamily;
+
+$var-dark1: $colorXDark;
+$var-blue1: $colorXBlue;
+$var-green1: $colorXBlue;
+$var-red1: $colorFormError;
+
+$cm-box-shadow-dark-md: none;
+
+$cm-space: (
+    xs: 4px,
+    sm: 8px,
+    md: 12px,
+    lg: 24px,
+    xl: 48px,
+    xxl: 96px
+);
+
+@import "node_modules/klaro/src/scss/klaro";
+
+.klaro {
+
+    .cm-btn {
+        @extend .btn;
+    }
+
+    .title {
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    label {
+        position: initial;
+    }
+
+    .cm-services {
+        display: none;
+    }
+
+    .cookie-modal {
+
+        z-index: 9998;
+
+        a {
+            text-decoration: underline;
+        }
+
+        .cm-bg {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .cm-modal {
+
+            &.cm-klaro {
+                max-width: 1050px;
+            }
+
+            .cm-header {
+                padding: 15px 30px;
+                border: 0;
+            }
+
+            .cm-body {
+                padding: 15px 30px;
+                border: 0;
+
+                .more {
+                    display: none;
+                }
+            }
+
+            .cm-footer {
+                padding: 15px 30px;
+                border: 0;
+            }
+
+            .cm-toggle-all {
+                display: none;
+            }
+
+            .cm-list-title {
+                font-size: $fontSizeNormal;
+            }
+
+            .cm-list-description {
+                font-size: $fontSizeNormal;
+            }
+
+        }
+
+        .cm-btn {
+            padding: 1.1rem 2rem 1rem 2rem;
+            border-radius: 0;
+        }
+    }
+
+    .read-more-less {
+        cursor: pointer;
+        display: block;
+    }
+}

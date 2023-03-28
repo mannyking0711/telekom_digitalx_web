@@ -1,0 +1,111 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	CONFIG
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// COLORS DIGITAL X
+	/////////////////////////////////
+
+	$colorXDark: 		#0d1f30;
+	$colorXBlue: 		rgb(76, 180, 231);
+	$colorXYellow: 		rgb(255, 222, 20);
+	$colorXMagenta: 	rgb(230, 0, 126);
+	$colorXPurple: 		#8F0286;
+	$colorXGreen:		#7ba02d;
+
+
+	/////////////////////////////////
+	// COLORS
+	/////////////////////////////////
+
+	$colorCta: 				#0536B6;
+	$colorCtaHover:			#FE2123;
+
+	$colorActive: 			#FE2123;
+	$colorActiveHover: 		#0536B6;
+
+	$colorGray:				#979FA7;
+	$colorGrayHover: 		#818890;
+
+	$colorGrayLight:		#FAFBFC;
+	$colorGrayLightHover: 	#EBEDEE;
+
+	$colorGrayDark:	 		#43484C;
+	$colorGrayDarkHover: 	#363A3E;
+
+	$colorBackground: 		#ffffff;
+
+
+	/////////////////////////////////
+	// FORMS
+	/////////////////////////////////
+
+	$formInputHeight: 			3rem;
+	$formInputMobileHeight: 	3.4rem;
+
+	$colorInputBackground: 		#ffffff;
+	$colorFormError: 			#ff0000;
+	$colorFormErrorBackground: 	#FEEEEC;
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	GLOBAL
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	* 			{ margin: 0; padding: 0; box-sizing: border-box; }
+	body 		{ background: $colorBackground; }
+	img			{ @extend %no-select; border: 0px solid; }
+	a 			{ outline: 0; text-decoration: none; }
+	ul,ol 		{ padding-left: 1.5rem; }
+	sub, sup 	{ position: relative; font-size: 75%; line-height: 0; vertical-align: baseline; } // Prevent `sub` and `sup` from affecting the line height
+	sub 		{ bottom: -0.25em; }
+	sup 		{ top: -0.5em; }
+	.dev 		{ @extend %dev; }
+	.wip 		{ @extend %wip; }
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INCLUDES
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	// global components
+	@import '../components/mixins';
+	@import '../components/breakpoints';
+	@import '../components/page-transition';
+
+	// optional components
+	@import '../components/video-player';
+
+	// testing components
+	@import '../components/view-test';
+
+	// backend components
+	@import 'components/typo';
+	@import 'components/layout';
+	@import 'components/buttons';
+	@import 'components/icons';
+	@import 'components/header/header-horizontal';
+	@import 'components/header/header-navi';
+	@import 'components/header/language-select';
+	@import 'components/form/form';
+	@import 'components/form/input-select';
+	@import 'components/form/input-radio';
+	@import 'components/popup/popup-error';
+
+	// backend pages
+	@import 'pages/page-index';
+	@import 'pages/page-login';
+	@import 'pages/page-password';
+
+

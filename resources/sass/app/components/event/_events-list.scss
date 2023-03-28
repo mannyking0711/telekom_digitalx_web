@@ -1,0 +1,384 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENTS LIST
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.eventslist {
+    background:                 $gradientXBlueLight;
+    padding:                    $spacing2XL 0 0;
+
+    @include breakpoint('xl', 'min') {
+        padding:                150px 0 0;
+    }
+
+    &__event {
+        margin:                 0 auto $spacing3XL;
+        max-width:              500px;
+
+        @include breakpoint('xl', 'min') {
+            display:            flex;
+            margin-bottom:      200px;
+            max-width:          initial;
+        }
+
+        &--preview-left { // logo right variant
+            @include breakpoint('xl', 'min') {
+                flex-flow:      row-reverse;
+            }
+
+            .eventslist__event-countdown {
+                @include breakpoint('xl', 'min') {
+                    left:       auto;
+                    right:      -8px;
+                }
+            }
+
+            .eventslist__event-intro {
+                @include breakpoint('xl', 'min') {
+                    transform:  scale(1.25) translate(-10%, 0);
+                }
+            }
+
+            .eventslist__event-info {
+                @include breakpoint('xl', 'min') {
+                    padding:    $spacingXL 10% $spacingXL $spacingXL;
+                }
+            }
+
+            .eventslist__event-dateplace {
+                @include breakpoint('xl', 'min') {
+                    left:       -8px;
+                    right:      auto;
+                }
+            }
+        }
+    }
+
+    &__event-intro {
+        background:             $colorWhite;
+        position:               relative;
+        border:                 4px solid $colorWhite;
+
+        // elements will be randomly positioned via JS
+        // but we only want that to happen on larger screens
+        @include breakpoint('xl', 'max') {
+            top:                0 !important;
+        }
+
+        @include breakpoint('xl', 'min') {
+            transform:          scale(1.25) translate(10%, 0);
+            border:             8px solid $colorWhite;
+            width:              350px;
+            height:             350px;
+            flex:               0 0 350px;
+            box-shadow:         0 0 20px rgba(0, 0, 0, 0.5);
+            z-index:            10;
+            top:                initial;
+        }
+    }
+
+    &__event-img {
+        width:                  100%;
+        display:                block;
+
+        &--mobile {
+            @include breakpoint('xl', 'min') {
+                display:        none;
+            }
+        }
+
+        &--desktop {
+            display:            none;
+
+            @include breakpoint('xl', 'min') {
+                display:        block;
+                width:          100%;
+                height:         100%;
+                position:       absolute;
+                left:           0;
+                top:            0;
+                object-fit:     cover;
+                object-position: center;
+            }
+        }
+    }
+
+    &__event-countdown {
+        position:               absolute;
+        bottom:                 0;
+        left:                   0;
+        background:             $gradientXBlue;
+
+        @include breakpoint('l', 'min') {
+            width:              20%;
+            padding:            $spacingMD;
+        }
+
+        @include breakpoint('xl', 'min') {
+            width:              30%;
+            bottom:             -8px;
+            left:               -8px;
+        }
+
+        &--past {
+            font:               600 0.9rem #{"/"} 1em $fontFamily;
+            color:              $colorWhite;
+            background:         $agendaGradient;
+            text-align:         center;
+            text-transform:     uppercase;
+            max-width:          120px;
+            padding:            $spacingSM $spacingMD;
+
+            @include breakpoint('m', 'min') {
+                font-size:      1rem;
+            }
+
+            @include breakpoint('xl', 'min') {
+                padding:        $spacing2XL $spacingMD;
+            }
+        }
+
+        .index-event-counter {
+            @include breakpoint('l', 'max') {
+                flex-wrap:      nowrap;
+                align-items:    center;
+                padding:        $spacingSM;
+                max-width:      150px;
+            }
+        }
+
+        .index-event-counter-daysleft {
+            margin:         0 0 $spacingSM;
+            @include breakpoint('l', 'max') {
+                font-size:      0.7rem;
+                line-height:    1em;
+                padding:        0;
+                hyphens:        initial;
+            }
+
+            @include breakpoint('l', 'min') {
+                font-size:      0.8rem;
+                line-height:    1em;
+            }
+
+            @include breakpoint('xl', 'min') {
+                font-size:      0.6rem;
+            }
+        }
+
+        .index-event-counter-digits {
+            @include breakpoint('l', 'max') {
+                position:       static;
+                width:          35%;
+                margin:         0 auto;
+            }
+        }
+
+        .index-event-register-btn a {
+            text-align:         center;
+            padding:            0.4rem;
+
+            font-size:          0.6rem;
+            line-height:        1em;
+        }
+    }
+
+    &__event-info {
+        background:             $colorWhite;
+        padding:                $spacingLG $spacingMD;
+        position:               relative;
+
+        @include breakpoint('xl', 'min') {
+            border-left:        8px solid $gradientXBlueLight;
+            border-right:       8px solid $gradientXBlueLight;
+            display:            flex;
+            flex-flow:          column;
+            justify-content:    center;
+            padding:            $spacingXL $spacingXL $spacingXL 10%;
+            height:             350px;
+        }
+    }
+
+    &__info-headline {
+        font:                   600 1.3rem #{"/"} 1.2em $fontFamily;
+    }
+
+    &__info-text {
+        font:                   400 1rem #{"/"} 1.4em $fontFamily;
+        color:                  $colorGray;
+        margin:                 0;
+
+        @include breakpoint('xl', 'min') {
+            margin-bottom:      $spacingXL;
+        }
+    }
+
+    &__event-logo {
+        width:                  50%;
+        position:               absolute;
+        top:                    50%;
+        left:                   50%;
+        transform:              translate(-50%, -50%);
+    }
+
+    &__event-dateplace {
+        font:                   400 0.8rem #{"/"} 1.2em $fontFamily;
+        background:             $colorXDark;
+        color:                  $colorWhite;
+        position:               absolute;
+        top:                    -4px;
+        left:                   50%;
+        transform:              translateX(-50%);
+        padding:                0.4rem 0.8rem;
+        white-space:            nowrap;
+        z-index:                10;
+
+        @include breakpoint('xl', 'min') {
+            font:               400 0.8rem #{"/"} 1em $fontFamily;
+            padding:            $spacingMD $spacingLG;
+            transform:          none;
+            top:                -$spacingLG;
+            left:               auto;
+            right:              -8px;
+        }
+    }
+
+    &__event-preview {
+        background:             $colorWhite;
+        padding:                4px 4px 0 4px;
+
+        @include breakpoint('xl', 'min') {
+            padding:            8px;
+            width:              270px;
+            height:             350px;
+            flex:               0 0 270px;
+            display:            flex;
+            flex-flow:          column;
+            justify-content:    flex-end;
+        }
+    }
+
+    &__preview-headline {
+        font:                   600 1.2rem #{"/"} 1.2em $fontFamily;
+        text-align:             center;
+        text-transform:         uppercase;
+
+        @include breakpoint('xl', 'min') {
+            font-size:          1.1rem;
+            margin:             -8px 0 0;
+            display:            flex;
+            align-items:        center;
+            justify-content:    center;
+            width:              100%;
+            height:             100%;
+        }
+    }
+
+    &__preview-content {
+        img {
+            display:            block;
+            width:              100%;
+            object-fit:         cover;
+            object-position:    center;
+        }
+
+        &--triple {
+            img {
+                @include breakpoint('xl', 'min') {
+                    height:     138px;
+                }
+            }
+        }
+
+        &--double {
+            img {
+                @include breakpoint('xl', 'min') {
+                    height:     150px;
+                }
+
+                &:first-child {
+                    border-bottom: 4px solid $colorWhite;
+                }
+            }
+        }
+
+        &--quote {
+            position:           relative;
+
+            img {
+                @include breakpoint('xl', 'min') {
+                    height:     300px;
+                }
+            }
+        }
+    }
+
+    &__dual-images {
+        display:                flex;
+        border-bottom:          4px solid $colorWhite;
+
+        img {
+            width:              50%;
+
+            @include breakpoint('xl', 'min') {
+                height:         160px;
+            }
+
+            &:first-child {
+                border-right:   2px solid $colorWhite;
+            }
+
+            &:last-child {
+                border-left:    2px solid $colorWhite;
+            }
+        }
+    }
+
+    &__quote {
+        position:               absolute;
+        left:                   0;
+        bottom:                 0;
+        width:                  100%;
+        text-align:             center;
+        z-index:                10;
+        color:                  $colorWhite;
+        padding:                $spacingMD;
+        font:                   400 0.9rem #{"/"} 1.3em $fontFamily;
+    }
+
+    &__quote-text {
+        font-style:             italic;
+        font-size:              1.2rem;
+        line-height:            1.4em;
+        margin-bottom:          $spacingMD;
+    }
+
+    &__quote-author {
+        font-weight:            600;
+    }
+
+    &__btn-wrap {
+        display:                flex;
+    }
+
+    &__event-btn {
+        &--mobile.btn {
+            margin:             $spacingLG auto;
+
+            @include breakpoint('xl', 'min') {
+                display:        none;
+            }
+        }
+
+        &--desktop.btn {
+            display:            none;
+
+            @include breakpoint('xl', 'min') {
+                display:        inline-flex;
+                margin:         0;
+                width:          max-content;
+            }
+        }
+    }
+}

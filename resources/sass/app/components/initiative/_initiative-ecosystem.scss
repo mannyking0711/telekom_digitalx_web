@@ -1,0 +1,67 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INITIATIVE ECOSYSTEM
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.iniEcosystem {
+    padding:                $spacing3XL 0;
+
+    @include breakpoint('l', min) {
+        padding-top:        0;
+    }
+
+    &__wrap {
+        margin-bottom:      $spacing3XL;
+
+        @include breakpoint('l', min) {
+            margin-bottom:  0;
+            display:        flex;
+        }
+    }
+
+    &__image {
+        width:              100%;
+        display:            block;
+        margin-bottom:      $spacing3XL;
+
+        @include breakpoint('l', min) {
+            width:          40%;
+            align-self:     center;
+        }
+
+        @include breakpoint('xl', min) {
+            width:          50%;
+        }
+    }
+
+    &__info {
+        background:         $colorWhite;
+        padding:            $spacingXL;
+        border-radius:      5px;
+        position:           relative;
+
+        @include breakpoint('l', min) {
+            align-self:     flex-start;
+            width:          60%;
+            border-radius:  0 0 0 5px;
+            right:          -10.1%;
+            padding-right:  calc(#{$spacingXL} + 10.1%);
+            margin-bottom:  $spacing3XL;
+        }
+
+        @include breakpoint('xl', min) {
+            width:          50%;
+            right:          -3.1%;
+            padding-right:  calc(#{$spacingXL} + 3.1%);
+        }
+
+        @include breakpoint(1500, min) {
+            border-radius:  0 0 5px 5px;
+            right:          0;
+            padding-right:  $spacingXL;
+            margin-left:    $spacing3XL;
+        }
+    }
+
+}

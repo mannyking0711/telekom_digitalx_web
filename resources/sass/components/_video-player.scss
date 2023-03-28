@@ -1,0 +1,130 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	PLYR
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// LAYOUT
+	/////////////////////////////////
+
+	.video-player {
+
+		@extend %relative;
+
+		// use transparent container instead of black background
+		.plyr--video,
+		.plyr__poster,
+		.plyr__video-wrapper {
+
+			background-color: transparent;
+		}
+
+
+		// hide controls on stopped video
+		.plyr.plyr--stopped .plyr__controls {
+			display: none;
+		}
+
+		>.video-caption {
+			position: inherit;
+			text-align: right;
+			font-size: 1rem;
+		}
+	}
+
+
+	/////////////////////////////////
+	// COLOR
+	/////////////////////////////////
+
+	.video-player {
+
+		.plyr--video .plyr__control.plyr__tab-focus,
+		.plyr--video .plyr__control:hover,
+		.plyr--video .plyr__control[aria-expanded=true] {
+
+			background: $colorXBlue;
+		}
+
+		.plyr--full-ui input[type=range] {
+
+			color: $colorXBlue;
+		}
+	}
+
+
+	/////////////////////////////////
+	// BIG PLAY ICON
+	/////////////////////////////////
+
+	.video-player .plyr__control--overlaid {
+		width: 				430px;
+		height: 			430px;
+		background: 		rgba(255, 255, 255, 0.55);
+
+		// play icon
+		clip-path: 			path('M428 215c0 117.684-95.316 213-213 213S2 332.684 2 215 97.316 2 215 2s213 95.316 213 213zM161.75 321.5L321.5 215 161.75 108.5z');
+		transform:			translate(-50%, -50%) scale(0.3);
+
+		& svg {
+			display: none;
+		}
+
+	}
+
+
+	.video-player .plyr__control--overlaid:hover {
+
+		background: #fff !important;
+		color: $colorXBlue;
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	BACKGROUND VIDEO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	.video-player.background {
+
+		height: 	100%;
+
+		position: 	absolute;
+		top: 		50%;
+		left: 		50%;
+		overflow: 	hidden;
+		transform: 	translate(-50%, -50%);
+
+		.plyr1 {
+			width: 		auto;
+			min-width: 	none;
+			max-width: 	none;
+			height: 	auto;
+			min-height: none;
+			max-height: none;
+
+
+		}
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+	@include breakpoint('l') {
+
+		.video-player .plyr__control--overlaid {
+			transform:			translate(-50%, -50%) scale(0.15);
+		}
+	}

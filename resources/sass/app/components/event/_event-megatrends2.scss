@@ -1,0 +1,143 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENT MEGATRENDS2
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.event-megatrends2 {
+  background-color: $colorXDark;
+  padding-bottom: $spacing3XL;
+  @include breakpoint('l', min) {
+    padding-bottom: $spacing5XL;
+  }
+
+  .lib-section-header {
+    background-color: $colorXDark;
+  }
+
+  .lib-section-header__title {
+    color: $colorXYellow;
+  }
+
+  .lib-section-header__title__tag {
+    color: $colorWhite;
+  }
+
+  .lib-section-header__subtitle {
+    color: $colorWhite;
+  }
+
+  .lib-section-header__intro {
+    color: $colorWhite;
+    > * {
+      color: $colorWhite!important;
+    }
+  }
+
+  &__megatrends {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0;
+
+    @include breakpoint('l', min) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    &__item {
+      padding: 8px 16px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover, &.active {
+        border: 2px solid $colorWhite!important;
+      }
+
+      &__icon {
+        display: block;
+        width: auto;
+        height: 120px;
+        filter: brightness(0) invert(1);
+      }
+
+      &__name {
+        width: 100%;
+        text-align: center;
+        color: $colorWhite;
+
+        font: 600 $fontSizeNormal #{"/"} 1em $fontFamily;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &.red {
+        background-color: $colorMegatrendsRed;
+        border: 2px solid $colorMegatrendsRed;
+      }
+
+      &.dark_red {
+        background-color: $colorMegatrendsDarkRed;
+        border: 2px solid $colorMegatrendsDarkRed;
+      }
+
+      &.yellow {
+        background-color: $colorMegatrendsYellow;
+        border: 2px solid $colorMegatrendsYellow;
+      }
+
+      &.light_green {
+        background-color: $colorMegatrendsLightGreen;
+        border: 2px solid $colorMegatrendsLightGreen;
+      }
+
+      &.blue {
+        background-color: $colorMegatrendsBlue;
+        border: 2px solid $colorMegatrendsBlue;
+      }
+
+      &.green {
+        background-color: $colorMegatrendsGreen;
+        border: 2px solid $colorMegatrendsGreen;
+      }
+
+      &.purple_magenta {
+        background-color: $colorMegatrendsPurpleMagenta;
+        border: 2px solid $colorMegatrendsPurpleMagenta;
+      }
+
+      &.orange {
+        background-color: $colorMegatrendsOrange;
+        border: 2px solid $colorMegatrendsOrange;
+      }
+
+      &.magenta {
+        background-color: $colorMegatrendsMagenta;
+        border: 2px solid $colorMegatrendsMagenta;
+      }
+
+      &.dark_blue {
+        background-color: $colorMegatrendsDarkBlue;
+        border: 2px solid $colorMegatrendsDarkBlue;
+      }
+    }
+  }
+
+
+  &__button {
+    margin-top: $spacing3XL;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn {
+    line-height: 1;
+
+    width: 100%;
+    @include breakpoint('l', min) {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD NOMINEES
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.awardNominees {
+    text-transform:             uppercase;
+    margin-bottom:              $spacingXL;
+
+    @include breakpoint('l', min) {
+        margin-bottom:          $spacing3XL;
+    }
+
+    &__headline {
+        margin-bottom:          $spacing2XL;
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacing4XL;
+        }
+    }
+
+    &__categories {
+        @include breakpoint('l', min) {
+            display:            flex;
+            flex-wrap:          wrap;
+            justify-content:    space-between;
+        }
+    }
+
+    &__category {
+        margin-bottom:          $spacing4XL;
+
+        @include breakpoint('l', min) {
+            width:              48%;
+        }
+    }
+
+    &__title {
+        font: 		            600 1.2rem #{"/"} 1.1em $fontFamily;
+        margin-bottom:          $spacingMD;
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacingLG;
+        }
+    }
+
+    &__nominees {
+        padding:                0;
+    }
+
+    &__nominee {
+        padding:                $spacingSM 0;
+        list-style:             none;
+        display:                flex;
+        align-items:            center;
+        border-bottom:          1px solid $colorGrayBorder;
+        margin-bottom:          $spacingSM;
+    }
+
+    &__nominee-logo {
+        flex:                   0 0 auto;
+        width:                  6rem;
+        height:                 3rem;
+        display:                flex;
+        align-items:            center;
+
+        img {
+            max-width:          100%;
+            max-height:         100%;
+        }
+    }
+
+    &__nominee-icon {
+        position:               static;
+        width:                  11px;
+        height:                 11px;
+        margin:                 0 $spacingSM 0 $spacingMD;
+    }
+
+    &__nominee-title {
+        font: 		            600 0.9rem #{"/"} 1.2em $fontFamily;
+        color:                  $colorGray;
+
+        @include breakpoint('l', min) {
+            font-size:          1rem;
+        }
+    }
+}

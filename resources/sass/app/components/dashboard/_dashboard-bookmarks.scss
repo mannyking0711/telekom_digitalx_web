@@ -1,0 +1,115 @@
+
+.dashboardBookmarks {
+
+    color: $colorXDark;
+
+    h1, h2 {
+        color: $colorXDark;
+    }
+
+    p {
+        color: $colorXDark;
+    }
+
+    &__icon-bookmark {
+
+        position: relative;
+        display: inline;
+        margin-right: 0.2rem;
+
+        @include breakpoint('m', 'min') {
+            width: 1.4rem * $bookmarkScaling;
+            height: 2.4rem * $bookmarkScaling;
+        }
+
+        width: 1.4rem * $smallBookmarkScaling;
+        height: 2.4rem * $smallBookmarkScaling;
+        top: 0.4rem;
+
+        fill: $colorXBlue;
+        stroke: $colorXBlue;
+
+    }
+
+    &__headline {
+        margin-top: 2%;
+        margin-bottom: 3%;
+        font-weight: bold;
+
+    }
+
+    &__headline-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: $spacingLG;
+        flex-flow: column;
+        @include breakpoint('xl', 'min') {
+            flex-flow: row;
+        }
+    }
+
+    &__search-section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column;
+        width: 100%;
+
+        @include breakpoint('l', 'min') {
+            flex-wrap: nowrap;
+            flex-flow: row;
+            width: auto;
+        }
+    }
+
+    &__search,
+    &__order {
+        display: flex;
+        align-items: baseline;
+        flex-flow: column;
+        width: 100%;
+
+        @include breakpoint('l', 'min') {
+            flex-flow: row;
+            width: auto;
+            margin-left: 1rem;
+        }
+
+        label {
+            font-weight: normal;
+            display: inline-block;
+            margin: 0 1rem 0 0;
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
+
+            @include breakpoint('l', 'min') {
+                width: auto;
+                text-align: left;
+            }
+        }
+
+        .input-select {
+            width: 100%;
+
+            @include breakpoint('l', 'min') {
+                width: auto;
+            }
+        }
+    }
+
+    &__bookmark-list {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+    }
+
+    section.inner .btn.fullwidth {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+
+

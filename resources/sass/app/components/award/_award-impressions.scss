@@ -1,0 +1,28 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD IMPRESSIONS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.awardImpressions {
+    &__headline {
+        margin-bottom:          $spacingMD;
+
+        @include breakpoint('l', min) {
+            margin-bottom:      $spacingXL;
+        }
+    }
+
+    &__text {
+        text-align:             center;
+        font: 		            400 1rem #{"/"} 1.2em $fontFamily;
+        color:                  $colorGray;
+        margin:                 0 auto $spacingXL;
+        max-width:              50em;
+
+        @include breakpoint('l', min) {
+            font-size:          1.2rem;
+            margin-bottom:      $spacing4XL;
+        }
+    }
+}

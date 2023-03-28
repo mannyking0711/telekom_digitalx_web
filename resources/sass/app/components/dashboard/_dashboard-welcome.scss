@@ -1,0 +1,97 @@
+.dashboard-unauthenticated-welcome {
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .left {
+    width: 40%;
+    @include breakpoint('xl', 'max') {
+      width: 100%;
+    }
+  }
+
+  .right {
+    width: 60%;
+    @include breakpoint('xl', 'max') {
+      width: 100%;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-flow: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint('xl', 'max'){
+      margin-top: 0;
+
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__loginText-intro{
+    text-align: center;
+    font: 400 1.3rem #{"/"} 1.4em $fontFamily;
+    color: $colorWhite;
+    padding: 0.2rem;
+
+    @include breakpoint('xl', 'min') {
+      margin-bottom: $spacingXL;
+    }
+  }
+
+  &__loginText {
+    font: 400 1.3rem #{"/"} 1.4em $fontFamily;
+    color: $colorWhite;
+    padding: 0.2rem;
+   display: flex;
+
+    @include breakpoint('xl', 'min') {
+      margin-bottom: $spacingXL;
+    }
+
+  }
+
+  &__loginText em {
+    color: $blueColor;
+    font-style: normal;
+    margin-right: 1.3rem;
+    margin-left: 1.5rem;
+  }
+
+  &__loginText-intro em {
+    color: $blueColor;
+    font-style: normal;
+    margin-right: 0.3rem;
+    margin-left: 0;
+  }
+
+  &__btnContainer {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  &__question {
+    font: 400 0.9rem #{"/"} 1.4em $fontFamily;
+    color: $colorWhite;
+    margin-top: 1.5rem;
+    align-self: center;
+
+  }
+
+  &__image {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-left: 3rem;
+
+    @include breakpoint('xl', 'max'){
+      margin: 0;
+    }
+  }
+}

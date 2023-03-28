@@ -1,0 +1,161 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENT MARKETPLACES
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.eventMarketplaces {
+  padding-top: $spacing3XL;
+  @include breakpoint('m', min) {
+    padding-top: $spacing5XL;
+  }
+  background: white;
+  text-align: center;
+
+  &__headline {
+    padding: 0 15px;
+
+    margin-bottom: 1.5rem;
+  }
+
+  &__desc {
+    padding: 0 15px;
+    max-width: 50em;
+    margin: 0 auto 3rem;
+    white-space: pre-line;
+  }
+
+  &__places {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 7px;
+
+    @include breakpoint('l', min) {
+      padding: 0 6rem;
+    }
+
+    @include breakpoint('xl', min) {
+      padding: 0 7px;
+    }
+  }
+
+  &__place {
+    padding: 7px;
+    width: 100%;
+
+    @include breakpoint('m', min) {
+      width: 50%;
+    }
+
+    @include breakpoint('xl', min) {
+      width: 25%;
+      padding: 0 7px;
+    }
+  }
+
+  &__place-text-wrap {
+    position: relative;
+    padding-top: 100%;
+
+    &--yellow { background: $colorXYellow; }
+    &--green { background: $colorXGreen; }
+    &--pink { background: $colorXMagenta; }
+    &--blue { background: $colorXBlue; }
+  }
+
+  &__place-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  &__place-headline {
+    color: $colorWhite;
+    font: 700 2.3rem #{"/"} 1em $fontFamily;
+    margin: 0;
+
+    @include breakpoint('l', min) {
+      font-size: 2.7vw;
+    }
+  }
+
+  &__place-subheadline {
+    color: $colorWhite;
+    font: 400 1.8rem #{"/"} 1.1em $fontFamily;
+    margin: 0;
+
+    @include breakpoint('l', min) {
+      font-size: 2.1vw;
+    }
+  }
+
+  &__place-image {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  &__btn.btn {
+    background: transparent;
+    color: $colorWhite;
+    border-color: $colorWhite;
+    margin-top: 15px;
+
+    &:hover, &:active, &:focus {
+      background: $colorWhite;
+      color: $colorGrayDark;
+      border-color: $colorWhite;
+    }
+  }
+
+
+
+  &__text {
+    padding: 0 15px;
+    max-width: 50em;
+    margin: $spacing2XL auto 0;
+    white-space: pre-line;
+  }
+
+  &__button {
+    margin: $spacingXL auto 0;
+  }
+
+
+  &__descriptions {
+    margin-top: 3rem;
+    display: grid;
+    gap: 20px;
+
+    @include breakpoint('l', min) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 70px;
+    }
+  }
+
+  &__description {
+
+
+    &__title {
+      font: 600 1.6rem #{"/"} 1.1em $fontFamily;
+      &--yellow { color: $colorXYellow; }
+      &--green { color: $colorXGreen; }
+      &--pink { color: $colorXMagenta; }
+      &--blue { color: $colorXBlue; }
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 25px;
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+  }
+}

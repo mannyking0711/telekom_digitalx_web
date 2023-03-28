@@ -1,0 +1,44 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	SHARE TEASER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .share-teaser {
+        display:                flex;
+        padding:                $spacingMD 0;
+        justify-content:        center;
+        align-items:            center;
+        border-radius:          $spacingXS;
+        font: 		            600 0.9rem #{"/"} 1.4em $fontFamily;
+        color:                  $colorGrayDark;
+
+        @include breakpoint('m', min) {
+            font: 		        normal $fontSizeNormal #{"/"} 1.6rem $fontFamily;
+        }
+
+        > * {
+            margin:             0 $spacingSM;
+        }
+
+        a {
+            @extend             %relative-inline-block;
+            width:              15px;
+            height:             17px;
+
+            @include breakpoint('m', min) {
+
+                width:          20px;
+                height:         22px;
+            }
+        }
+    }
+
+    .share-teaser_dark {
+        background-color:       $gradientXBlueDark;
+        color:                  $colorWhite;
+
+        svg {
+            fill:               $colorWhite;
+        }
+    }

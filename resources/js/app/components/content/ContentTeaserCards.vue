@@ -1,0 +1,111 @@
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    HTML
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<template>
+
+  <div class="content-teaser-cards">
+
+    <section class="inner no-spacing">
+      <div class="col-100">
+
+        <h3 class="content-teaser-cards__headline" v-if="title">{{ title }}</h3>
+        <p class="content-teaser-cards__desc" v-if="text">{{ text }}</p>
+
+        <div class="content-teaser-cards__cards">
+          <div v-for="card in cards" :key="card.id" class="content-teaser-cards__card">
+            <img :data-src="card.image" v-if="card.image" class="lazy content-teaser-cards__card__image"
+                 :alt="card.title"/>
+            <h4 class="content-teaser-cards__card__title" v-if="card.title">{{ card.title }}</h4>
+            <p class="content-teaser-cards__card__text" v-if="card.text">{{ card.text }}</p>
+            <a v-if="card.button && card.url" :href="card.url" target="_blank" class="content-teaser-cards__card__button btn blue">
+              <span>{{ card.button }}</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+</template>
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    JAVASCRIPT
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<script>
+
+export default {
+
+
+  /////////////////////////////////
+  // INIT
+  /////////////////////////////////
+
+  name: 'ContentTeaserCards',
+
+  props: {
+    title: {type: String, required: null},
+    text: {type: String, required: false, default: null},
+    image: {type: String, required: false, default: null},
+    cards: {type: Array, required: false, default: null},
+  },
+
+  data() {
+    return {};
+  },
+
+  computed: {},
+
+
+  /////////////////////////////////
+  // EVENTS
+  /////////////////////////////////
+
+  created() {
+
+  },
+
+  mounted() {
+    window.lazyload.update();
+  },
+
+
+  /////////////////////////////////
+  // METHODS
+  /////////////////////////////////
+
+  methods: {}
+
+} // end export
+
+</script>
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    CSS
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<style lang="scss">
+
+</style>
+
+
+<style lang="scss" scoped>
+
+</style>
+
+
+

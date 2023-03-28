@@ -1,0 +1,4 @@
+#!/bin/bash
+yum install -y httpd.x86_64
+
+# INSTALL NODE/NPM AND YARN

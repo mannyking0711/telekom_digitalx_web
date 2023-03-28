@@ -1,0 +1,27 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INITIATIVE HISTORY
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.iniHistory {
+    padding:                    $spacing5XL 0;
+
+    &__headline {
+        overflow-wrap:          break-word;
+        word-wrap:              break-word;
+        hyphens:                auto;
+    }
+
+    &__desc {
+        font-size:              1.1rem;
+        text-align:             center;
+        margin:                 0 auto;
+        max-width:              50em;
+        color:                  $colorGray;
+
+        @include breakpoint('l', min) {
+            font-size:          1.2rem;
+        }
+    }
+}

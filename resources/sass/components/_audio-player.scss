@@ -1,0 +1,87 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	PLYR
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	.audio-player {
+        --plyr-main-color:                      $colorXBlue;
+        --plyr-audio-controls-background:       transparent;
+        --plyr-audio-control-color:             $colorWhite;
+        --plyr-range-thumb-background:          transparent;
+        --plyr-range-thumb-shadow:              none;
+        --plyr-audio-range-track-background:  #364e66;
+        --plyr-control-spacing:                 0;
+        --plyr-control-radius:                  100%;
+        --plyr-control-icon-size:               15px;
+        --plyr-audio-control-color-hover:       var(--plyr-main-color);
+
+        padding:                10px 0;
+        margin-bottom:          15px;
+
+        @include breakpoint('m', min) {
+            margin-bottom:      10px;
+        }
+
+        .plyr__control  {
+            width:              35px;
+            height:             35px;
+            border:             4px solid $colorWhite;
+
+            &:hover {
+                background:     transparent;
+                border-color:   var(--plyr-audio-control-color-hover);
+            }
+
+            svg {
+                position:       relative;
+                left:           8px;
+            }
+
+            &--pressed svg {
+                left:           6px;
+            }
+        }
+
+        .plyr__controls__item.plyr__progress__container {
+            margin-left:        10px;
+
+            @include breakpoint('m', min) {
+                padding:        0 47px;
+                margin-left:    20px;
+            }
+        }
+
+        .plyr__time {
+            font:               600 0.8rem #{"/"} 1.2em 'Source Sans Pro', sans-serif;
+            position:           absolute;
+            bottom:             -3px;
+
+            @include breakpoint('m', min) {
+                bottom:         10px;
+                font-size:      0.9rem;
+            }
+
+            &--current {
+                left:           45px;
+
+                @include breakpoint('m', min) {
+                    left:       55px;
+                }
+            }
+    
+            &--duration {
+                right:          0;
+    
+                &::before {
+                    display:    none;
+                }
+            }
+        }
+
+        .plyr__tooltip {
+            font:               600 0.8rem #{"/"} 1.2em 'Source Sans Pro', sans-serif;
+            padding:            0 3px;
+        }
+	}

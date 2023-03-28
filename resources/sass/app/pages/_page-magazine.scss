@@ -1,0 +1,209 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  PAGE MAGAZINE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	.pageMagazine {
+
+		&__intro {
+
+			@include breakpoint('m', 'min') {
+				padding:        0 $paddingPageInner;
+			}
+
+			@include breakpoint('xl', 'min') {
+				padding:        0;
+			}
+			display:            flex;
+			padding:            0 $paddingPageMobileInner;
+		}
+
+    &__header {
+      h1 {
+        margin-bottom: 1rem;
+      }
+
+      p {
+        white-space: pre-wrap;
+        margin-bottom: 2.5rem;
+      }
+    }
+
+		&__feature {
+
+			@include breakpoint('m', 'min') {
+				height:         40vw;
+				min-height:     300px;
+				margin-bottom:  $spacing2XL;
+			}
+
+			@include breakpoint('xl', 'min') {
+				width:          65%;
+				max-height:     500px;
+			}
+			width:              100%;
+			display:            flex;
+			position:           relative;
+			margin-bottom:      $spacingLG;
+			flex-flow:          column;
+			justify-content:    flex-end;
+		}
+
+		&__sidebar {
+
+			@include breakpoint('xl', 'min') {
+				width:          35%;
+				margin-bottom:  0;
+			}
+			width:              100%;
+			margin-bottom:      $spacing2XL;
+		}
+
+		&__feature-text {
+
+			@include breakpoint('m', 'min') {
+				padding-left:   $spacingLG;
+				background:     $gradientBlack;
+			}
+
+			@include breakpoint('xl', 'min') {
+				padding-left:   12.7%;
+			}
+			position:           relative;
+			z-index:            10;
+		}
+
+		&__feature-image {
+
+			@include breakpoint('m', 'min') {
+				height:         100%;
+				position:       absolute;
+				margin-bottom:  0;
+			}
+			width:              100%;
+			margin-bottom:      $spacingMD;
+
+			img {
+
+				@include breakpoint('m', 'min') {
+					height:         100%;
+					object-fit:	cover;
+					object-position: center center;
+				}
+				width: 			100%;
+			}
+		}
+
+		&__feature-title {
+
+			@include breakpoint('m', 'min') {
+				margin-right:   30%;
+				font-size: 		2rem;
+				color:          $colorWhite;
+			}
+
+			@include breakpoint('l', 'min') {
+				font-size: 		2.4rem;
+			}
+			margin-bottom:      $spacingMD;
+			font: 		        600 1.4rem #{"/"} 1.2em $fontFamily;
+		}
+
+		&__feature-articleinfo {
+			@include breakpoint('m', 'min') {
+				.articleinfo__metadata {
+					position:       absolute;
+					bottom:         $spacingLG;
+					right:          $spacingLG;
+					text-align:     right;
+				}
+
+				.articleinfo__bookmark {
+					top:            -$spacing2XL;
+					left:           auto;
+					right:          0;
+				}
+			}
+		}
+
+
+
+		&__order {
+
+			@include breakpoint('m', 'min') {
+				display:            flex;
+				margin-bottom:      $spacing2XL;
+				justify-content:    flex-end;
+				text-align:         right;
+				align-items:        center;
+			}
+			margin-bottom:          $spacingXL;
+
+			label {
+
+				@include breakpoint('m', 'min') {
+					margin-right:   $spacingMD;
+				}
+				font-weight:        normal;
+			}
+
+			.input-select {
+
+				@include breakpoint('m', 'min') {
+					max-width:      200px;
+				}
+				width:              100%;
+				border-color:       $colorGrayLight;
+			}
+		}
+
+		&__more {
+			width:                  100%;
+			background-color:       $colorXGreen;
+		}
+
+
+
+		/////////////////////////////////////
+		//
+		//    SEARCHBAR
+		//
+		/////////////////////////////////////
+
+		&__search {
+
+			@include breakpoint('m', 'min') {
+				margin-bottom:      0;
+			}
+
+			@include breakpoint('l', 'min') {
+				display:            flex;
+			}
+
+		}
+
+
+		&__search-field {
+
+			@include breakpoint('l', 'min') {
+				width: 70%;
+			}
+		}
+
+
+		&__search-category {
+
+			@include breakpoint('l', 'min') {
+				width: 30%;
+				max-width: 150px;
+				margin-right: 1.5rem;
+			}
+
+			.input-select {
+				width:              100%;
+				border-color:       $colorGrayLight;
+			}
+		}
+
+	}

@@ -1,0 +1,49 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AGENDA DAY SELECTOR
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.agenda-day-selector {
+  margin-top: $spacing3XL;
+  @include breakpoint('l', min) {
+    margin-top: $spacing3XL;
+  }
+
+  &__label {
+    text-align: center;
+    color: $colorTypo;
+    font: 600 $fontSizeSmall #{"/"} 1.1em $fontFamily;
+  }
+
+  &__buttons {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+
+    @include breakpoint('l', min) {
+      flex-direction: row;
+    }
+  }
+
+  &__button {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1;
+
+    &.btn {
+      background-color: $colorWhite;
+      color: $colorXBlue;
+      border: 2px solid $colorXBlue;
+
+      &:hover, &.active {
+        background-color: $colorXBlue;
+        color: $colorWhite;
+        border: 2px solid $colorXBlue;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENT SPEAKER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.eventspeaker {
+
+  @include breakpoint('l', min) {
+    padding: $spacing5XL 0;
+  }
+  padding: $spacing3XL 0;
+  background: $colorGrayBackground;
+  background-size: cover;
+  text-align: center;
+  color: $colorTypo;
+
+  &__headline {
+
+    @include breakpoint('l', min) {
+      font-size: 2.2rem;
+    }
+    font: 600 1.8rem #{"/"} 1em $fontFamily;
+    color: $colorTypo;
+
+
+    &__tag {
+      color: $colorXBlue
+    }
+  }
+
+  &__text {
+    max-width: 650px;
+    text-align: center;
+    margin: 15px auto 0;
+    font: 400 $fontSizeNormal #{"/"} 1.3em $fontFamily;
+    color: $colorTypo;
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px;
+    margin: 70px auto 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  &__speaker {
+    width: 50%;
+    max-width: 170px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__speaker-image {
+
+    @include breakpoint('l', min) {
+      width: 170px;
+      height: 170px;
+      margin-bottom: 10px;
+    }
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &__speaker-name {
+    font: 600 1rem #{"/"} 1.2em $fontFamily;
+    color: $colorTypo;
+  }
+
+  &__speaker-desc {
+    font: 400 0.9rem #{"/"} 1.3em $fontFamily;
+    color: $colorTypo;
+  }
+
+  &__btn {
+    margin-top: 40px;
+  }
+}

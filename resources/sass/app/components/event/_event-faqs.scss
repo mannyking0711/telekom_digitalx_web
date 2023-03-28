@@ -1,0 +1,101 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENT FAQS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.eventfaqs {
+
+    @include breakpoint('l', min) {
+        padding: $spacing3XL 0;
+    }
+    padding: $spacing2XL 0;
+    text-align: center;
+    color: $colorWhite;
+
+    &__headline {
+
+        @include breakpoint('l', min) {
+            margin-bottom: $spacing3XL;
+            font-size: 2.2rem;
+        }
+        margin-bottom: $spacingXL;
+        font: 600 1.8rem #{"/"} 1em $fontFamily;
+        color: $colorWhite;
+    }
+
+    &__desc {
+        @include breakpoint('l', min) {
+            margin-bottom: $spacing5XL;
+        }
+        max-width: 650px;
+        margin: 0 auto $spacing2XL;
+        color: $colorWhite;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: $spacing3XL;
+        display: flex;
+
+        flex: 0 0 100%;
+        max-width: 100%;
+        @include breakpoint('l', min) {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+
+        &__border {
+            width: 100%;
+            border: 1px solid $colorXBlue;
+            border-radius: 5px;
+            padding: $spacing2XL $spacingMD $spacing3XL;
+        }
+
+        &__icon {
+            display: block;
+            position: relative;
+            fill: $colorWhite;
+            width: 25px;
+            height: 25px;
+            transform: rotate(90deg);
+            margin: 0 auto $spacingLG;
+
+            &:hover {
+                fill: $colorWhite;
+            }
+        }
+
+        &__index {
+          color: $colorXBlue;
+          font: normal normal 600 40px/26px Source Sans Pro;
+          margin: 0 auto $spacingLG;
+        }
+
+        &__title {
+            font: 600 1.4rem / 1.2em "Source Sans Pro", sans-serif;
+            color: $colorWhite;
+            margin-bottom: $spacing2XL;
+
+            @include breakpoint('l', min) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &__text {
+            margin: 0 auto;
+            color: $colorWhite;
+            text-align: center;
+        }
+    }
+}

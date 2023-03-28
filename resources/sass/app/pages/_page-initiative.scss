@@ -1,0 +1,48 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  PAGE INITIATIVE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.pageInitiative {
+    //background:                 url('../img/app/initiative/background.jpg') center center no-repeat fixed;
+    //background-size:            cover;
+
+    &__filled {
+        background:             $colorWhite;
+    }
+    
+    &__headline {
+        font-size:              2.4rem;
+        line-height:            1em;
+        margin-bottom:          $spacingXL;
+
+        @include breakpoint('l', min) {
+            font-size:          2.6rem;
+        }
+
+        br {
+            display:            none;
+
+            @include breakpoint('m', min) {
+                display:        block;
+            }
+        }
+    }
+
+    &__events {
+        padding-bottom:          $spacing3XL;
+
+        @include breakpoint('l', min) {
+            padding-bottom:      $spacing5XL;
+        }
+    }
+
+    &__events-headline {
+        padding:                $spacing3XL 0 $spacingMD;
+
+        @include breakpoint('l', min) {
+            padding:            $spacing4XL 0 $spacingXL;
+        }
+    }
+}

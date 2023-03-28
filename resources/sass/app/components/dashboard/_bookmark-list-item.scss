@@ -1,0 +1,183 @@
+.bookmark-list-item {
+    $self: &;
+
+    margin: 0 0 $spacingLG 0;
+    width: 100%;
+    @include breakpoint('xl', 'min') {
+        width: 45%;
+        margin: 0 0 $spacingLG 0;
+    }
+
+    border-bottom: 1px dashed $colorGrayBorder;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:nth-last-child(2):nth-child(odd) {
+        @include breakpoint('xl', 'min') {
+            border-bottom: none;
+        }
+    }
+
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    &__item-type {
+        color: $blueColor;
+        font: bold 1rem #{"/"} 1rem $fontFamily;
+        position: relative;
+        display: block;
+        margin-bottom: $spacingXS;
+
+        .btn-delete {
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+        }
+
+        .icon-delete {
+
+            @extend %relative;
+            border: 1px solid $colorGrayLight;
+            border-radius: 0.2rem;
+
+            @include breakpoint('m', 'min') {
+                width: 2rem * $bookmarkScaling;
+                height: 2.5rem * $bookmarkScaling;
+                top: -1rem * (1 - $bookmarkScaling);
+            }
+
+            width: 2rem * $smallBookmarkScaling;
+            height: 2em * $smallBookmarkScaling;
+            top: -0.1rem;
+
+            svg.sprite {
+                fill: $colorGrayLight;
+                stroke: $colorGrayLight;
+            }
+
+            &.active svg.sprite {
+                fill: $colorXBlue;
+                stroke: $colorXBlue;
+            }
+        }
+    }
+
+    .content {
+        @extend %relative;
+        margin-bottom: $spacingLG;
+
+        @include breakpoint('l', 'min') {
+            padding-left: 10rem;
+        }
+    }
+
+    .image {
+
+        float: left;
+        @extend %relative;
+
+        width: 6rem;
+        height: 6rem;
+        @include breakpoint('m', 'min') {
+            width: 9rem;
+            height: 9rem;
+        }
+        margin-bottom: $spacingMD;
+        padding-bottom: $paddingPageInner; // intrinsic ratio
+        background: $colorGrayBackground url('../svg/app/loading-content.svg') no-repeat center center;
+        background-size: 30px 30px;
+        margin-right: $spacingMD;
+
+        img {
+
+            @extend %absolute;
+
+            width: 6rem;
+            height: 6rem;
+            @include breakpoint('m', 'min') {
+                width: 9rem;
+                height: 9rem;
+            }
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+
+    .headline {
+        font: bold 1.3rem #{"/"} 1.5rem $fontFamily;
+    }
+
+    &__headlineComplete {
+        margin-bottom: $spacingSM;
+        margin-right: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row;
+
+    }
+
+    .premiumIcon {
+
+        color: $colorWhite;
+        background-color: $blueColor;
+        display: inline-block;
+        position: relative;
+
+        align-self: flex-start;
+
+        margin: 0 0.2rem 0 0;
+        padding: 0.3rem 0.4rem;
+
+        font: bold 0.8rem #{"/"} 0.8rem $fontFamily;
+        border: 1px solid $blueColor;
+        border-radius: 0.3rem;
+        cursor: default;
+    }
+
+    &__articleinfo-content {
+        #{ $self }--large & { // large variant
+            @include breakpoint('m', 'min') {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__articleinfo-metadata {
+        @extend %flex;
+        flex-flow: column;
+
+        @include breakpoint('m', 'min') {
+            flex-flow: row;
+        }
+        position: relative;
+
+        font: $fontSizeSmall #{"/"} $fontSizeSmall*1.2 $fontFamily;
+        color: $colorGrayLight;
+
+        margin-bottom: $spacingMD;
+    }
+
+    &__articleinfo-date {
+        @include breakpoint('m', 'min') {
+            margin-right: $spacingXS;
+        }
+        margin-right: 0;
+    }
+
+    &__articleinfo-author {
+        font-weight: bold;
+    }
+
+    &__articleinfo-footer {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row;
+    }
+}

@@ -1,0 +1,113 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INDEX MAGAZINE NEWSTICKER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.index-magazine-newsticker {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    align-self: flex-end;
+    margin-top: 35px;
+    margin-left: 30px;
+    padding-right: $paddingPage;
+
+    > .title {
+        padding: 32px 25px;
+        background: transparent linear-gradient(180deg, #92BF33 0%, #7BA02D 100%) 0% 0% no-repeat padding-box;
+        border-radius: 5px 0 0 5px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: $colorWhite;
+        font: 600 1.1rem #{"/"} 1.6rem $fontFamily;
+    }
+
+    > .content {
+        width: 100%;
+        display: flex;
+        border: 1px solid #D2D2D3;
+        border-radius: 0 5px 5px 0;
+
+        > .left,
+        > .right {
+            padding: 10px 20px;
+            align-self: center;
+            color: #ADAFB1;
+            transform: scale(0.75, 2);
+            cursor: pointer;
+
+            &.hidden {
+                visibility: hidden;
+            }
+        }
+
+        > .middle {
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0;
+
+            > .items {
+                transform: translate3d(0, 0px, 0px);
+                transition-duration: 0.3s;
+            }
+        }
+    }
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    @include breakpoint('xl') {
+
+        .index-magazine-newsticker {
+            width: calc(99.9% - #{$paddingPageInner*2});
+            margin: 0 $paddingPageInner;
+            padding: 0;
+        }
+
+    }
+
+    @include breakpoint('l') {
+
+        .index-magazine-newsticker {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+
+    @include breakpoint('m') {
+
+        .index-magazine-newsticker {
+            flex-direction: column;
+            padding: 0;
+
+            > .title {
+                padding: 10px 20px;
+                border-radius: 5px 5px 0 0;
+                display: block;
+            }
+
+            > .content {
+                border-top: 0;
+                border-radius: 0 0 5px 5px;
+
+                h4 {
+                    line-height: 1.1rem;
+                }
+            }
+        }
+
+    }

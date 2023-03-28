@@ -1,0 +1,176 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENT PARTNER UNITED
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    .eventpartnerunited__headline {
+
+        @include breakpoint('l', min) {
+            margin-bottom:  $spacing2XL;
+        }
+        margin-bottom:      $spacingMD;
+
+        text-align:         center;
+        text-transform:     uppercase;
+        font:               600 2.5rem #{"/"} 2.3em $fontFamily;
+    }
+
+    .eventpartnerunited__logolist {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+
+    .eventpartnerunited__logolist-item {
+        width: calc(100% * (1/8) - 10px - 1px);
+
+        @include breakpoint('l', max) {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        a {
+            width: 100%;
+        }
+    }
+
+    .eventpartnerunited__logolist-item--hidden {
+
+        @include breakpoint('l', max) {
+            display: none;
+        }
+    }
+
+    .eventpartnerunited__btn {
+
+        @include breakpoint('l', min) {
+            &.btn { display: none; }
+        }
+
+        width:              100%;
+        margin:             0;
+        background:         $colorXDark;
+    }
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  FOCUS PARTNER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.eventpartner {
+    text-align: center;
+
+    /////////////////////////////////
+    // COPY
+    /////////////////////////////////
+
+    .eventpartner__headline {
+
+        @include breakpoint('l', min) {
+            margin-bottom:  $spacing2XL;
+        }
+        margin-bottom:      $spacingMD;
+
+        text-align:         center;
+        text-transform:     uppercase;
+        font:               600 1.4rem #{"/"} 1.2em $fontFamily;
+    }
+
+
+    /////////////////////////////////
+    // BUTTON
+    /////////////////////////////////
+
+    .eventpartner__btn {
+
+        @include breakpoint('l', min) {
+            &.btn { display: none; }
+        }
+
+        width:              100%;
+        margin:             0;
+        background:         $colorXDark;
+    }
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    PARTER LOGO LIST
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .eventpartner__wrapper {
+        width: 100%;
+        background: white;
+        padding: 5rem 0;
+    }
+
+    .logolist {
+        @extend %relative-flex;
+
+        margin-bottom:          $marginBottomSection;
+        flex-wrap:              wrap;
+        justify-content:        center;
+
+        @include breakpoint('l', max) {
+            margin-bottom: 10%;
+        }
+    }
+
+    .logolist:last-of-type {
+        margin-bottom: 0;
+    }
+
+
+    /////////////////////////////////
+    // ITEM
+    /////////////////////////////////
+
+    .logolist__item {
+        @extend %relative;
+        width: 100px;
+        height: 70px;
+        margin: 15px;
+        padding:                $spacingSM;
+        list-style:             none;
+
+        @include breakpoint('l', max) {
+            margin-bottom: 10%;
+        }
+    }
+
+    .logolist__item.coop {
+        @extend %relative;
+        width: 150px;
+        height: 100px;
+        margin: 10px;
+        padding:                $spacingSM;
+        list-style:             none;
+    }
+
+
+    /////////////////////////////////
+    // LOGO
+    /////////////////////////////////
+
+    .logolist__logo {
+
+        @extend %absolute;
+        height: 100%;
+        opacity: 0.8;
+        filter: saturate(0%);
+        object-fit: contain;
+    }
+
+
+    .logolist__logo:hover {
+
+        opacity:1;
+        filter: saturate(100%);
+    }
+

@@ -1,0 +1,53 @@
+
+.dashboardLive {
+  color: $colorWhite;
+
+  h1, h2, h3 {
+    color: $colorXBlue;
+    text-align: center;
+    line-height: 1.8rem;
+    text-transform: none;
+  }
+
+  &__event-text {
+    font: 400 1rem #{"/"} 1.4em $fontFamily;
+    color: black;
+    margin: 0;
+
+    @include breakpoint('xl', 'min') {
+      margin-bottom: $spacingXL;
+    }
+  }
+
+  &__headline {
+    text-transform: none;
+  }
+
+  &__caption {
+    margin-bottom: 8%;
+  }
+
+  .eventslist {
+    padding-top: 0;
+
+    background: none;
+  }
+
+  .eventslist__event {
+    @include breakpoint('xl') {
+      max-width: none;
+    }
+  }
+
+  .eventslist__event-info {
+    @include breakpoint('xl', 'min') {
+      height: auto;
+    }
+  }
+
+  .eventslist__event-btn--mobile {
+    @include breakpoint('xl') {
+      width: 100%;
+    }
+  }
+}

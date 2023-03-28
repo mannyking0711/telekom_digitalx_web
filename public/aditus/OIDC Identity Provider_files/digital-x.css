@@ -1,0 +1,388 @@
+﻿/* fontawesome */
+@font-face {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: local(''),
+        url('https://ticketshop.aditus.de/Demo_IdentityProvider/lib/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+        url('https://ticketshop.aditus.de/Demo_IdentityProvider/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+        url('https://ticketshop.aditus.de/Demo_IdentityProvider/lib/fontawesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+        url('https://ticketshop.aditus.de/Demo_IdentityProvider/lib/fontawesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+        url('https://ticketshop.aditus.de/Demo_IdentityProvider/lib/fontawesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+}
+
+/* source-sans-pro-300 - latin */
+@font-face {
+    font-family: 'Source Sans Pro Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://www.digital-x.eu/fonts/sourcesanspro-light-300/source-sans-pro-v14-latin-300.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('https://www.digital-x.eu/fonts/sourcesanspro-light-300/source-sans-pro-v14-latin-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-light-300/source-sans-pro-v14-latin-300.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-light-300/source-sans-pro-v14-latin-300.woff') format('woff'),
+        /* Modern Browsers */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-light-300/source-sans-pro-v14-latin-300.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-light-300/source-sans-pro-v14-latin-300.svg#SourceSansPro') format('svg');
+    /* Legacy iOS */
+}
+
+/* source-sans-pro-regular - latin */
+@font-face {
+    font-family: 'Source Sans Pro Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://www.digital-x.eu/fonts/sourcesanspro-regular-400/source-sans-pro-v14-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('https://www.digital-x.eu/fonts/sourcesanspro-regular-400/source-sans-pro-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-regular-400/source-sans-pro-v14-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-regular-400/source-sans-pro-v14-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-regular-400/source-sans-pro-v14-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-regular-400/source-sans-pro-v14-latin-regular.svg#SourceSansPro') format('svg');
+    /* Legacy iOS */
+}
+
+/* source-sans-pro-600 - latin */
+@font-face {
+    font-family: 'Source Sans Pro Bold';
+    font-style: normal;
+    font-weight: 600;
+    src: url('https://www.digital-x.eu/fonts/sourcesanspro-semi-bold-600/source-sans-pro-v14-latin-600.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('https://www.digital-x.eu/fonts/sourcesanspro-semi-bold-600/source-sans-pro-v14-latin-600.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-semi-bold-600/source-sans-pro-v14-latin-600.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-semi-bold-600/source-sans-pro-v14-latin-600.woff') format('woff'),
+        /* Modern Browsers */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-semi-bold-600/source-sans-pro-v14-latin-600.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-semi-bold-600/source-sans-pro-v14-latin-600.svg#SourceSansPro') format('svg');
+    /* Legacy iOS */
+}
+
+/* source-sans-pro-700 - latin */
+@font-face {
+    font-family: 'Source Sans Semi Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://www.digital-x.eu/fonts/sourcesanspro-bold-700/source-sans-pro-v14-latin-700.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        url('https://www.digital-x.eu/fonts/sourcesanspro-bold-700/source-sans-pro-v14-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-bold-700/source-sans-pro-v14-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-bold-700/source-sans-pro-v14-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-bold-700/source-sans-pro-v14-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('https://www.digital-x.eu/fonts/sourcesanspro-bold-700/source-sans-pro-v14-latin-700.svg#SourceSansPro') format('svg');
+    /* Legacy iOS */
+}
+
+body {
+    background: url(../background.jpg) 50% no-repeat fixed;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.0)!important;
+}
+
+.logo-wrapper {
+    /*width: 100%;
+    height: var(--logo-height, 55px);
+    background: var(--logo-image) no-repeat;*/
+    /*background: url(../sprite-digital-logo-white.svg) no-repeat top left;*/
+    background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJzcHJpdGUtZGlnaXRhbHgtbG9nby13aGl0ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyMDkgNDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwOSA0MSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTU2LjQsOC41YzcuMiwwLDExLjcsNC40LDExLjcsMTEuOWMwLDcuOS00LjUsMTIuMS0xMS42LDEyLjFINDZ2LTI0SDU2LjR6IE01NS4xLDI3LjFjNC42LDAsNi44LTEuNyw2LjgtNi43YzAtNC41LTIuNS02LjUtNi41LTYuNWgtMy4xdjEzLjJDNTIuMywyNy4xLDU1LjEsMjcuMSw1NS4xLDI3LjF6IE03Ny42LDguNXYyNGgtNi4zdi0yNEg3Ny42eiBNMTAzLjcsMTYuN2gtNi4zYy0wLjItMi0yLjItMy4zLTQuNy0zLjNjLTMuNiwwLTUuNiwzLTUuNiw3LjFjMCw0LjIsMiw3LjEsNS42LDcuMWMyLjksMCw1LjEtMS4zLDUuNS0zLjZoLTQuNHYtNC42SDEwNHYxMy4xaC00bC0wLjQtMi42Yy0xLjMsMS45LTQsMy4xLTYuNywzLjFjLTcuMSwwLTEyLTUuMy0xMi0xMi41YzAtNyw0LjctMTIuNSwxMi0xMi41Qzk4LjEsOCwxMDMuMiwxMC43LDEwMy43LDE2Ljd6IE0xMTQuMSw4LjV2MjRoLTYuM3YtMjRDMTA3LjgsOC41LDExNC4xLDguNSwxMTQuMSw4LjV6IE0xMzUuOSw4LjV2NS40aC02LjV2MTguNmgtNi4zVjEzLjloLTYuNVY4LjVDMTE2LjYsOC41LDEzNS45LDguNSwxMzUuOSw4LjV6IE0xNDguNCw4LjVsOSwyNGgtNi41bC0xLjUtNC4zSDE0MWwtMS41LDQuM2gtNi40bDktMjRMMTQ4LjQsOC41TDE0OC40LDguNXogTTE0Mi41LDIzLjVoNS40bC0yLjctOC40aC0wLjFMMTQyLjUsMjMuNUwxNDIuNSwyMy41eiBNMTY1LjYsOC41djE4LjZoMTAuOXY1LjRoLTE3LjF2LTI0SDE2NS42TDE2NS42LDguNXogTTE5Mi45LDguNWw0LDcuNWw0LjMtNy41aDcuMWwtNy44LDExLjRsOC41LDEyLjZoLTcuNmwtNC41LThsLTQuOSw4aC03LjJsOC41LTEyLjZsLTcuOC0xMS40SDE5Mi45eiIvPjxwYXRoIGZpbGw9IiNFMjBBNzQiIGQ9Ik0yNy4zLDIwLjdMMjQsMjR2My41aDMuM1YyMC43eiBNMTUuNywxOC42SDguNUwxLjEsMjZsMy42LDMuNkM0LjcsMjkuNiwxNS43LDE4LjYsMTUuNywxOC42eiBNMjcuMywxMy41SDI0djMuM0MyNCwxNi44LDI3LjMsMTMuNSwyNy4zLDEzLjV6IE0yNy4zLDMuNGgtMjR2NS4xaDI0QzI3LjMsOC41LDI3LjMsMy40LDI3LjMsMy40eiIvPjxwYXRoIGZpbGw9IiM0RUIzRTYiIGQ9Ik0xOSwyMS45bC04LjMsOC4zbDMuNiwzLjZMMTksMjlWMjEuOXogTTIwLjgsMTMuNWgxLjVWMTJMMjAuOCwxMy41eiBNMTguNyw4LjVoLTYuOHY1LjFoMS43TDE4LjcsOC41ek0zNS45LDguNWgtOC42djEyLjJsMy42LTMuNnYxNS40SDM2TDM1LjksOC41eiIvPjxwYXRoIGZpbGw9IiM4MjIzODEiIGQ9Ik0yNy4zLDguNWgtOC42bC01LjEsNWg3LjFsMS41LTEuNHYxLjRoNS4xTDI0LDE2LjhWMjRsMy4zLTMuM1Y4LjV6Ii8+PHBhdGggZmlsbD0iI0ZGREUxNCIgZD0iTTE5LDI5djguNmg1VjI3LjRoLTEuOHYtMS43TDE5LDI5eiBNMCwxMy41djUuMWg4LjVsNS01LjFIMHogTTIwLjcsMTMuNUwwLDM0LjNsMy4zLDMuM2wxOS0xOXYtNS4xQzIyLjMsMTMuNSwyMC43LDEzLjUsMjAuNywxMy41eiIvPjxwYXRoIGZpbGw9IiNFNDAwM0IiIGQ9Ik0yNCwyNGwtMS44LDEuOHYxLjdIMjRWMjR6IE0xMy42LDEzLjVsLTUuMSw1LjFoNy4ybDUuMS01LjFDMjAuOCwxMy41LDEzLjYsMTMuNSwxMy42LDEzLjV6IE0yNCwxMy41aC0xLjh2NS4xbDEuOC0xLjhDMjQsMTYuOCwyNCwxMy41LDI0LDEzLjV6Ii8+PHBhdGggZmlsbD0iIzdEQTEyQyIgZD0iTTIyLjIsMTguNkwxOSwyMS45VjI5bDMuMy0zLjNDMjIuMywyNS43LDIyLjIsMTguNiwyMi4yLDE4LjZ6Ii8+PHBhdGggZmlsbD0iIzgzMkI0NiIgZD0iTTIyLjIsMTguNnY3LjJMMjQsMjR2LTcuMUwyMi4yLDE4LjZ6Ii8+PC9zdmc+) no-repeat top left;
+    background-size: contain;
+    height: var(--logo-height, 35px);
+    margin: 50px 0 0 50px;
+}
+.logo-wrapper-tk-de {
+    width: 30%;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4Ni44NSIgaGVpZ2h0PSIyNS42NjEiPjxwYXRoIGNsYXNzPSJhIiBzdHlsZT0iZmlsbDojZTIwYTc0IiBkPSJNODEuNjM5IDExLjgxaDUuMjExdjUuMjExaC01LjIxMXoiLz48cGF0aCBjbGFzcz0iYSIgc3R5bGU9ImZpbGw6I2UyMGE3NCIgZD0iTTc4LjMyMSAyMC4xNzZjMCAxLjY1NS4yNDUgMi43MjQuNzQyIDMuMjIyYTMuMyAzLjMgMCAwIDAgMi4wODYuNzc5aDEuNDg1djEuNDg1SDcwLjA1OXYtMS40ODVhMTIuMzIzIDEyLjMyMyAwIDAgMCAyLjIyNy0uMTQ4IDIuMjI3IDIuMjI3IDAgMCAwIDEuODQxLTEuNyA4LjgyNiA4LjgyNiAwIDAgMCAuMi0yLjIyN1YxLjIzMmE2LjYyMSA2LjYyMSAwIDAgMC01IDIuMTIzIDEwLjI5MSAxMC4yOTEgMCAwIDAtMi4wOTMgNS45MzhsLTEuMzU0LS4yM0w2Ni4xMzIgMGgyMC40MmwuMjUyIDkuMDYzLTEuMzU4LjIzYTEwLjMgMTAuMyAwIDAgMC0yLjEtNS45MzggNi42ODEgNi42ODEgMCAwIDAtNS4wMjUtMi4xMjN2MTguOTQzWiIvPjxwYXRoIGNsYXNzPSJhIiBzdHlsZT0iZmlsbDojZTIwYTc0IiBkPSJNNjUuOTAyIDExLjgxaDUuMjExdjUuMjExaC01LjIxMXoiLz48cGF0aCBzdHlsZT0iZmlsbDojZmZmIiBkPSJNMCAxN2guODR2LTYuNTZIMFptMi41NSAwaC44M3YtMy41MmExLjgyNiAxLjgyNiAwIDAgMSAxLjMyLS43NGMuNjQgMCAuOTIuMzguOTIgMS4yOVYxN2guODN2LTMuMDhjMC0xLjI0LS40Ni0xLjktMS40OS0xLjlhMi4yOTEgMi4yOTEgMCAwIDAtMS42My44MkgzLjNsLS4wNy0uN2gtLjY4Wm01LjQ3IDBoLjgzdi00Ljg2aC0uODNabS40Mi01Ljg2YS41MTcuNTE3IDAgMCAwIC41NS0uNTQuNTIyLjUyMiAwIDAgMC0uNTUtLjU0LjUyMi41MjIgMCAwIDAtLjU1LjU0LjUxNy41MTcgMCAwIDAgLjU1LjU0Wm0zLjU4IDUuOThhMi4yNjIgMi4yNjIgMCAwIDAgLjkyLS4yMWwtLjE3LS41OWExLjMxNyAxLjMxNyAwIDAgMS0uNTYuMTJjLS41NSAwLS43NS0uMzQtLjc1LS45M3YtMi43aDEuMzJ2LS42N2gtMS4zMnYtMS41NmgtLjY5bC0uMSAxLjU2LS43Ni4wNXYuNjJoLjcydjIuNjhjMCAuOTcuMzUgMS42MyAxLjM5IDEuNjNabTEuODYtLjEyaC44M3YtNC44NmgtLjgzWm0uNDItNS44NmEuNTE3LjUxNyAwIDAgMCAuNTUtLjU0LjUyMi41MjIgMCAwIDAtLjU1LS41NC41MjIuNTIyIDAgMCAwLS41NS41NC41MTcuNTE3IDAgMCAwIC41NS41NFptMy4xNyA1Ljk4YTIuNTE0IDIuNTE0IDAgMCAwIDEuNi0uN2guMDNsLjA4LjU4aC42OHYtMi45OWMwLTEuMi0uNTEtMS45OS0xLjY5LTEuOTlhMy41MjMgMy41MjMgMCAwIDAtMS45MS42M2wuMzIuNTZhMi43MDkgMi43MDkgMCAwIDEgMS40NS0uNWMuNzkgMCAuOTkuNTkgMSAxLjItMi4wOC4yMy0yLjk4Ljc1LTIuOTggMS44M2ExLjMxNyAxLjMxNyAwIDAgMCAxLjQyIDEuMzhabS4yMy0uNjhjLS40NyAwLS44NC0uMjEtLjg0LS43NSAwLS42My41My0xIDIuMTctMS4xOXYxLjMyYTEuOTg3IDEuOTg3IDAgMCAxLTEuMzMuNjJabTUuMDguNjhhMi4yNjIgMi4yNjIgMCAwIDAgLjkyLS4yMWwtLjE3LS41OWExLjMxNyAxLjMxNyAwIDAgMS0uNTYuMTJjLS41NSAwLS43NS0uMzQtLjc1LS45M3YtMi43aDEuMzJ2LS42N2gtMS4zMnYtMS41NmgtLjY5bC0uMSAxLjU2LS43Ni4wNXYuNjJoLjcydjIuNjhjMCAuOTcuMzUgMS42MyAxLjM5IDEuNjNabTEuODYtLjEyaC44M3YtNC44NmgtLjgzWm0uNDItNS44NmEuNTE3LjUxNyAwIDAgMCAuNTUtLjU0LjUyMi41MjIgMCAwIDAtLjU1LS41NC41MjIuNTIyIDAgMCAwLS41NS41NC41MTcuNTE3IDAgMCAwIC41NS41NFptMy4xIDUuODZoLjk3bDEuNzItNC44NmgtLjgybC0uOTEgMi43NWMtLjE1LjQ4LS4zMS45Ny0uNDUgMS40NGgtLjA0Yy0uMTUtLjQ3LS4zLS45Ni0uNDUtMS40NGwtLjkxLTIuNzVoLS44NlptNS41NS4xMmEyLjY4MyAyLjY4MyAwIDAgMCAxLjYxLS41bC0uMjktLjUzYTIuMTQxIDIuMTQxIDAgMCAxLTEuMjIuMzYgMS42IDEuNiAwIDAgMS0xLjYtMS42NmgzLjI3YTIuNTYgMi41NiAwIDAgMCAuMDQtLjQ5YzAtMS40LS43MS0yLjI4LTEuOTUtMi4yOGEyLjM0IDIuMzQgMCAwIDAtMi4xOCAyLjU1IDIuMzE1IDIuMzE1IDAgMCAwIDIuMzIgMi41NVptLTEuNS0yLjk3YTEuNDY4IDEuNDY4IDAgMCAxIDEuMzgtMS40N2MuNzQgMCAxLjE5LjUxIDEuMTkgMS40N1ptOC4xNiAyLjk3YTIuMTkzIDIuMTkzIDAgMCAwIDEuNDctLjY5aC4wM2wuMDcuNTdoLjY4VjkuODhoLS44M3YxLjg3bC4wNC44M2EyIDIgMCAwIDAtMS4zNi0uNTYgMi4zIDIuMyAwIDAgMC0yLjExIDIuNTZjMCAxLjYyLjc5IDIuNTQgMi4wMSAyLjU0Wm0uMTgtLjdjLS44NSAwLTEuMzMtLjY5LTEuMzMtMS44NSAwLTEuMTEuNjItMS44NSAxLjM5LTEuODVhMS42NzcgMS42NzcgMCAwIDEgMS4xOC41djIuNTRhMS42NjMgMS42NjMgMCAwIDEtMS4yNC42NlptNS42Ny43YTIuNjgzIDIuNjgzIDAgMCAwIDEuNjEtLjVsLS4yOS0uNTNhMi4xNDEgMi4xNDEgMCAwIDEtMS4yMi4zNiAxLjYgMS42IDAgMCAxLTEuNi0xLjY2aDMuMjdhMi41NiAyLjU2IDAgMCAwIC4wNC0uNDljMC0xLjQtLjcxLTIuMjgtMS45NS0yLjI4YTIuMzQgMi4zNCAwIDAgMC0yLjE4IDIuNTUgMi4zMTUgMi4zMTUgMCAwIDAgMi4zMiAyLjU1Wm0tMS41LTIuOTdhMS40NjggMS40NjggMCAwIDEgMS4zOC0xLjQ3Yy43NCAwIDEuMTkuNTEgMS4xOSAxLjQ3Wm00LjUgMi44NWguODN2LTMuMTJjLjMzLS44Mi44Mi0xLjExIDEuMjMtMS4xMWExLjQxOCAxLjQxOCAwIDAgMSAuNDQuMDZsLjE4LS43MWExLjE0OSAxLjE0OSAwIDAgMC0uNTItLjEgMS42ODggMS42ODggMCAwIDAtMS4zOCAxaC0uMDNsLS4wNy0uODhoLS42OFoiLz48L3N2Zz4=) no-repeat top right;
+    background-size: contain;
+    height: var(--logo-height, 45px);
+    /*margin: 50px 50px 0 0px;*/
+    position: absolute;
+    top: 55px;
+    right: 50px;
+}
+.logo-wrapper-tk-en {
+    width: 30%;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDA2IiBoZWlnaHQ9IjE0OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsLXJ1bGU9Im5vbnplcm8iIGZpbGw9Im5vbmUiPjxwYXRoIGQ9Ik0yODQuNjQgNjhoMjkuOTN2MjkuOTRoLTI5LjkzVjY4Wm05MS4yOCAwaDI5LjkzdjI5Ljk0aC0yOS45M1Y2OFoiIGZpbGw9IiNFODBCOEEiLz48cGF0aCBkPSJNNDA0LjM4IDBIMjg2LjExbC0xLjQ4IDUyLjE3IDcuODQgMS4zNWMxLjQ2LTE1LjM3IDUuNS0yNi43NyAxMi4xLTM0LjIyIDYuOTUtNy43OSAxNi41My0xMS44NiAyOC44My0xMi4yMXYxMDkuMTNjMCA5LjUzLTEuMzMgMTUuNzItNC4xMSAxOC41Ny0yLjM2IDIuNDMtNi4zNyAzLjkzLTEyIDQuNDktMS42Ny4xNC00LjUyLjIxLTguNTUuMjF2OC4zNGg3Mi45OHYtOC4zNGMtNC4wNCAwLTYuODktLjA3LTguNTUtLjIxLTUuNjMtLjU2LTkuNjMtMi4wNS0xMi00LjQ5LTIuNzgtMi44NS00LjEzLTkuMDQtNC4xMy0xOC41N1Y3LjA5YzEyLjMxLjM1IDIxLjkgNC40MiAyOC44NSAxMi4yMSA2LjYxIDcuNDQgMTAuNjQgMTguODUgMTIuMSAzNC4yMmw3Ljg0LTEuMzVMNDA0LjM4IDBaIiBmaWxsPSIjRTgwQjhBIi8+PHBhdGggZD0ibTUzLjE4IDc1LjcgNC4yMSAxNi4xaC4wOWw0LjA1LTE2LjFoNC43OWwzLjg4IDE2LjFoLjA4bDQuMzktMTYuMWg0Ljg0bC02Ljc2IDIxLjU3aC00Ljg4bC00LjAxLTE2LjAyaC0uMDhsLTMuOTYgMTYuMDJoLTUuMDFMNDguMTQgNzUuN2g1LjA0Wm00NC4xOCA4Ljg5Yy0uMjUtMy0yLjIxLTUuNzEtNS40Ny01LjcxLTMuMzQgMC01LjQ2IDIuNTQtNS42MyA1LjcxaDExLjFabTQuODQgMS41YzAgLjU0LS4wNCAxLjA4LS4wOCAxLjYzSDg2LjI3YzAgMy41NSAyLjA1IDYuMzggNS44IDYuMzggMi42MyAwIDQuMzgtMS4wOCA1LjI2LTMuNTloNC41MWMtLjk2IDQuNjMtNS4wNSA3LjM0LTkuNzYgNy4zNC02LjggMC0xMC41NS00Ljc1LTEwLjU1LTExLjMgMC02LjIyIDQtMTEuNDMgMTAuNDMtMTEuNDMgNi4wNyAwIDEwLjI0IDUgMTAuMjQgMTAuOTdtMTYuMTktMTAuODV2NC41OWMtLjcxLS4xMi0xLjM4LS4yMS0yLjA1LS4yMS0zLjU0IDAtNS44NCAzLjA5LTUuODQgNy4yMnYxMC40M2gtNC43NVY3NS43aDQuNDZ2NC4xN2guMDljLjY3LTIuNzUgMy44OC00Ljc2IDYuMy00Ljc2LjkyLjAxIDEuMDguMDEgMS43OS4xM20xNi4xIDkuMzVjLS4yNS0zLTIuMjEtNS43MS01LjQ2LTUuNzEtMy4zNCAwLTUuNDcgMi41NC01LjYzIDUuNzFoMTEuMDlabTQuODQgMS41YzAgLjU0LS4wNCAxLjA4LS4wOCAxLjYzSDEyMy40YzAgMy41NSAyLjA1IDYuMzggNS44IDYuMzggMi42MyAwIDQuMzgtMS4wOCA1LjI2LTMuNTloNC41MWMtLjk2IDQuNjMtNS4wNSA3LjM0LTkuNzYgNy4zNC02LjggMC0xMC41NS00Ljc1LTEwLjU1LTExLjMgMC02LjIyIDQtMTEuNDMgMTAuNDMtMTEuNDMgNi4wNyAwIDEwLjI0IDUgMTAuMjQgMTAuOTdtMTMuMjMgOC4wMWMzLjggMCA2LjA1LTMuMzQgNi4wNS03LjYzIDAtNC42Ny0yLjIxLTcuNTktNi03LjU5LTMuOCAwLTYuMDEgMy4yNS02LjAxIDcuODQgMCA0LjE3IDIuMjUgNy4zOCA1Ljk2IDcuMzhtMTAuNjQtMjYuNjJ2MjkuNzhoLTQuNXYtMi45MmgtLjA4Yy0xLjI5IDIuMzgtMy43NiAzLjUxLTYuNjcgMy41MS02LjE3IDAtMTAuMS00LjM4LTEwLjEtMTEuNTIgMC03LjEzIDQtMTEuMjIgOS4zNC0xMS4yMiAzLjA5IDAgNS44OCAxLjI5IDcuMTcgMy4zOGguMDlWNjcuNDhoNC43NVptMjcuNTQgMjYuNjJjNC4zIDAgNS45Ni0zLjg0IDUuOTYtNy41OSAwLTMuNjMtMS44OC03LjYzLTYtNy42My00LjQyIDAtNi4wMSAzLjc1LTYuMDEgNy42MyAwIDMuNzEgMS44MyA3LjU5IDYuMDUgNy41OW0tNS44OS0yNi42MlY3OC41aC4wOWMxLjM3LTIuMDkgMy45Mi0zLjM4IDYuNDItMy4zOCA2LjcyIDAgMTAuMSA0Ljk2IDEwLjEgMTEuNDcgMCA1LjgtMi44OCAxMS4yNi05LjMgMTEuMjYtMi45NiAwLTUuOTItLjc1LTcuNDctMy41NWgtLjA4djIuOTZoLTQuNVY2Ny40OGg0Ljc0Wm0yMy40NSA4LjIyIDUuNjMgMTYuMWguMDlsNS40Ni0xNi4xaDQuOTZsLTguMyAyMi41M2MtLjg4IDIuNDYtMS43MSA0LjA4LTIuMzggNS4wMS0xLjI5IDEuODgtMi45NiAyLjU4LTUuMzggMi41OC0xIDAtMi4wOS0uMDgtMy4yNS0uMjV2LTRjLjcxLjA4IDEuMjkuMjkgMi4yNi4yOSAxLjU0IDAgMi41LS42NyAyLjk2LTEuOTZsLjkyLTIuNzEtOC4xOC0yMS40OGg1LjIxdi0uMDFaTTEwLjYzIDk0LjFjNC4yOSAwIDUuOTYtMy44NCA1Ljk2LTcuNTkgMC0zLjU5LTEuNzktNy42My02LjAxLTcuNjMtNC40MiAwLTYuMDEgMy43NS02LjAxIDcuNjMgMCAzLjcxIDEuODQgNy41OSA2LjA2IDcuNTltMTAuNzItNy41MWMwIDUuNjctMi44NCAxMS4yNi05LjMgMTEuMjYtMi43MSAwLTUuNzUtLjk2LTcuMjItMy4zOGgtLjA4djEwLjc2SDBWNzUuN2g0LjV2Mi45MmguMDhjMS4zOC0yLjUgMy45Mi0zLjUgNi42OC0zLjUgNi43NSAwIDEwLjA5IDUuMTcgMTAuMDkgMTEuNDdtMTMuODkgNy41MWM0LjIxIDAgNi4xMy0zLjg4IDYuMTMtNy42MyAwLTMuODQtMS44OC03LjU5LTYuMTctNy41OS00LjEzIDAtNi4wOSAzLjgtNi4wOSA3LjU5IDAgMy43MSAxLjkyIDcuNjMgNi4xMyA3LjYzbTEwLjg5LTcuNjRjMCA2LjcyLTQuMTMgMTEuMzktMTAuODkgMTEuMzktNi43NiAwLTEwLjg5LTQuNjMtMTAuODktMTEuMzkgMC02LjU5IDQuMTMtMTEuMzUgMTAuODktMTEuMzUgNi43Ni4wMSAxMC44OSA0Ljc2IDEwLjg5IDExLjM1IiBmaWxsPSIjRkZGIi8+PC9nPjwvc3ZnPg==) no-repeat top right;
+    background-size: contain;
+    height: var(--logo-height, 45px);
+    /*margin: 50px 50px 0 0px;*/
+    position: absolute;
+    top: 55px;
+    right: 50px;
+}
+
+body main .card {
+    background: rgba(255, 255, 255, 1.0);
+    border-radius: 0.3rem;
+    border: 0;
+}
+
+
+/* Form */
+body main .card-body {
+    font: normal 400 1rem/1rem "Source Sans Pro Regular", sans-serif;
+    color: #3c3c3c;
+}
+
+body main .card {
+    overflow: hidden;
+}
+
+.card-body > form > h3 {
+    color: #3C3C3C;
+    font: normal 600 2rem/2.5rem "Source Sans Pro Bold", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.card-body > form > h3 > small {
+    color: #3C3C3C!important;;
+    font: normal 400 1rem/1.5rem "Source Sans Pro Regular", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+body main .form-control {
+    color: #3C3C3C;
+    font: normal 600 1rem/1.5rem "Source Sans Pro Bold", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body main .form-control:focus {
+    border-color: #ADAFB1;
+
+}
+
+.form-control,
+.form-control:active,
+.form-control:hover,
+.form-control:focus,
+.form-control:visited {
+    border-radius: 0.3rem;
+    border-color: #ADAFB1;
+    box-shadow: 0 0 0 0rem rgb(255 255 255 / 0%);
+}
+
+
+.form-check-label {
+    font: normal 400 1rem/1rem "Source Sans Pro Regular", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #3C3C3C;
+}
+
+
+/* login+register button */
+body main .btn-primary {
+    background: #ffc014;
+    border-color: #ffc014;
+    border-radius: 0.3rem;
+    font: normal 700 0.9rem/1rem "Source Sans Pro Black", sans-serif;
+    text-transform: uppercase;
+    padding: 10px 0;
+    color: #fff;
+}
+
+body main .btn-primary:hover {
+    background: #0d1f30;
+    border-color: #0d1f30;
+    color: #fff;
+}
+
+body main .btn-secondary {
+    background: #4cb4e7;
+    border-color: #4cb4e7;
+    border-radius: 0.3rem;
+    font: normal 700 0.9rem/1rem "Source Sans Pro Black", sans-serif;
+    text-transform: uppercase;
+    padding: 10px 0;
+    color: #fff;
+}
+
+body main .btn-secondary:hover {
+    background: #2196d0;
+    border-color: #2196d0;
+    color: #fff;
+}
+
+/* forgot button */
+body main .btn-dark {
+    border: 1px solid #cbcbcb;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    font: normal 700 0.9rem/1rem "Source Sans Pro Black", sans-serif;
+    color: #cbcbcb;
+    text-transform: uppercase;
+    padding: 10px 0;
+    box-shadow: 0 0 0 0rem rgb(255 255 255 / 0%);
+}
+
+body main .btn-dark:hover {
+    border: 1px solid #6e6e6e;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    font: normal 700 0.9rem/1rem "Source Sans Pro Black", sans-serif;
+    color: #6e6e6e;
+    text-transform: uppercase;
+    padding: 10px 0;
+    box-shadow: 0 0 0 0rem rgb(255 255 255 / 0%);
+    filter: brightness(100%);
+}
+
+
+
+/* close button */
+div.d-flex div button.text-danger, .close-button {
+    font: normal 400 1rem/1rem "Source Sans Pro Regular", sans-serif;
+    /*color: #E20A74!important;*/
+    content: "\f00d";
+    position: absolute;
+    top: -1px;
+    /*right: -73px;
+    left: 436px;*/
+    left: auto;
+    right: 18px;
+    visibility: hidden;
+}
+
+div.d-flex div button.text-danger:after, .close-button:after {
+    background: transparent linear-gradient(270deg, #F4F0F0 0%, #EBE5E5 100%) 0% 0% no-repeat padding-box;
+    border-radius: 0px 6px 0px 0px;
+    color: #fff;
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "\f00d";
+    height: auto;
+    padding: 10px;
+    display: inline-block;
+    font: normal normal normal 14px/1 "FontAwesome";
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* devider text */
+div.bordertitle {
+    height: 18px;
+}
+div.bordertitle span {
+    font: normal 600 1rem/1rem "Source Sans Pro Bold", sans-serif;
+}
+
+/* Social login */
+.btn-facebook,
+.btn-social-bordered.btn-google,
+.btn-xing,
+.btn-linkedin,
+.btn-social-bordered:visited {
+    border: 1px solid #cbcbcb;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    font: normal 300 0.9rem/0.9rem "Source Sans Pro Light", sans-serif;
+    color: #cbcbcb;
+    text-transform: uppercase;
+    padding: 10px 0;
+    box-shadow: 0 0 0 0rem rgb(255 255 255 / 0%);
+}
+
+.btn-social-bordered .fa {
+    border: 0px;
+}
+.btn-social-bordered:hover,
+.btn-social-bordered:active,
+.btn-social-bordered:focus {
+    border: 1px solid #6e6e6e;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    font: normal 300 0.9rem/0.9rem "Source Sans Pro Light", sans-serif;
+    color: #6e6e6e;
+    text-transform: uppercase;
+    padding: 10px 0;
+    box-shadow: 0 0 0 0rem rgb(255 255 255 / 0%);
+    filter: brightness(100%);
+}
+
+.btn-social-bordered.btn-google:hover, .btn-social-bordered.btn-google:active, .btn-social-bordered.btn-google:focus {
+    background-color: #fff;
+}
+
+.btn-google .fa-google::before {
+    background: #fff;
+    content: "\f1a0";
+    height: auto;
+}
+
+li:not(:last-child) .btn-social-bordered {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+body footer {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+body footer .container {
+    margin-right: 20px;
+    font-family: "Source Sans Pro Regular", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body footer .container div .links span:not(:last-child):after {
+    content: " |";
+    padding: 0 10px;
+}
+
+
+/* register form width */
+.custom-register {
+    max-width: 650px;
+}
+
+
+
+@media (max-width: 550px) {
+    .logo-wrapper {
+        margin: 20px 0 0 0;
+        height: var(--logo-height, 25px);
+    }
+    .logo-wrapper-tk-de, .logo-wrapper-tk-en {
+        /*margin: -30px 0 0 0;*/
+        position: absolute;
+        top: 22px;
+        right: 5px;
+        height: var(--logo-height, 35px);
+    }
+    div.d-flex div button.text-danger, .close-button {
+        /*left: 311px;*/
+        left: auto;
+        right: 18px;
+    }
+}

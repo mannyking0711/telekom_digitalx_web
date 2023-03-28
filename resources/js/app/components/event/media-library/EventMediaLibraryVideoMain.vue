@@ -1,0 +1,78 @@
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    HTML
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<template>
+  <div class="event-media-library-video-main" v-if="(video !== null)">
+    <div v-if="video.premium && !userLoggedIn" class="event-media-library-video-main__loginteaser">
+      <img :src="video.img_detail" :alt="video.title" class="event-media-library-video-main__loginteaser-image"/>
+      <login-teaser class="event-media-library-video-main__loginteaser-teaser"/>
+    </div>
+
+    <video-player
+      v-else-if="video.video"
+      class="event-media-library-video-main__player"
+      :source="video.video"
+      :options="video.img_detail ? {poster: video.img_detail} : {}"
+    />
+
+    <h2 class="event-media-library-video-main__headline">{{ video.title }}</h2>
+    <article-info
+      class="event-media-library-video-main__articleinfo articleinfo--large"
+      :item_id="video.id"
+      :item_type="video.type"
+      :published="video.published"
+      :author="video.author"
+      :tags="video.tags"
+    />
+  </div>
+</template>
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    JAVASCRIPT
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<script>
+import {mapGetters} from "vuex";
+import {IS_SSR} from "../../../plugins/ssrSwitch";
+
+export default {
+  /////////////////////////////////
+  // INIT
+  /////////////////////////////////
+
+  name: "EventMediaLibraryVideoMain",
+
+  props: {
+    video: {
+      type: Object,
+      required: true,
+    },
+  },
+
+  computed: {
+    ...mapGetters('oidcStore', [
+      'oidcUser',
+    ]),
+
+    userLoggedIn: function () {
+      return (IS_SSR === false) ? (!!this.oidcUser) : false;
+    }
+  },
+}; // end export
+</script>
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    CSS
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<style lang="scss"></style>
+
+<style lang="scss" scoped></style>

@@ -1,0 +1,116 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD PROCESS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.awardProcess {
+    background:             linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.0) $spacing4XL);
+    padding-top:            $spacing4XL;
+
+    &__headline {
+        margin-bottom:      $spacing3XL;
+
+        @include breakpoint('l', min) {
+            margin-bottom:  $spacing4XL;
+        }
+    }
+
+    &__steps {
+        display:            flex;
+        flex-direction:     column;
+        flex-wrap:          wrap;
+        justify-content:    space-between;
+
+        @include breakpoint('m', min) {
+            flex-direction: row;
+        }
+    }
+
+    &__step {
+        text-align:         center;
+        border:             1px solid $colorGrayBorder;
+        border-radius:      5px;
+        width:              100%;
+        padding:            $spacingMD;
+
+        @include breakpoint('m', min) {
+            width:          48%;
+            margin-bottom:  4%;
+        }
+
+        @include breakpoint('xl', min) {
+            width:          20%;
+            margin-bottom:  0;
+        }
+    }
+
+    &__arrow {
+        position:           static;
+        width:              $spacing4XL;
+        height:             $spacing4XL;
+        padding:            $spacingMD;
+        align-self:         center;
+        fill:               $colorAwardBlue;
+        transform:          rotate(90deg);
+
+        @include breakpoint('m', min) {
+            display:        none;
+            transform:      rotate(0deg);
+            width:          6.6666%;
+        }
+
+        @include breakpoint('xl', min) {
+            display:        block;
+        }
+
+        &:hover {
+            fill:           $colorAwardBlue;
+        }
+    }
+
+    &__step-number {
+        font: 		        600 2.4rem #{"/"} 1em $fontFamily;
+        color:              $colorAwardBlue;
+        margin-bottom:      $spacingMD;
+    }
+
+    &__step-title {
+        font-size:          1.4rem;
+        line-height:        1em;
+
+        @include breakpoint('xl', min) {
+            min-height:     2em;
+        }
+    }
+
+    &__step-desc {
+        font-size:          1rem;
+        line-height:        1.4em;
+        color:              $colorGray;
+        margin-bottom:      $spacingSM;
+
+        @include breakpoint('xl', min) {
+            margin-bottom:  $spacingMD;
+        }
+    }
+
+    &__register {
+        display:            flex;
+        flex-wrap:          wrap;
+        justify-content:    space-between;
+        margin-top: $spacingXL;
+    }
+
+    &__register-btn {
+        @include breakpoint('m', 'min') {
+            width:          31.5555%;
+            margin-bottom:  2.6666%;
+        }
+
+        @include breakpoint('xl', 'min') {
+            width:          48%;
+            margin-bottom:  4%;
+        }
+    }
+}

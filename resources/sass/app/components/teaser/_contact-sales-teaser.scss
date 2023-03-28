@@ -1,0 +1,115 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  CONTACT SALES TEASER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	.contactsalesteaser {
+		$self: &; // store scope in varaible
+
+		background:             $gradientXYellow;
+		color:                  $colorWhite;
+
+		&--large  { // large variant
+			@include breakpoint('l', min) {
+				display:            flex;
+			}
+		}
+
+		&__form {
+
+			text-align: center;
+			padding:    4% 8%;
+
+			.form-row {
+				max-width: 340px;
+				margin: 0 auto 2rem auto;
+			}
+		}
+
+		&__headline {
+			display:            flex;
+			margin-bottom:      $spacingSM;
+			padding-top:        0.2rem;
+			justify-content:    center;
+			transform:          scale(0.9);
+			color: 				$colorWhite;
+			text-align: 		left;
+			
+			@include breakpoint('m', min) {
+				transform:      scale(1);
+			}
+
+			@include breakpoint('xl', 'min') {
+				transform:      scale(0.9);
+			}
+
+			@include breakpoint('xxl', 'min') {
+				transform:      scale(1);
+			}
+
+			#{ $self }--large & { // large variant
+				display:        none;
+			}
+		}
+
+		&__btn {
+			width:   	auto;
+			display: 	inline-block;
+			border:  	2px solid $colorWhite;
+			background: none
+		}
+
+		&__icon {
+			@extend             %relative-inline-block;
+
+			@include breakpoint('xl', min) {
+				width:          85px;
+				height:         55px;
+			}
+			width:              85px;
+			height:             55px;
+			margin-left: -10px;
+
+			svg {
+				fill:           $colorWhite;
+			}
+		}
+
+
+
+	/////////////////////////////////
+	// CONTENT COLUMN
+	/////////////////////////////////
+
+	.contactsalesteaser__content-wrap {
+		padding-bottom:     $spacingXL;
+		flex:               1;
+	}
+
+	.contactsalesteaser--large .contactsalesteaser__content-wrap { // large variant
+		padding:        $spacingLG 0;
+		background:     $gradientXBlue;
+
+		@include breakpoint('l', min) {
+			width:      50%;
+			min-height: 350px;
+		}
+
+		@include breakpoint('xl', min) {
+			padding-top: $spacing2XL;
+		}
+
+		@include breakpoint(1350, min) {
+			display:     flex;
+			padding-top: $spacingLG;
+			justify-content: center;
+			flex-flow:    column;
+		}
+	}
+
+	.contactsalesteaser--large .contactsalesteaser__content {
+		margin:         0 $spacing2XL;
+		text-align:     center;
+	}
+}

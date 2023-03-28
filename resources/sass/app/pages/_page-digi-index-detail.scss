@@ -1,0 +1,212 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	DIGI-INDEX DETAIL
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.page-digi-index-detail__page {
+  margin-top: $spacing3XL;
+  @include breakpoint('m', min) {
+    margin-top: $spacing5XL;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    line-height: 1em;
+    margin-bottom: $spacingMD;
+
+    @include breakpoint('l', min) {
+      font-size: 2.6rem;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: $spacingXL;
+  }
+
+  &__intro {
+    margin: 0 auto;
+    max-width: 60em;
+    text-align: center;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__intro + &__intro {
+    margin-top: $spacingXL;
+  }
+
+  &__archive-button {
+    margin: $spacing3XL auto 0;
+    text-align: center;
+  }
+}
+
+
+.page-digi-index-detail__content {
+  margin-top: $spacing3XL;
+  @include breakpoint('m', min) {
+    margin-top: $spacing5XL;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 0px;
+
+    @include breakpoint('l', min) {
+      align-items: stretch;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 30px;
+    }
+
+    @include breakpoint('xl', min) {
+      gap: 70px;
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    order: 3;
+  }
+
+  &__image-align-left {
+    @include breakpoint('l', min) {
+      order: 1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px #00000029;
+  }
+
+  &__content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    order: 2;
+  }
+
+  &__title {
+    text-align: left;
+    color: $colorTypo;
+    font: normal 600 1.6rem/2.1rem $fontFamily;
+    margin-bottom: $spacingSM;
+  }
+
+  &__copy {
+    color: $colorTypo;
+    font: normal 400 1.12rem/1.3rem $fontFamily;
+    margin-top: $spacingLG;
+  }
+
+  &__button {
+    margin-top: $spacingLG;
+  }
+}
+
+
+.page-digi-index__download {
+  margin-top: $spacing3XL;
+  @include breakpoint('m', min) {
+    margin-top: $spacing5XL;
+  }
+
+  &__bg-image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__bg-image {
+    object-fit: cover;
+    object-position: 50% 40%;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    vertical-align: middle;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 30px 0;
+    margin: 10% 0;
+
+    @include breakpoint('l', min) {
+      margin: 5% 0;
+      align-items: stretch;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 30px;
+    }
+
+    @include breakpoint('xl', min) {
+      gap: 70px;
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    order: 3;
+  }
+
+  &__image-align-left {
+    @include breakpoint('l', min) {
+      order: 1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    order: 2;
+  }
+
+  &__title {
+    text-align: left;
+    color: $colorTypo;
+    font: normal 600 1.6rem/2.1rem $fontFamily;
+    margin-bottom: $spacingLG;
+  }
+
+  &__title + &__subtitle {
+    margin-top: -$spacingLG;
+  }
+
+  &__subtitle {
+    color: $colorTypo;
+    font: normal 400 1.6rem/2.1rem $fontFamily;
+    margin-bottom: $spacingLG;
+  }
+
+  &__copy {
+    color: $colorTypo;
+    font: normal 400 1.12rem/1.3rem $fontFamily;
+    margin-top: $spacingLG;
+  }
+
+  &__button {
+    margin-top: $spacingLG;
+  }
+}

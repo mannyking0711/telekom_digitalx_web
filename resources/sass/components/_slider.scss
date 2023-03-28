@@ -1,0 +1,157 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	CONFIG
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	.slider {
+		$self: &; // store scope in varaible
+		
+		&--large { // large variant 
+			position: 			relative;
+		}
+
+		&__controls {
+			display:            flex;
+			align-items:        center;
+			justify-content:    center;
+			position:           relative;
+			height:             $spacingMD;
+			margin:             0 $spacingSM $spacing3XL;
+	
+			@include breakpoint('xl', min) {
+				margin-bottom:  $spacingXL;
+			}
+
+            #{ $self }--large & { // large variant 
+				@include breakpoint('l', min) {
+					position:   static;
+				}
+            }
+		}
+	
+		.slider__arrow { 		// selector chosen to overwrite .icon styles
+			height:             $spacingMD;
+			width:              $spacingMD;
+			fill:               $colorGrayLight;
+			cursor:             pointer;
+			outline: 			none;
+
+			&:hover {
+				fill:		    $colorXBlue;
+			}
+	
+			&--left {
+				transform:      rotate(180deg);
+			}
+		
+			&--right {
+				left:           auto;
+				right:          0;
+			}
+		}
+
+		&--large .slider__arrow { // large variant
+			@include breakpoint('l', min) {
+				width:              1.75rem;
+				height:             100%;
+			}
+	
+			&--right { 
+				@include breakpoint('l', min) {
+					right:          -$spacing3XL;
+				}
+
+				@include breakpoint('xl', min) {
+					right:          -$spacingXL;
+				}
+
+				@include breakpoint(1500, min) {
+					right:          -$spacing3XL;
+				}
+			}
+
+			&--left {
+				@include breakpoint('l', min) {
+					left:           -$spacing3XL;
+				}
+
+				@include breakpoint('xl', min) {
+					left:           -$spacingXL;
+				}
+
+				@include breakpoint(1500, min) {
+					left:           -$spacing3XL;
+				}
+			}
+		}
+
+		&--green .slider__arrow { // green variant 
+			&:hover {
+				fill:		$colorXGreen;
+			}
+		}
+
+		&--award .slider__arrow { // award variant 
+			&:hover {
+				fill:		$colorAwardGreen;
+			}
+		}
+
+		&--full-width { // full width variant
+
+	
+			.slider__arrow--left {
+				@include breakpoint('xl', max) {
+					left:               $spacingMD;
+				}
+			}
+	
+			.slider__arrow--right {
+				@include breakpoint('xl', max) {
+					right:              $spacingMD;
+				}
+			}
+		}
+	
+		&__bullets {
+			display:            flex;
+			padding:            0;
+		}
+	
+		&__bullet {
+			width:              25px;
+			height:             5px;
+			margin:             0 $spacingXS;
+			background:         $colorGrayLight;
+			list-style-type:    none;
+			cursor:             pointer;
+
+            #{ $self }--green & { // green variant 
+				&.tns-nav-active, 	// tiny slider active class
+				&:hover {
+					background: $colorXGreen;
+				}
+            }
+
+            #{ $self }--award & { // award variant 
+				&.tns-nav-active, 	// tiny slider active class
+				&:hover {
+					background: $colorAwardGreen;
+				}
+            }
+	
+			&.tns-nav-active, 	// tiny slider active class
+			&:hover {
+				background:     $colorXBlue;
+			}
+		}
+
+		&__image {
+			display: 			block;
+			width: 				100%;
+			height: 			auto;
+			margin-bottom: 		$spacingLG;
+		}
+
+	}

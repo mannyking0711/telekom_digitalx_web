@@ -1,0 +1,291 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INDEX EVENT
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	.index-event {
+    margin-top: $marginBottomSection;
+		align-items: flex-start;
+	}
+
+	.index-event-mobile {
+		display: none;
+	}
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INDEX EVENT CONTENT
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// TYPO
+	/////////////////////////////////
+
+  .index-event-desktop {
+    margin-top: -$spacingSM;
+    margin-bottom: $spacing3XL;
+  }
+
+	.index-event-name {
+
+	}
+
+	.index-event-copy {
+    margin: 0;
+    white-space: pre-line;
+	}
+
+  .index-event .index-event-counter {
+    margin-bottom: $spacingLG;
+  }
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INDEX EVENT GALLERY
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.index-event-gallery {
+  margin: $spacingXL 0;
+  gap: 10px;
+  display: flex;
+  @include breakpoint('m') {
+    flex-direction: column-reverse;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 50%;
+    @include breakpoint('m') {
+      width: 100%;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 50%;
+    @include breakpoint('m') {
+      width: 100%;
+    }
+
+    &__content {
+      padding: 2rem 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.8rem;
+    font: 600 3rem/2.7rem $fontFamily;
+    text-align: center;
+    color: $colorXBlue;
+    white-space: pre-line;
+
+    @include breakpoint('m') {
+      font-size: 		1.9rem;
+      line-height: 	1.8rem;
+    }
+  }
+
+  &__subtitle {
+    font: 400 1.8rem/2.0rem $fontFamily;
+    text-align: center;
+    color: $colorGray;
+
+    @include breakpoint('m') {
+      font-size: 		1.4rem;
+      line-height: 	1.6rem;
+    }
+  }
+
+  &__image {
+    display: flex;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0;
+  }
+}
+
+
+
+	/////////////////////////////////
+	// BUTTONS
+	/////////////////////////////////
+
+	//.index-event-buttonrow {
+  //
+	//	@extend %relative-inline-block;
+	//	width: 100%;
+	//	text-align: center;
+  //
+	//	.btn {
+	//		display: block;
+	//		display: inline-block;
+	//		margin: 0 auto;
+	//		padding-left: 4rem;
+	//		padding-right: 4rem;
+	//	}
+	//}
+
+
+	/////////////////////////////////
+	// TOP CONTENT
+	/////////////////////////////////
+
+	//.event-gallery-speakerinfo {
+	//	@extend %relative;
+	//	margin: 1rem 0 2rem 0;
+	//}
+  //
+	//.event-gallery-speaker {
+	//	margin-bottom: 0.8rem;
+	//	font: 600 3rem/3.5rem $fontFamily;
+	//	text-align: center;
+	//	color: $colorXBlue;
+	//}
+  //
+	//.event-gallery-subline {
+	//	margin-bottom: 3rem;
+	//	font: 600 2rem/2.7rem $fontFamily;
+	//	text-align: center;
+	//	color: $colorGray;
+	//}
+
+
+	/////////////////////////////////
+	// BOTTOM CONTENT
+	/////////////////////////////////
+
+	//.index-event-gallery-bottom .index-event-buttonrow {
+	//	@extend %flex;
+  //
+	//	height: 0;
+	//	justify-content: center;
+	//	align-items: flex-end;
+	//}
+  //
+	//.index-event-speaker-btn {
+	//	display: block;
+	//	margin-right: 0;
+	//	@include breakpoint('l') {
+	//		margin-top: -0.7rem;
+	//		margin-bottom: 1.4rem;
+	//	}
+	//}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    @include breakpoint('xl') {
+
+        /////////////////////////////////
+        // HEDLINE
+        /////////////////////////////////
+
+        .index-event-desktop  {
+            margin-top: $spacingMD;
+            margin-bottom: $spacingMD;
+            //display: none;
+        }
+
+        .index-event-mobile {
+            display: block;
+        }
+
+    }
+
+
+	@include breakpoint('l') {
+
+		/////////////////////////////////
+		// CONTENT
+		/////////////////////////////////
+		.index-event-name {
+			text-align: center;
+		}
+
+		.index-event-copy {
+			text-align: center;
+		}
+
+		/////////////////////////////////
+		// GALLERY
+		/////////////////////////////////
+
+		//.index-event-gallery-top  {
+    //
+		//	flex-direction: column;
+    //
+		//}
+    //
+		//.index-event-gallery-top .event-gallery-left {
+		//	width: 100%;
+		//	order: 2;
+		//}
+    //
+		//.event-gallery-right {
+		//	width: 100%;
+		//}
+    //
+    //    .index-event-gallery-bottom	.event-gallery-left {
+    //        width: 100%;
+    //    }
+    //
+    //    .index-event-gallery-bottom	.event-gallery-right {
+    //        width: 100%;
+    //    }
+    //
+		//.event-gallery-speaker {
+		//	margin-bottom: 0.4rem;
+		//	font: 600 2.2rem/2.7rem $fontFamily;
+		//}
+    //
+		//.event-gallery-subline {
+		//	margin-bottom: 1.5rem;
+		//	font: 600 1.1rem/1.6rem $fontFamily;
+		//}
+    //
+		//.event-gallery-image  {
+		//	margin-bottom: 3%;
+		//}
+    //
+		//.event-gallery-speakerinfo {
+		//	text-align: center;
+		//}
+    //
+		//.event-gallery-left:last-child {
+		//	width: 100%;
+		//	margin-top: 6%;
+		//}
+    //
+		//.index-event-gallery-bottom .index-event-buttonrow {
+		//	height: auto;
+		//}
+
+	}

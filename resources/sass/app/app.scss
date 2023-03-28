@@ -1,0 +1,561 @@
+@import "../../../node_modules/bootstrap/scss/mixins/banner";
+@include bsBanner("");
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/utilities";
+
+@import "../../../node_modules/bootstrap/scss/root";
+//@import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/images";
+@import "../../../node_modules/bootstrap/scss/containers";
+@import "../../../node_modules/bootstrap/scss/grid";
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	CONFIG
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// COLORS DIGITAL X
+	/////////////////////////////////
+
+	$colorXDark: 		   #0d1f30;
+  $colorXBlue: 		   #4DB3E6;
+	$colorXYellow: 		 #FFC014;
+	$colorXYellowDark: #FFBF00;
+	$colorXMagenta: 	 #E5117E;
+	$colorXPurple: 		 #8F0286;
+	$colorXGreen:		   #469309;
+  $colorXCyan:       #1CC99F;
+
+	/////////////////////////////////
+	// COLORS APP
+	/////////////////////////////////
+
+	$colorWhite:			#FFFFFF;
+	$colorYellow:			#ffc014;
+	$colorAwardGreen:		#6ab482;
+	$colorAwardBlue:		#133171;
+
+	$colorCta: 				$colorXMagenta;
+	$colorCtaHover:			$colorXBlue;
+
+	$colorActive: 			$colorXBlue;
+	$colorActiveHover: 		$colorXMagenta;
+	$colorGray:				#6E6E6E;
+	$colorGrayHover: 		#818890;
+
+	$colorGrayMid:			#D7D9D9;
+
+	$colorGrayLight:		#ADAFB1;
+	$colorGrayLightHover: 	#EBEDEE;
+
+	$colorGrayDark:	 		#3C3C3C;
+	$colorGrayDarkHover: 	#363A3E;
+
+	$colorGrayBorder: 		#D9DCE0;
+
+	$colorGrayBackground:	#F8F8F8;
+
+	$colorBackground: 		$colorWhite;
+
+	$colorMegatrendsRed: #D75436;
+	$colorMegatrendsDarkRed: #471419;
+	$colorMegatrendsYellow: #F6EA72;
+	$colorMegatrendsLightGreen: #91EB8C;
+	$colorMegatrendsBlue: #66B1E0;
+	$colorMegatrendsGreen: #54A55B;
+	$colorMegatrendsPurpleMagenta: #E5B0FA;
+	$colorMegatrendsOrange: #E4913B;
+	$colorMegatrendsMagenta: #E278CE;
+	$colorMegatrendsDarkBlue: #2B3E86;
+
+
+	/////////////////////////////////
+	// GRADIENTS
+	/////////////////////////////////
+
+	$gradientXBlueLight: 	#1A3C5D;
+	$gradientXBlueDark: 	#0D1F30;
+	$gradientXGrayLight: 	#F3F3F3;
+	$gradientXBlue: 		linear-gradient(180deg, $gradientXBlueLight 0%, $gradientXBlueDark 100%);
+	$gradientBlack:			linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.8) 100%);
+	$gradientXGray: 		linear-gradient(180deg, #F0F2F3 0%, $colorWhite 50%);
+	$gradientXYellow:       linear-gradient(180deg, #FFC014, #F7B500 100%);
+	$agendaGradient:        linear-gradient(0deg, #35a3d9, #95d9fb 100%);
+	$awardGradient:         linear-gradient(0deg, $colorAwardBlue, $colorAwardGreen 100%);
+	$awardGradientAngled:   linear-gradient(45deg, $colorAwardBlue, $colorAwardGreen 100%);
+
+
+	/////////////////////////////////
+	// SPACING (FOR MARGIN AND PADDING)
+	/////////////////////////////////
+
+	$spacingXS:				0.25rem;
+	$spacingSM:				0.5rem;
+	$spacingMD:				1rem;
+	$spacingLG:				1.5rem;
+	$spacingXL:				2rem;
+	$spacing2XL:			2.5rem;
+	$spacing3XL:			3rem;
+	$spacing4XL:			4rem;
+	$spacing5XL:			5rem;
+
+
+	/////////////////////////////////
+	// PADDING
+	/////////////////////////////////
+
+	$paddingPage: 2.78%; 			// 40/1440
+	$paddingPageInner: 8.3%; 		// 84+40/1440
+	$paddingPageMobileInner: 6vw;
+
+	$marginBottomSection: 5rem;
+	$marginBottomSectionMobile: 2rem;
+
+
+	/////////////////////////////////
+	// FORMS
+	/////////////////////////////////
+
+	$formInputHeight: 			3rem;
+	$formInputMobileHeight: 	3.4rem;
+
+	$colorInputBackground: 		$colorWhite;
+	$colorFormError: 			#ff0000;
+	$colorFormErrorBackground: 	#FEEEEC;
+
+	/////////////////////////////////
+	// CONTAINER
+	/////////////////////////////////
+	.container-fluid{
+		max-width: 1500px;
+
+		@include media-breakpoint-up(md){
+			padding-right: 3rem;
+			padding-left: 3rem;
+		}
+	}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	GLOBAL
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	* 			{ margin: 0; padding: 0; box-sizing: border-box; }
+	body 		{ background: $colorBackground; }
+	img			{ @extend %no-select; border: 0px solid; }
+	a 			{ outline: 0; text-decoration: none; }
+	ul,ol 		{ padding-left: $spacingLG; }
+	sub, sup 	{ position: relative; font-size: 75%; line-height: 0; vertical-align: baseline; } // Prevent `sub` and `sup` from affecting the line height
+	sub 		{ bottom: -0.25em; }
+	sup 		{ top: -0.5em; }
+	.dev 		{ @extend %dev; }
+	.wip 		{ @extend %wip; }
+    .sr-only    { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+
+	.position-relative{position: relative}
+	.text-center{text-align: center}
+	.text-left{text-align: left}
+
+	img{
+		max-width: 100%;
+	}
+
+	.content{
+		max-width: 960px;
+	}
+	.content-center{
+		margin: auto;
+		text-align: center;
+	}
+
+	ul.list-checkmark{
+		list-style-type:none;
+		position: relative;
+
+		li{
+			margin: 0.75rem 1.25rem;
+
+			&:before{
+				content: " ";
+				background-image: url("../svg/app/icon-check.svg");
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				position: absolute;
+				height: 16px;
+				width: 16px;
+				left: 8px;
+				margin-top: 8px;
+			}
+		}
+	}
+
+	.section{
+		margin: $marginBottomSectionMobile 0 $marginBottomSectionMobile 0;
+
+		@include media-breakpoint-up(lg){
+			margin: $marginBottomSection 0 $marginBottomSection 0;
+		}
+	}
+
+	.bg-light{
+		background: #f3f3f3;
+		padding: $marginBottomSectionMobile 0;
+
+		@include media-breakpoint-up(lg){
+			padding: $marginBottomSection 0;
+		}
+	}
+	.bg-white{
+		background-color: #ffffff;
+	}
+	.bg-overlay{
+		&::before {
+
+
+			@include media-breakpoint-up(lg){
+				content: ' ';
+				position: absolute;
+				background: #1B3F63;
+				position: absolute;
+				width: calc(50% + 3rem);
+				top: 0;
+				right: 0;
+				bottom: 0;
+				opacity: 0.7;
+			}
+		}
+	}
+	.bg-dx{
+		background-color: rgba(0, 0, 0, 0);
+		background-position: 0% 0%, center center;
+		background-repeat: repeat, no-repeat;
+		background-attachment: scroll, fixed;
+		background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), url("../img/app/initiative/background.jpg");
+		background-origin: padding-box, padding-box;
+		background-clip: border-box, border-box;
+		background-size: cover;
+		position: relative;
+		padding: $marginBottomSectionMobile 0;
+
+		@include media-breakpoint-up(lg){
+			padding: $marginBottomSection 0;
+		}
+
+
+
+		> *{
+			position: relative;
+		}
+
+		*{
+			color: #ffffff;
+		}
+	}
+
+	.box-light{
+		background: #F3F3F3;
+		padding: 1.5rem;
+	}
+	.box-card{
+		padding:1.5rem;
+		border-radius: 6px;
+		border: 1px solid #000000;
+		height: 100%;
+	}
+	.box-blue{
+		background: linear-gradient(180deg, #1B3F63 0%, #0D1F31 100%);
+		border-radius: 6px;
+		padding: 1.5rem;
+
+		*{
+			color: #ffffff;
+		}
+	}
+	.box-large{
+		padding: 3rem;
+	}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INCLUDES
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	// global components
+	@import '../components/mixins';
+	@import '../components/breakpoints';
+	@import '../components/page-transition';
+
+	// optional components
+	@import '../components/video-player';
+	@import '../components/audio-player';
+	@import '../components/accordeon';
+	@import '../components/slider';
+
+	// testing components
+	@import '../components/view-test';
+
+	// app components
+	@import 'components/typo';
+	@import 'components/layout';
+	//@import 'components/grid';
+	@import 'components/buttons';
+	@import 'components/icons';
+	@import 'components/cookieconsent';
+	@import 'components/colorbox';
+  @import 'components/table';
+  @import 'components/popup/newsletter-modal';
+  @import 'components/breadcrumb';
+
+	// teaser
+	@import 'components/teaser/login-teaser';
+	@import 'components/teaser/newsletter-event-teaser';
+	@import 'components/teaser/newsletter-teaser';
+	@import 'components/teaser/podcast-teaser';
+	@import 'components/teaser/share-teaser';
+	@import 'components/teaser/bonus-teaser';
+	@import 'components/teaser/subjects-teaser';
+	@import 'components/teaser/contact-sales-teaser';
+	@import 'components/teaser/bookmark-share-teaser';
+
+	// sections
+	@import 'components/sections/quote-section';
+	@import 'components/sections/quotes-slider';
+	@import 'components/sections/media-gallery';
+	@import 'components/sections/logo-headline';
+	@import 'components/sections/scroll-arrow';
+
+	// header
+	@import 'components/header/header-horizontal';
+	@import 'components/header/header-metanavi';
+	@import 'components/header/header-navi';
+	@import 'components/header/header-toolnavi';
+	@import 'components/header/language-select';
+
+	// magazine
+	@import 'components/magazine/magazine-highlights';
+	@import 'components/magazine/magazine-overview-articles';
+	@import 'components/magazine/magazine-overview-event-newsletter';
+	@import 'components/magazine/magazine-overview-highlights';
+	@import 'components/magazine/magazine-overview-intro';
+	@import 'components/magazine/magazine-overview-podcasts';
+	@import 'components/magazine/magazine-overview-staff';
+	@import 'components/magazine/magazine-overview-subject';
+	@import 'components/magazine/magazine-overview-teaser';
+	@import 'components/magazine/magazine-overview-videos';
+
+	// map
+	@import 'components/map/dx-map';
+
+	// event
+	@import 'components/event/events-intro';
+	@import 'components/event/events-info';
+	@import 'components/event/events-list';
+	@import 'components/event/events-footer';
+	@import 'components/event/event-intro';
+	@import 'components/event/event-highlights';
+	@import 'components/event/event-speaker';
+	@import 'components/event/event-speaker-hero';
+	@import 'components/event/event-speaker-intro';
+	@import 'components/event/event-join';
+	@import 'components/event/event-campus';
+	@import 'components/event/event-retrospect';
+	@import 'components/event/speaker-teaser';
+	@import 'components/event/events-event-newsletter';
+	@import 'components/event/agenda-day';
+	@import 'components/event/agenda-day-selector';
+  @import 'components/event/agenda-megatrends-filter';
+	@import 'components/event/event-faqs';
+	@import 'components/event/event-keyvisual';
+	@import 'components/event/event-main-stages';
+	@import 'components/event/event-parallax';
+	@import 'components/event/event-participate-faqs';
+	@import 'components/event/event-participate-join';
+	@import 'components/event/event-participate-streams';
+	@import 'components/event/event-partner';
+	@import 'components/event/event-partner-hero';
+	@import 'components/event/event-partner-intro';
+  @import 'components/event/event-partner-list';
+  @import 'components/event/event-partner-list';
+  @import 'components/event/event-partner-map';
+	@import 'components/event/event-megatrends-hero';
+	@import 'components/event/event-megatrends-intro';
+	@import 'components/event/event-megatrends-anchor-list';
+  @import 'components/event/event-pk-banner';
+  @import 'components/event/event-pk-banner2';
+  @import 'components/event/event-pk-highlights';
+  @import 'components/event/event-pk-intro';
+  @import 'components/event/event-pk-map';
+  @import 'components/event/event-presenter';
+	@import 'components/event/event-slider';
+	@import 'components/event/event-banner';
+	@import 'components/event/event-banner2';
+	@import 'components/event/event-marketplaces';
+	@import 'components/event/event-megatrends';
+	@import 'components/event/event-megatrends2';
+	@import 'components/event/event-streams';
+	@import 'components/event/event-locations';
+	@import 'components/event/event-app';
+	@import 'components/event/event-tickets';
+	@import 'components/event/event-teaser-tickets';
+	@import 'components/event/event-gk-pk-teaser';
+	@import 'components/event/event-hero';
+	@import 'components/event/event-introduction';
+	@import 'components/event/event-advertising';
+	@import 'components/event/event-agenda-hero';
+	@import 'components/event/event-agenda-intro';
+
+  // event-media-library
+  @import 'components/event-media-library/event-media-library-video-list';
+  @import 'components/event-media-library/event-media-library-video-main';
+
+  // content
+  @import 'components/content/content-note';
+  @import 'components/content/content-teaser1';
+  @import 'components/content/content-teaser-cards';
+  @import 'components/content/content-teaser-pk';
+  @import 'components/content/content-tiles-stages';
+
+	// article
+	@import 'components/article/article-info';
+	@import 'components/article/article-list';
+
+	// podcast
+	@import 'components/podcast/podcast-panel';
+	@import 'components/podcast/podcast-series';
+	@import 'components/podcast/podcast-favorite';
+
+  // award-partners
+  @import 'components/award-partners/award-partners-list';
+
+  // digi-index
+  @import 'components/digi-index/digi-index-archive';
+  @import 'components/digi-index/digi-index-header';
+
+	// award
+	@import 'components/award/award-2cols-text-with-image';
+	@import 'components/award/award-categories';
+	@import 'components/award/award-hero';
+  @import 'components/award/award-intro';
+	@import 'components/award/award-nominees';
+	@import 'components/award/award-regionals';
+	@import 'components/award/award-other';
+	@import 'components/award/award-winners';
+	@import 'components/award/award-prices';
+	@import 'components/award/award-process';
+	@import 'components/award/award-quotes';
+	@import 'components/award/award-impressions';
+	@import 'components/award/award-retrospect';
+	@import 'components/award/award-register';
+	@import 'components/award/award-register2';
+
+	// partner
+	@import 'components/partner/partner-focus';
+  @import 'components/partner/partner-hero';
+	@import 'components/partner/partner-list';
+	@import 'components/partner/partner-map';
+	@import 'components/partner/partner-detail';
+
+	// speaker
+  @import 'components/speaker/speaker-hero';
+  @import 'components/speaker/speaker-detail';
+
+	// initiative
+	@import 'components/initiative/initiative-intro';
+	@import 'components/initiative/initiative-mission';
+	@import 'components/initiative/initiative-history';
+	@import 'components/initiative/initiative-ecosystem';
+	@import 'components/initiative/initiative-retro';
+	@import 'components/initiative/initiative-award';
+
+  // lib
+  @import 'components/lib/lib-headline-h2';
+  @import 'components/lib/lib-hero';
+  @import 'components/lib/lib-intro';
+  @import 'components/lib/lib-section-header';
+
+	// form
+    @import 'components/form/contact-form';
+	@import 'components/form/contact-sales-form';
+	@import 'components/form/form';
+	@import 'components/form/input-select';
+	@import 'components/form/input-radio';
+	@import 'components/form/searchfield';
+	@import 'components/form/newsletter-event-registration-form';
+	@import 'components/form/newsletter-registration-form';
+	@import 'components/popup/popup-error';
+
+	// footer
+	@import 'components/footer/footer-horizontal';
+	@import 'components/footer/footer-teaser';
+	@import 'components/footer/footer-newsletter';
+	@import 'components/footer/footer-social';
+	@import 'components/footer/footer-navi';
+
+	// index components
+	@import 'components/index/index-intro';
+	@import 'components/index/index-event';
+	@import 'components/index/index-event-counter';
+	@import 'components/index/index-award';
+	@import 'components/index/index-initiative';
+	@import 'components/index/index-magazine-hero';
+    @import 'components/index/index-magazine-list';
+    @import 'components/index/index-magazine-list-item';
+    @import 'components/index/index-magazine-newsticker';
+    @import 'components/index/index-magazine-newsticker-item';
+    @import 'components/index/index-best-practice-list';
+    @import 'components/index/index-best-practice-list-item';
+
+	// dashboard
+	@import "components/dashboard/dashboard-profile";
+	@import "components/dashboard/dashboard-live";
+	@import "components/dashboard/dashboard-interests";
+	@import "components/dashboard/dashboard-newdx";
+	@import "components/dashboard/dashboard-bookmarks";
+	@import "components/dashboard/dashboard-welcome";
+	@import "components/dashboard/bookmark-list-item";
+
+	// app pages
+	@import 'pages/page-index';
+	@import 'pages/page-magazine';
+	@import 'pages/page-magazine-overview';
+	@import 'pages/page-article';
+	@import 'pages/page-podcast';
+	@import 'pages/page-video';
+	@import 'pages/page-meta';
+	@import 'pages/page-newsletter';
+	@import 'pages/page-events';
+	@import 'pages/page-event';
+	@import 'pages/page-event-media-library';
+  @import 'pages/page-event-media-library-detail';
+	@import 'pages/page-event-pk';
+	@import 'pages/page-event-speaker';
+	@import 'pages/page-agenda';
+	@import 'pages/page-speaker';
+	@import 'pages/page-speaker-detail';
+	@import 'pages/page-participate';
+	@import 'pages/page-award';
+	@import 'pages/page-initiative';
+	@import 'pages/page-press';
+	@import 'pages/page-social';
+	@import 'pages/page-partner';
+	@import 'pages/page-author-detail';
+	@import "pages/page-dashboard";
+	@import "pages/page-digi-index-archive";
+	@import "pages/page-digi-index";
+	@import "pages/page-digi-index-detail";
+	@import "pages/page-error";
+
+  // search
+  @import 'components/search/search-input';
+  @import 'components/search/search-results';

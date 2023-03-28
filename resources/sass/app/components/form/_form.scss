@@ -1,0 +1,293 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	CONFIG
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	$formInputHeight: 			3rem;
+	$formInputMobileHeight: 	3.2rem;
+
+	$formInputPaddingTop:		1rem;
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	LAYOUT
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// FORM ROW
+	/////////////////////////////////
+
+	.form-row, .form-row-buttons {
+
+		@extend %relative;
+
+		margin-bottom: 1rem;
+	}
+
+
+	.form-row-buttons {
+
+		text-align: right;
+
+		// no margin on last button
+		.btn:last-child { margin-right: 0; }
+	}
+
+
+	/////////////////////////////////
+	// FORM GRID
+	/////////////////////////////////
+
+    .form-grid {
+
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -5px;
+        margin-left: -5px;
+
+        & > .col, & > [class*=col-] {
+            padding-right: 5px;
+            padding-left: 5px;
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+        }
+
+        .col-xs {
+            @include breakpoint('s', min) {
+                flex: 0 0 16.666667%;
+                max-width: 16.666667%;
+            }
+        }
+
+        .col-sm {
+            @include breakpoint('s', min) {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
+
+        .col-lg {
+            @include breakpoint('s', min) {
+                flex: 0 0 75%;
+                max-width: 75%;
+            }
+        }
+
+        .col-xl {
+            @include breakpoint('s', min) {
+                flex: 0 0 83.333333%;
+                max-width: 83.333333%;
+            }
+        }
+    }
+
+
+	/////////////////////////////////
+	// LABEL
+	/////////////////////////////////
+
+	label, .form-label {
+
+		@extend %relative;
+		@extend %no-select;
+
+		margin-bottom: 0.2rem;
+		font-weight: bold;
+
+		.dark-input & {
+			color: $colorWhite;
+		}
+	}
+
+
+	/////////////////////////////////
+	// DEFAULT INPUT
+	/////////////////////////////////
+
+	input, .input, textarea, .input-radio, .input-checkbox, .input-select, .input-file {
+
+		@extend %relative;
+
+		height: 			$formInputHeight;
+		margin: 			0 0 0 0;
+		padding:   			0 0 0 $formInputPaddingTop;
+		color: 				$colorTypo;
+
+		border: 			1px solid $colorGray;
+		border-radius: 		3px;
+
+		-webkit-appearance: none;
+		-moz-appearance: 	none;
+		appearance: 		none;
+
+		.dark-input & {
+			border: 		1px solid $colorXBlue;
+			color:			$colorWhite;
+		}
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INPUT / TEXTAREA
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// DEFAULT
+	/////////////////////////////////
+
+	input, .input, textarea {
+
+		background: 	$colorInputBackground;
+
+		.dark-input & {
+			background: transparent;
+		}
+	}
+
+	// show other dom elements as input
+	.input {
+
+		padding-top: 13px;
+	}
+
+
+	/////////////////////////////////
+	// TEXTAREA
+	/////////////////////////////////
+
+	textarea {
+
+		height: 		$formInputHeight * 2;
+		padding-top: 	$formInputPaddingTop * 0.6;
+	}
+
+
+	/////////////////////////////////
+	// FOCUS
+	/////////////////////////////////
+
+	input:focus, textarea:focus {
+
+		// background: 	$colorInputFocusBackground;
+		// color: 		$colorInputFocusText;
+		outline: 		none;
+		border: 		1px solid $colorCta;
+	}
+
+
+	.dark-input input:focus, .dark-input textarea:focus {
+		border: 		1px solid #fff;
+	}
+
+
+	/////////////////////////////////
+	// READONLY
+	/////////////////////////////////
+
+	input[readonly="readonly"] {
+
+		background: 	$colorGrayLight;
+		border: 		$colorGrayLight !important; // prevent hover styling
+	}
+
+
+	/////////////////////////////////
+	// PLACEHOLDER
+	/////////////////////////////////
+
+	input::-webkit-input-placeholder 	{ font: normal 1rem/1.6rem $fontFamily; color: #ccc; }
+	input:-ms-input-placeholder 		{ font: normal 1rem/1.6rem $fontFamily; color: #ccc; }
+	input::placeholder 					{ font: normal 1rem/1.6rem $fontFamily; color: #ccc; }
+	input::-moz-placeholder 			{ font: normal 1rem/2.8rem $fontFamily; color: #ccc; opacity: 1; } // Firefox need more line-height
+
+    textarea::-webkit-input-placeholder 	{ font: normal 1rem/1.6rem $fontFamily; color: #ccc; }
+    textarea:-ms-input-placeholder 		{ font: normal 1rem/1.6rem $fontFamily; color: #ccc; }
+    textarea::placeholder 					{ font: normal 1rem/1.6rem $fontFamily; color: #ccc; }
+    textarea::-moz-placeholder 			{ font: normal 1rem/2.8rem $fontFamily; color: #ccc; opacity: 1; } // Firefox need more line-height
+
+	.dark-input input::-webkit-input-placeholder 	{ font: normal 1rem/1.6rem $fontFamily; color: $colorXBlue; opacity: 0.7;}
+	.dark-input input:-ms-input-placeholder 		{ font: normal 1rem/1.6rem $fontFamily; color: $colorXBlue; opacity: 0.7; }
+	.dark-input input::placeholder 					{ font: normal 1rem/1.6rem $fontFamily; color: $colorXBlue; opacity: 0.7; }
+	.dark-input input::-moz-placeholder 			{ font: normal 1rem/2.8rem $fontFamily; color: $colorXBlue; opacity: 0.7; } // Firefox need more line-height
+
+    .dark-input textarea::-webkit-input-placeholder 	{ font: normal 1rem/1.6rem $fontFamily; color: $colorXBlue; opacity: 0.7;}
+	.dark-input textarea:-ms-input-placeholder 		{ font: normal 1rem/1.6rem $fontFamily; color: $colorXBlue; opacity: 0.7; }
+	.dark-input textarea::placeholder 					{ font: normal 1rem/1.6rem $fontFamily; color: $colorXBlue; opacity: 0.7; }
+	.dark-input textarea::-moz-placeholder 			{ font: normal 1rem/2.8rem $fontFamily; color: $colorXBlue; opacity: 0.7; } // Firefox need more line-height
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	ERRORS
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	/////////////////////////////////
+	// MESSAGES CONTAINER
+	/////////////////////////////////
+
+	.form-error-messages {
+
+		@extend %relative;
+
+		margin-top: 	30px;
+		margin-bottom: 	30px;
+
+		p {
+			margin: 0;
+		}
+	}
+
+
+	/////////////////////////////////
+	// INPUT / TEXTAREA
+	/////////////////////////////////
+
+	label.error, p.error {
+
+		color: $colorFormError;
+	}
+
+
+	input.error, .input.error, textarea.error, .input-select.error {
+
+		background: 	$colorFormErrorBackground;
+		border: 		1px solid $colorFormError;
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	@include breakpoint('m') {
+
+		input, .input, textarea, .input-radio, .input-checkbox, .input-select, .input-file {
+
+			height: $formInputMobileHeight;
+		}
+
+		textarea {
+
+			height: $formInputMobileHeight * 1.8;
+		}
+	}
+
+

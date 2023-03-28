@@ -1,0 +1,190 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  NEWSLETTER TEASER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	.nlteaser {
+
+		$self: &; // store scope in varaible
+		padding:                $spacing2XL $spacingXL $spacingXL;
+		background:             $gradientXBlue;
+		color:                  $colorWhite;
+
+
+		&__form {
+
+			text-align: center;
+
+			.form-row {
+				max-width: 340px;
+				margin: 0 auto 2rem auto;
+			}
+		}
+
+
+		&__social {
+
+			@include breakpoint('l', min) {
+				padding:        0 8%;
+			}
+			padding:            0 $spacing2XL;
+			flex:               1;
+		}
+
+
+		&__headline {
+
+			@include breakpoint('m', min) {
+				font-size:      2.8rem;
+			}
+
+			@include breakpoint('xl', min) {
+				font-size:      2.4rem;
+			}
+
+			@include breakpoint('xxl', min) {
+				font-size:      2.8rem;
+			}
+			max-width:          6.5em;
+			margin:             0 auto $spacingXL;
+			text-align:         center;
+			color:              $colorWhite;
+			font:               600 2.4rem #{"/"} 1em $fontFamily;
+		}
+
+
+		&__text {
+
+			@include breakpoint('m', min) {
+				font-size:      1.6rem;
+			}
+
+			@include breakpoint('xl', min) {
+				font-size:      1.2rem;
+			}
+
+			@include breakpoint('xxl', min) {
+				font-size:      1.6rem;
+			}
+			margin-bottom:      $spacing2XL;
+			font:               normal 1.2rem #{"/"} 1.2em $fontFamily;
+			text-align:         center;
+			color:              $colorWhite;
+		}
+
+
+		&__btn {
+			width:   auto;
+			display: inline-block;
+		}
+
+
+		&__icons {
+			max-width:          25em;
+			display:            flex;
+			margin:             0 auto;
+			justify-content:    space-between;
+		}
+
+
+		&__icon {
+			@extend             %relative-inline-block;
+
+			@include breakpoint('xl', min) {
+				width:          35px;
+				height:         35px;
+			}
+			width:              25px;
+			height:             25px;
+
+			svg {
+				fill:           $colorWhite;
+			}
+		}
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    TEASER LARGE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+	.nlteaser--large  {
+
+		@include breakpoint('l', min) {
+			display:            flex;
+			padding:            $spacing2XL 0 $spacing3XL;
+		} // large variant
+
+		padding:            $spacing2XL;
+	}
+
+
+	.nlteaser--large .nlteaser__form {
+
+		@include breakpoint('l', min) {
+			margin:         0;
+			padding:        0 8%;
+			border-bottom:  none;
+			border-right:   1px solid $colorXBlue;
+		} // large variant
+
+		margin-bottom:      $spacing2XL;
+		border-bottom:      1px solid $colorXBlue;
+		flex:               1;
+	}
+
+
+	.nlteaser--large .nlteaser__headline {
+
+		@include breakpoint('m', min) {
+			font-size:  2.6rem;
+		}
+
+		@include breakpoint(1100, min) {
+			white-space: nowrap;
+		} // large variant
+
+		max-width:      initial;
+		font-size:      2rem;
+	}
+
+
+	.nlteaser--large .nlteaser__text {
+
+		@include breakpoint('l', min) {
+			font-size:  1.3rem;
+		} // large variant
+
+		max-width:      20em;
+		margin:         0 auto $spacing2XL;
+		font-size:      1rem;
+	}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+	@include breakpoint('l') {
+
+		.nlteaser__form .form-row {
+			margin-bottom: 1rem;
+		}
+
+		.nlteaser__btn {
+			width: 100%;
+			margin-bottom: 2.5rem;
+		}
+
+		.nlteaser__social {
+			padding: 0;
+		}
+	}

@@ -1,0 +1,111 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT JOIN
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.eventjoin {
+  background: #fff;
+
+  &__container {
+    background: $colorGrayBackground;
+    text-align: center;
+    padding: $spacing2XL 0 $spacingXL;
+    margin-bottom: 0;
+
+    @include breakpoint('l', min) {
+      padding: $spacing3XL 0;
+      margin-bottom: 0;
+    }
+  }
+
+
+  &__headline {
+    font: 600 1.4rem #{"/"} 1.2em $fontFamily;
+    margin-bottom: $spacingLG;
+
+    @include breakpoint('l', min) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__inner {
+    //padding: 0 $paddingPage;
+    @include breakpoint('l', min) {
+      display: flex;
+    }
+  }
+
+  &__infos {
+    background: $colorWhite;
+    padding: $spacingXL $spacingLG;
+    box-shadow: 0px 0px 25px #00000029;
+    border-radius: 5px;
+
+    @include breakpoint('l', min) {
+      width: 50%;
+      //margin: 0 5%;
+      padding: $spacing2XL $spacing2XL $spacingXL;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+
+    @include breakpoint('xl', min) {
+      width: 33%;
+    }
+  }
+
+  &__form {
+    padding: $spacingXL $spacingLG;
+
+    @include breakpoint('l', min) {
+      width: 50%;
+      //margin: 0 5%;
+      padding: $spacing2XL $spacing2XL $spacingXL;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+
+    @include breakpoint('xl', min) {
+      width: 33%;
+    }
+  }
+
+  &__calendar {
+    padding: $spacingXL $spacingLG;
+
+    @include breakpoint('l', min) {
+      width: 50%;
+      //margin: 0 5%;
+      padding: $spacing2XL $spacing2XL $spacingXL;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+
+    @include breakpoint('xl', min) {
+      width: 33%;
+    }
+
+    .eventjoin__headline {
+      margin-top: $spacingLG;
+      margin-bottom: $spacingSM;
+      color: $colorXBlue;
+    }
+  }
+
+  &__text {
+    color: $colorGray;
+  }
+
+  &__list {
+    max-width: 350px;
+    margin-bottom: 0;
+  }
+
+  &__btn {
+    margin: 0 auto;
+  }
+}

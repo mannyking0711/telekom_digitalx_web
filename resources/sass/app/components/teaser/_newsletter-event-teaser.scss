@@ -1,0 +1,229 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// NEWSLETTER EVENT TEASER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+    .newsletter-event-teaser {
+
+        background: $gradientXBlue;
+
+        p {
+            color: $colorWhite;
+            line-height: 1.4em;
+
+            span {
+                color: $colorYellow;
+                font-weight: 600;
+                font-family: $fontFamily;
+            }
+
+            @include breakpoint('xl', min) {
+                font-size: 1.3rem;
+            }
+        }
+
+        > .headline {
+            padding: $spacingXL;
+            text-align: center;
+
+            > h3 {
+                font: 600 2.0rem #{"/"} 1.2em $fontFamily;
+                color: $colorWhite;
+
+                margin: 0;
+
+                span {
+                    color: $colorYellow;
+                }
+
+                @include breakpoint('l', min) {
+                    font-size: 2.6rem;
+                }
+            }
+        }
+
+        > .content {
+            width: 100%;
+            padding-bottom: $spacingXL;
+            display: flex;
+            flex-wrap: wrap;
+
+            .btn {
+                min-width: 17em;
+            }
+
+            > .left {
+                border-right: 1px solid $colorXBlue;
+                padding: 0 $spacing2XL;
+                width: 33%;
+
+                > h4 {
+                    max-width: 10em;
+                    font: 600 2.0rem #{"/"} 1.2em $fontFamily;
+                    color: $colorWhite;
+
+                    margin-bottom: $spacingXL;
+
+                    span {
+                        color: $colorYellow;
+                    }
+
+                    @include breakpoint('l', min) {
+                        font-size: 2.0rem;
+                    }
+                }
+            }
+
+            > .middle {
+                padding: 0 $spacing2XL;
+                width: 34%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+
+                > .bottom {
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-end;
+
+                    .newsletter-event-registration-form {
+                        width: 100%;
+                    }
+                }
+            }
+
+            > .right {
+                border-left: 1px solid $colorXBlue;
+                padding: 0 $spacing2XL;
+                width: 33%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+
+                > .top {
+                    text-align: center;
+                }
+
+                > .middle {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    padding-bottom: $spacingXL;
+
+                    .icon-calendar-plus {
+                        @extend %relative;
+                        width: 150px;
+                        height: 138px;
+                        margin: 0 auto;
+                    }
+                }
+
+                > .bottom {
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+    @include breakpoint('xl') {
+
+        .newsletter-event-teaser {
+
+            > .content {
+
+                .btn {
+                    width: 100%;
+                }
+
+                > .left {
+                    width: 100%;
+                    border: 0;
+                    text-align: center;
+                    padding: $spacingXL $spacingXL;
+
+                    > h4 {
+                        max-width: inherit;
+                    }
+                }
+
+                > .middle {
+                    width: 50%;
+                }
+
+                > .right {
+                    width: 50%;
+                }
+            }
+
+        }
+
+    }
+
+
+    @include breakpoint('l') {
+
+        .newsletter-event-teaser {
+
+            > .content {
+
+                > .middle {
+                    width: 100%;
+                    border: 0;
+                    padding: $spacingXL $spacingXL;
+
+                    > .top {
+                        text-align: center;
+                    }
+                }
+
+                > .right {
+                    width: 100%;
+                    border: 0;
+                    padding: $spacingXL $spacingXL;
+                }
+            }
+
+        }
+
+    }
+
+
+    @include breakpoint('m') {
+
+        .newsletter-event-teaser {
+
+            > .headline {
+                padding: $spacingXL $spacingMD;
+            }
+
+            > .content {
+
+                > .left {
+                    padding: $spacingXL $spacingMD;
+                }
+
+                > .middle {
+                    padding: $spacingXL $spacingMD;
+                }
+
+                > .right {
+                    padding: $spacingXL $spacingMD 0 $spacingMD;
+                }
+            }
+
+        }
+
+    }

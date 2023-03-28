@@ -1,0 +1,232 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	PARTNER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.pagePartner {
+
+    .section-signup > .row > .col{
+        margin-bottom: 1.5rem;
+    }
+
+    .content__contact-box{
+
+    }
+    .content__signup-text{
+        &__wrapper{
+            display: flex;
+            align-items: center;
+
+            padding-right: 0;
+
+            @include media-breakpoint-up(lg){
+                padding-right: $marginBottomSection;
+            }
+        }
+    }
+
+    &__intro {
+        @include breakpoint(940, min) {
+            background:         #02050c;
+        }
+    }
+
+    &__mobile-background {
+        width:                  100%;
+        padding-top:            46.1111%;
+        margin-bottom:          $spacingXL;
+        background:             url('../img/app/partner/logo.svg') no-repeat 71.5%/150% ,
+                                url('../img/app/partner/background.jpg') no-repeat 70%/130%;
+
+        @include breakpoint(940, min) {
+            display:            none;
+        }
+    }
+
+    &__intro-background {
+        @include breakpoint(940, min) {
+            background:         url('../img/app/partner/logo.svg') no-repeat center center,
+                                url('../img/app/partner/background.jpg') no-repeat center center;
+            background-size:    cover;
+            padding-top:        $spacing4XL;
+            background-position-x: 60%, 60%;
+        }
+
+        @include breakpoint('xl', min) {
+            background-position-x: 80%, 80%;
+        }
+    }
+
+    &__intro-headline {
+        font-size:              1.8rem;
+        line-height:            1.2em;
+        margin-bottom:          $spacingLG;
+
+        @include breakpoint('m', min) {
+            font-size:          2rem;
+        }
+    }
+
+    &__intro-text {
+        background:             $colorWhite;
+        border-radius:          5px 5px 0 0;
+        text-align:             center;
+
+        @include breakpoint(940, min) {
+            width:              60%;
+            padding:            $spacing2XL $spacingMD;
+        }
+
+        @include breakpoint('xl', min) {
+            width:              45%;
+            padding:            $spacing2XL $spacingLG;
+        }
+
+        @include breakpoint('xxl', min) {
+            padding:            $spacing2XL $spacingXL;
+        }
+    }
+
+    &__intro-desc {
+        color:                  $colorGray;
+        font-size:              1rem;
+        line-height:            1.4em;
+    }
+
+    &__intro-subheadline {
+        font-size:              1.4rem;
+        line-height:            1.2em;
+
+        @include breakpoint('m', min) {
+            font-size:          1.6rem;
+        }
+    }
+
+    &__intro-btn {
+        margin:                 0 0 $spacingMD 0;
+    }
+    
+    &__list {
+        display:                inline-block;
+        margin:                 0 auto $spacingLG;
+
+        @include breakpoint('m', min) {
+            padding:            0 10%;
+        }
+
+        li {
+            margin-bottom:      $spacingMD;
+            list-style:         none;
+            padding-left:       $spacingXL;
+            background: 		url('../svg/app/icon-check.svg') no-repeat left 0.35rem/1.2rem;
+            text-align:         left;
+            color:              $colorGray;
+            font: 		        400 1rem #{"/"} 1.3em $fontFamily;
+
+            @include breakpoint('m', min) {
+                font-size:      1.2rem;
+            }
+        }
+
+        &--bundle {
+            padding:            0 5%;
+            margin:             0 auto $spacingSM;
+
+            li {
+                padding-left:   $spacingLG;
+                background:     url('../svg/app/icon-check.svg') no-repeat left 0.3rem/1rem;
+                font-size:      1rem;
+            }
+        }
+    }
+
+    &__desc {
+        margin:                 0 auto;
+        padding:                $spacing4XL 0;
+        max-width:              40em;
+        text-align:             center;
+
+        p {
+            font-size:          1.2rem;
+            margin:             0;
+        }
+    }
+
+    &__bundles {
+        margin-bottom:          $spacing2XL;
+
+        @include breakpoint('xl', min) {
+            display:            flex;
+        }
+    }
+
+    &__bundle {
+        border:                 1px solid $colorGrayBorder;
+        padding:                $spacingLG $spacingMD;
+        text-align:             center;
+        margin-bottom:          $spacingXL;
+        flex:                   1;
+
+        @include breakpoint('m', min) {
+            padding:            $spacingLG 10%;
+        }
+
+        @include breakpoint('xl', min) {
+            padding:            $spacingLG;
+            margin:             0 0 0 $spacingXL;
+        }
+
+        &:first-child {
+            @include breakpoint('xl', min) {
+                margin-left:    0;
+            }
+        }
+    }
+
+    &__bundle-headline {
+    }
+
+    &__bundle-desc {
+        color:                  $colorGray;
+        font-size:              1rem;
+        line-height:            1.3em;
+        margin-bottom:          $spacingLG;
+        white-space:            pre-line;
+    }
+
+    &__bundle-btn {
+        margin:                 0;
+    }
+
+    &__signup-buttons {
+        margin-bottom:          $spacing5XL;
+
+        .btn {
+            margin-right:       0;
+        }
+    }
+
+    &__partner-headline {
+        font-size:              2rem;
+        line-height:            1.2em;
+        margin-bottom:          $spacingXL;
+
+        @include breakpoint('m', min) {
+            font-size:          2.2rem;
+            margin-bottom:      $spacing3XL;
+        }
+    }
+
+    // partner logos
+    .logolist__item.coop {
+        width:                  100px;
+        height:                 70px;
+    }
+
+    &__focus {
+        .eventfocus {
+            //margin: 7% auto 0 auto;
+        }
+    }
+}

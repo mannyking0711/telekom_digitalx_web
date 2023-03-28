@@ -1,0 +1,53 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  PAGE MAGAZINE OVERVIEW
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.pageMagazineOverview {
+	background:                 url('../img/app/initiative/background.jpg') center center no-repeat fixed;
+	background-size:            cover;
+
+	&__headline {
+		text-align: center;
+	}
+
+	&__flat {
+		background: 			$colorWhite;
+	}
+
+	&__rounded {
+		border-radius: 			5px;
+	}
+
+    &__btn-container {
+        width: 					100%;
+        margin:                 0 0 1rem 0;
+        padding:                0 $spacingXL;
+		text-align: center;
+
+        @include breakpoint('l', min) {
+            width: 			    50%;
+            margin:             0 0 1rem 50%;
+            padding:            0 $spacing3XL;
+        }
+    }
+
+	&__btn {
+        margin-top:             0;
+	}
+
+	&__btn-container-hero {
+		width: 					100%;
+		margin:                 0 0 1rem 0;
+		padding:                0 $spacingXL;
+		text-align: center;
+
+		@include breakpoint('l', min) {
+			width: 			    60%;
+			margin:             0 0 1rem 20%;
+			padding:            0 $spacing3XL;
+		}
+	}
+
+}

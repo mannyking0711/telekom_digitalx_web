@@ -1,0 +1,47 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  LIB HEADLINE H2
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.lib-headline-h2 {
+  &__headline {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__title {
+    font: 600 1.8rem #{"/"} 1em $fontFamily;
+
+    text-align: center;
+    margin: 0;
+
+    @include breakpoint('l', min) {
+      text-align: left;
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    color: $colorXBlue;
+    font: 600 1.3rem #{"/"} 1em $fontFamily;
+
+    text-align: center;
+    margin: 0;
+
+    @include breakpoint('l', min) {
+      text-align: left;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__text {
+    color: $colorTypo;
+    margin: $spacingXL auto 0;
+    white-space: pre-line;
+  }
+
+  //:last-child {
+  //  margin-bottom: 0;
+  //}
+}

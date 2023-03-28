@@ -1,0 +1,131 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	FOOTER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+footer {
+  @extend %relative;
+}
+
+// Disable footer if page-transiotion is loading to reduce flicker
+header + footer {
+  display: none;
+}
+
+footer section {
+  margin-bottom: 0;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	FOOTER BOTTOM
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.footer-bottom {
+  margin: 0 0 0 0;
+  padding: $paddingPage 0;
+  background: $gradientXBlue;
+
+  .footer-content {
+    @extend %flex;
+
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    // extra padding for all columns except first one.
+    & > div {
+      padding-top: 20px;
+    }
+
+    & > div:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .footer-logo {
+
+    @extend %relative;
+
+    width: 173px;
+    height: 46px;
+    margin: 1rem auto;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    @extend .h5;
+  }
+
+  p {
+
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+
+/////////////////////////////////
+// STICKY FOOTER
+/////////////////////////////////
+
+#app {
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page {
+  flex-grow: 2;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@include breakpoint('xl') {
+  .footer-bottom .footer-content {
+    flex-wrap: wrap;
+  }
+}
+
+
+@include breakpoint('m') {
+  .footer-bottom h3 {
+
+    font-size: 1.9rem;
+    line-height: 2.3rem;
+  }
+
+  .footer-bottom p {
+
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .footer-bottom .footer-content {
+
+    display: block;
+    padding-top: 0;
+  }
+
+  .footer-bottom .footer-content > div {
+
+    width: 100%;
+    margin: 0 auto 45px auto;
+    padding-top: 0 !important;
+  }
+}

@@ -1,0 +1,114 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENTS INFO
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.eventsinfo {
+    text-align:                 center;
+    padding:                    $spacingXL 0 $spacing3XL;
+
+    @include breakpoint('l', 'min') {
+        padding:                $spacing3XL 0 $spacing4XL;
+    }
+
+    // chevron
+    &:after {
+        width: 					18px;
+        height: 				18px;
+        position: 				absolute;
+        top: 					100%;
+        left: 					50%;
+        margin: 				-9px 0 0 -9px;
+        background:				$colorWhite;
+        content: 				'';
+        transform: 				rotate(45deg);
+    }
+
+    &__headline {
+        font:                   600 1.9rem #{"/"} 1.2em $fontFamily;
+        margin-bottom:          $spacingXL;
+
+        @include breakpoint('l', 'min') {
+            font-size:          2.2rem;
+            margin-bottom:      $spacing2XL;
+        }
+    }
+
+    &__events {
+        display:                flex;
+        flex-wrap:              wrap;
+        max-width:              450px;
+        margin:                 0 auto $spacingMD;
+
+        @include breakpoint('l', 'min') {
+            max-width:          680px;
+        }
+
+        @include breakpoint('xl', 'min') {
+            max-width:          900px;
+        }
+    }
+
+    &__event {
+        width:                  50%;
+        padding:                0 $spacingSM;
+
+        @include breakpoint('m', 'min') {
+            padding:            0 $spacingXL;
+        }
+
+        @include breakpoint('l', 'min') {
+            padding:            0 $spacingMD;
+            width:              25%;
+        }
+
+        @include breakpoint('xl', 'min') {
+            padding:            0 $spacingXL;
+        }
+    }
+
+    &__event-number {
+        background-image:       linear-gradient(180deg, #91d0ec, #38abdf);
+        background-size:        100%;
+        font:                   700 2.4rem #{"/"} 1em 'Bebas', sans-serif;
+        color:                  $colorXBlue;
+        background-clip:        text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color:   transparent;
+        margin-bottom:          $spacingSM;
+
+        @include breakpoint('l', 'min') {
+            font-size:          2.6rem;
+        }
+
+        @include breakpoint('xl', 'min') {
+            font-size:          3.4rem;
+        }
+    }
+
+    &__event-desc {
+        font:                   600 0.9rem #{"/"} 1.2em $fontFamily;
+        color:                  $colorGray;
+
+        @include breakpoint('l', 'min') {
+            font-size:          1rem;
+        }
+
+        em {
+            color:              $colorYellow;
+            font-style:         normal;
+        }
+    }
+
+    &__desc {
+        font:                   400 1rem #{"/"} 1.4em $fontFamily;
+        color:                  $colorGray;
+        max-width:              30em;
+        margin:                 0 auto;
+
+        @include breakpoint('l', 'min') {
+            font-size:          1.1rem;
+        }
+    }
+}

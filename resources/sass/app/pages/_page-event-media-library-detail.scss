@@ -1,0 +1,226 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	EVENT MEDIA LIBRARY DETAIL
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.page-event-media-library-detail {
+
+  &__intro {
+    &__container {
+      margin-top: $spacing3XL;
+      @include breakpoint('l', min) {
+        margin-top: $spacing5XL;
+      }
+    }
+
+    &__tagline {
+      font: 600 1.2rem #{"/"} 1em $fontFamily;
+
+      text-align: center;
+      color: $colorXBlue;
+      margin: 0 0 $spacingSM 0;
+
+      @include breakpoint('l', min) {
+        font-size: 1.2rem;
+        text-align: left;
+      }
+    }
+
+    &__headline {
+      font: 600 1.9rem #{"/"} 2.3em $fontFamily;
+      text-align: center;
+      margin: 0 0 $spacingXL;
+
+      @include breakpoint('l', min) {
+        font-size: 2.9rem;
+        line-height: 3.4rem;
+        text-align: left;
+      }
+    }
+
+    &__subheadline {
+      text-align: center;
+      margin: (-$spacingSM) 0 $spacingXL;
+
+      @include breakpoint('l', min) {
+        text-align: left;
+      }
+    }
+
+    &__grid {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      @include breakpoint('l', min) {
+        flex-direction: row;
+      }
+    }
+
+    &__container-text {
+      width: 100%;
+
+      @include breakpoint('l', min) {
+        width: 65%;
+      }
+    }
+
+    &__container-text p {
+      text-align: center;
+
+      @include breakpoint('l', min) {
+        text-align: left;
+      }
+    }
+
+    &__container-image {
+      width: 100%;
+
+      @include breakpoint('l', min) {
+        width: 35%;
+      }
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+
+    &__image-title {
+      color: $colorTypo;
+      font: 600 1.4rem #{"/"} 1em $fontFamily;
+      text-align: center;
+      margin-top: $spacingMD;
+    }
+
+    &__image-subtitle {
+      color: $colorTypo;
+      font: normal 1.12rem #{"/"} 1.3rem $fontFamily;
+      text-align: center;
+      margin-top: $spacingXS;
+
+    }
+  }
+
+  &__share {
+    padding-top: $spacingXL;
+    margin-top: $spacingXL;
+    border-top: 1px solid $colorGrayLight;
+
+    .share-teaser {
+      justify-content: left;
+      padding: 0;
+      margin-left: -0.5rem;
+    }
+  }
+
+  &__impressions {
+    &__preview {
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    // @todo: Migrate modal to a separate component (see also EventLocations)
+    .active {
+      display: block !important;
+    }
+
+    .modal {
+      z-index: 99999;
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0, 0, 0, 0.7);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .modal-content {
+      position: fixed;
+      width: 100%;
+      max-width: 1200px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @include breakpoint('m', 'min') {
+        width: 70%;
+      }
+
+      img {
+        width:100%;
+        height: auto;
+      }
+    }
+
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* hide the slides by default */
+    .mySlides {
+      display: none;
+      padding: 4px;
+      background: white;
+    }
+
+    .mySlides:first-child {
+      display: block;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: fixed;
+      top: 50%;
+      width: auto;
+      color: white;
+      font-weight: bold;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+      font-size: 5rem;
+    }
+
+    .prev {
+      left: 0;
+      margin-left: 4rem;
+    }
+
+    .next {
+      right: 0;
+      margin-right: 4rem;
+    }
+  }
+
+  &__archives {
+    &__title {
+      text-align: center;
+      padding-bottom: $spacingMD;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  EVENT SLIDER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.eventslider {
+    margin: 0;
+    max-width: 100%;
+
+    .headline {
+        background: white;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .headline__title {
+        margin: 1rem 0 0 0;
+        margin-bottom: 3rem;
+    }
+
+    .slider {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .slider__controls {
+        @include breakpoint('l', min) {
+            margin: 0;
+            height: 0;
+        }
+
+        .slider__arrow--left {
+            left: 1rem;
+        }
+
+        .slider__arrow--right {
+            right: 1rem;
+        }
+    }
+
+    .slider__bullets {
+        margin: 0;
+    }
+}
+
+.quoteSectionHeadlines {
+    @include breakpoint('l', min) {
+        display: flex;
+        flex-flow: row;
+    }
+
+    &__image {
+        width: 100%;
+        display: block;
+
+        @include breakpoint('l', min) {
+            width: 50%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        text-align: center;
+        padding: 6vw;
+
+        @include breakpoint('l', min) {
+            padding: 4rem;
+            width: 50%;
+            align-self: center;
+        }
+
+        @include breakpoint('xl', min) {
+            padding: 5rem 6rem;
+        }
+    }
+
+    &__subheadline {
+        font: 600 18px #{"/"} 22px $fontFamily;
+        color: $colorXBlue;
+        margin: 0;
+
+        @include breakpoint('xl', min) {
+            font: 600 24px #{"/"} 26px $fontFamily;
+        }
+    }
+
+    &__headline {
+        font: 900 40px #{"/"} 1em $fontFamily;
+        color: $colorWhite;
+
+        margin: 0;
+
+        @include breakpoint('xl', min) {
+            font-size: 60px;
+        }
+    }
+
+    &__quote {
+        color: $colorWhite;
+        margin: 1rem 0 0;
+
+        @include breakpoint('xl', min) {
+            margin-top: 3rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__note {
+        font-weight: 600;
+        color: $colorXBlue;
+        margin: 1.5rem 0 0.5rem;
+
+        @include breakpoint('xl', min) {
+            margin: 3rem 0 1rem;
+            font-size: 1.2rem;
+        }
+    }
+}

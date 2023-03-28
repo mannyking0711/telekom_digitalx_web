@@ -1,0 +1,99 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	INDEX BEST PRACTISE LIST
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.index-best-practice-list {
+	width: 100%;
+	position: relative;
+	display: flex;
+	/*margin-top: -6%;*/
+	margin-top: -8%;
+	background-color: $colorWhite;
+	border-top-right-radius: 6px;
+	padding: 10px 10px 0 $paddingPage;
+	box-shadow: 20px 0 30px -36px #000000;
+	flex-flow: row wrap;
+
+	> .title {
+		@extend %relative;
+
+		object-fit: cover;
+		object-position: center center;
+		flex: 1 50%;
+		margin: 5px 0;
+		font-size: 2.2rem;
+	}
+
+	> .button {
+		width: auto;
+		height: auto;
+		display: inline-block;
+		margin: 0.0rem 0 0.7rem 0;
+		padding: 1.1rem 2rem 1rem 2rem;
+		background: $blueColor;
+		color: $colorWhite;
+		border-radius: 0.3rem;
+		border: 0;
+		cursor: pointer;
+		outline: 0;
+		font: bold 0.9rem / 0.9rem "Source Sans Pro", sans-serif;
+		text-decoration: none;
+		text-align: center;
+		vertical-align: middle;
+
+		letter-spacing: 0.01rem;
+		-webkit-transition: all 0.2s;
+		transition: all 0.2s;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		flex: 2 20%;
+	}
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	MOBILE
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+@include breakpoint('xl') {
+
+	.index-best-practice-list {
+		width: 68%;
+		margin-bottom: $marginBottomSection;
+
+		> .button {
+			padding: 0.3rem;
+		}
+	
+		> .title {
+			font-size: 1.5rem;
+		}
+	
+	}
+
+}
+
+@include breakpoint('l') {
+
+	.index-best-practice-list {
+		width: 100%;
+		padding: 0;
+		box-shadow: none;
+	}
+
+}
+
+@include breakpoint('m') {
+
+	.index-best-practice-list {
+		padding: 0;
+		box-shadow: none;
+	}
+
+}

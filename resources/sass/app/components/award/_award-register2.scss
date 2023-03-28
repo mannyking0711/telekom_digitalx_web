@@ -1,0 +1,104 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	AWARD REGISTER2
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.awardRegister2 {
+  margin-top: $spacing3XL;
+  background: $colorXDark;
+  @include breakpoint('l', min) {
+    margin-top: $spacing5XL;
+    background: #fff;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background: $colorXDark;
+    color: #ffffff;
+
+    @include breakpoint('l', min) {
+      align-items: center;
+      flex-direction: row;
+    }
+
+    &--headline {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__logo {
+    width: 280px;
+    flex: 1 0 auto;
+
+    @include breakpoint('s', min) {
+      width: 328px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    margin: 0 0 40px;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('l', min) {
+      margin: 40px;
+    }
+  }
+
+  &__subheadline {
+    color: $colorXYellowDark;
+    font: 600 1.2rem #{"/"} 1em $fontFamily;
+    text-align: center;
+    margin: 0;
+
+    @include breakpoint('l', min) {
+      font-size: 1.2rem;
+      text-align: left;
+    }
+  }
+
+  &__headline {
+    color: #fff;
+    font: 600 2.3em #{"/"} 1em $fontFamily;
+    text-align: center;
+    margin: $spacingSM 0 0;
+
+    @include breakpoint('l', min) {
+      font-size: 2.3em;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    color: #ffffff;
+    font: normal 400 1.12rem/1.3rem $fontFamily;
+    margin: $spacingLG 0 0;
+    text-align: center;
+
+    @include breakpoint('l', min) {
+      text-align: left;
+    }
+  }
+
+  &__button {
+    margin: $spacing2XL 0 0;
+    align-self: center;
+
+    @include breakpoint('l', min) {
+      align-self: flex-start;
+    }
+  }
+}

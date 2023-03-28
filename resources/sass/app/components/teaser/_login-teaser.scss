@@ -1,0 +1,140 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	LOGIN TEASER
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.login-teaser {
+    @include box-shadow('normal');
+    border-radius: 0.3rem;
+    background: $colorWhite;
+    max-width: 960px;
+
+    &__header {
+        background: $colorXBlue;
+        padding: $spacingMD;
+        border-radius: 0.3rem 0.3rem 0 0;
+
+        @include breakpoint('xl', min) {
+            padding: 1.25rem;
+        }
+    }
+
+    &__headline {
+        color: $colorWhite;
+        text-align: center;
+
+        margin: 0;
+        font: 600 1.6rem #{"/"} 1em $fontFamily;
+
+        @include breakpoint('xl', min) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__main {
+        padding: $spacingLG $spacingLG 1.75rem $spacingLG;
+
+        @include breakpoint('xl', min) {
+            display: flex;
+            padding: 0;
+        }
+    }
+
+    &__info {
+        @include breakpoint('xl', min) {
+            width: 50%;
+            padding: 2.25rem 1.75rem;
+        }
+    }
+
+    &__form {
+        @include breakpoint('xl', min) {
+            width: 50%;
+            padding: 2.25rem 1.75rem;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+    }
+
+    &__text {
+        margin: 0 0 $spacingLG;
+
+        @include breakpoint('xl', min) {
+            text-align: center;
+        }
+
+        em {
+            color: $colorXBlue;
+            font-weight: 600;
+            font-style: normal;
+        }
+    }
+
+    &__bullets {
+        display: inline-block;
+        margin: 0 0 $spacingMD;
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin-bottom: $spacingMD;
+            padding-left: $spacingXL;
+            background: url('../svg/app/icon-check.svg') no-repeat left 0.35rem/1.2rem;
+            font: 400 1rem #{"/"} 1.3em $fontFamily;
+
+            @include breakpoint('m', min) {
+                font-size: 1.2rem;
+                margin-bottom: $spacingLG;
+            }
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        margin: 0;
+
+        @include breakpoint('xl', min) {
+            font: 700 1.2rem #{"/"} 1em $fontFamily;
+        }
+
+        &.btn .icon {
+            @include breakpoint('xl', min) {
+                width: $spacingMD;
+                height: $spacingMD;
+            }
+        }
+    }
+
+    &__label {
+        font: 400 0.9rem #{"/"} 1em $fontFamily;
+        margin: 1.75rem 0 $spacingMD;
+        text-align: center;
+
+        @include breakpoint('xl', min) {
+            margin-top: $spacingXL;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+
+.pagearticle__loginteaser--sidebar {
+  .login-teaser {
+    &__main {
+      flex-direction: column;
+    }
+
+    &__info {
+      width: 100%;
+      padding-bottom: 0;
+    }
+
+    &__form {
+      width: 100%;
+      padding-top: 0;
+    }
+  }
+}
